@@ -1,0 +1,38 @@
+// start .sCategories
+.sCategories {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+			@include block(160,190);
+
+	}
+	&__title{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		color: #fff;
+		border-radius: $border-radius;
+		background: rgba(19, 23, 33, 0.70);
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCategories

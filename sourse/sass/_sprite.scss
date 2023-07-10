@@ -1,0 +1,54 @@
+@use "sass:math";
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-basket {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(22 / var(--h) *1em );
+}
+.icon-check {
+	--h: 27;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(27 / var(--h) *1em );
+}
+.icon-fb {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-instagram {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-telegram {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}
+.icon-user {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
+.icon-viber {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}
+.icon-vk {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-whatsapp {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}

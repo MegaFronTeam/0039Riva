@@ -1,0 +1,28 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sCategories
+			+icon("user")
+			+e.row.row
+				mixin item(i,t)
+					+e.col.col-xl-2.col-lg-3.col-md-4.col-6 
+						+e.item(href="#").bg-wrap
+							+img(`img/categories-${i}.jpg`,'bg').picture-bg
+							+e.title!= t
+				+item(`1`,`Столы для руководителя`)
+				+item(`2`,``)
+				+item(`3`,``)
+				+item(`4`,``)
+				+item(`5`,``)
+				+item(`6`,``)
+				+item(`7`,``)
+				+item(`8`,``)
+				+item(`9`,``)
+				+item(`10`,``)
+				+item(`11`,``)
+				+item(`12`,``)
+	// end sCategories
+
+	
