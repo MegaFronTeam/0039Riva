@@ -14,8 +14,68 @@
 	&__col{
 
 	}
+	&__big {
+		border-radius: rem(6);
+		overflow: hidden;
+		display: flex;
+		height: 100%;
+		&:hover {
+			.sNews__big-offer {
+				color: $primary;
+			}
+		}
+	}
+	&__big-left {
+		width: 40%;
+		background: $dark;
+		color: white;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding-left: rem(32);
+		padding-right: rem(30);
+		font-weight: $font-weight-semibold;
+	}
+	&__big-offer {
+		margin-bottom: rem(10);
+		font-size: rem(20);
+		line-height: 150%;
+		@include mt;
+	}
+	&__big-date {
+		color: $secondary;
+		font-size: rem(12);
+		line-height: 150%;
+	}
+	&__big-img {
+		width: 60%;
+	}
 	&__item{
-
+		&:hover {
+			.sNews__title {
+				color: $primary;
+			}
+		}
+	}
+	&__item-img {
+		height: rem(300);
+		border-radius: rem(6);
+		overflow: hidden;
+		margin-bottom: rem(10);
+	}
+	&__title {
+		margin: rem(10);
+		color: $dark;
+		font-weight: $font-weight-semibold;
+		font-size: rem(16);
+		line-height: 150%;
+		@include mt;
+	}
+	&__date {
+		margin: 0 rem(10);
+		line-height: 150%;
+		font-size: rem(12);
+		color: $secondary;
 	}
 
 	@include media-breakpoint-up(xl) {}
