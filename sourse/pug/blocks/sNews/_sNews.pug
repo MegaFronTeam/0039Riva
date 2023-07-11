@@ -3,7 +3,23 @@ mixin sNews(data)
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sNews
+				h2 Новости
 				
 			+e.row.row
+				+e.col.col-lg-6.col-md-6.col-12
+					+e.big(href="#")
+						+e.big-left
+							+e.H3.big-offer Комплект для главного лица компании
+							+e.big-date 29 мая 2022
+						+e.big-img.bg-wrap
+							+img(`img/news-1.jpg`,'bg').picture-bg
+				mixin item(i, t, d) 
+					+e.col.col-lg-3.col-md-3.col-12
+						+e.item(href="#")
+							+e.item-img.bg-wrap
+								+img(`img/news-${i}.jpg`,'bg').picture-bg
+							+e.title!= t 
+							+e.date!= d 
+				+item(`2`,`Грамотный выбор офисного стола. Плюсы и минусы деревянной столешницы.`,`29 мая 2022`)
+				+item(`3`,`Новинка в каталоге — кабинет руководителя`,`29 мая 2022`)
 	// end sNews

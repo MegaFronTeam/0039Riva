@@ -8,15 +8,13 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
 	&__col{
 
 	}
 	&__item{
-			@include block(160,190);
-
+		@include block(160,190);
+		border-radius: 6px;
+		overflow: hidden;
 	}
 	&__title{
 		position: absolute;
@@ -26,6 +24,14 @@
 		color: #fff;
 		border-radius: $border-radius;
 		background: rgba(19, 23, 33, 0.70);
+		text-align: center;
+		min-height: 58px;
+		font-size: rem(15px);
+		padding: rem(7px) rem(10px);
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	@include media-breakpoint-up(xl) {}

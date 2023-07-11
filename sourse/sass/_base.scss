@@ -132,7 +132,10 @@ main{
 }
 
 .section-title {
-	margin-bottom: var(--sTPB);
+	margin-bottom: rem(32px);
+	h2 {
+		font-weight: 600;
+	}
 }
 
 
@@ -550,4 +553,9 @@ iframe {
 
 .btn-accenter{
 	@extend  .btn-primary;
+}
+
+.center-offer {
+	font-weight: 600;
+	margin-bottom: rem(32px);
 }

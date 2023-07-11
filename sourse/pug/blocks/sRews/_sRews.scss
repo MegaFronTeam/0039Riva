@@ -17,6 +17,30 @@
 	&__item{
 
 	}
+	&__item-title {
+		color: $dark;
+		margin-bottom: rem(8);
+		font-size: rem(16);
+		line-height: 150%;
+		font-weight: $font-weight-semibold;
+	}
+	&__item-sub {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: rem(18);
+	}
+	&__item-stars {}
+	&__item-star {}
+	&__item-date {
+		color: $secondary;
+		font-size: rem(12);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+	}
+	&__item-text {
+		font-size: rem(14);
+		line-height: 150%;
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
