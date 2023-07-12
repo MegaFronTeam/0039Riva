@@ -35,9 +35,43 @@
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>headerBlock ds dfsdfdsfsd</h2>
+							<h1>Офисная мебель Riva</h1>
 						</div>
-						<div class="row"></div>
+						<div class="headerBlock__slider-wrapper">
+							<div class="headerBlock__slider headerBlock__slider--js default-slider swiper">
+								<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="headerBlock__item bg-wrap"><img class="object-fit-js picture-bg" src="img/headerBlock-1.jpg" alt="" loading="lazy"/>
+												<div class="headerBlock__row row"> 
+													<div class="headerBlock__col offset-1 col-5 col-md-3">
+														<h2 class="headerBlock__offer">Кабинеты руководителя
+														</h2>
+														<a class="headerBlock__btn" href="#">В каталог
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item bg-wrap"><img class="object-fit-js picture-bg" src="img/headerBlock-1.jpg" alt="" loading="lazy"/>
+												<div class="headerBlock__row row"> 
+													<div class="headerBlock__col offset-1 col-5 col-md-3">
+														<h2 class="headerBlock__offer">Кабинеты руководителя
+														</h2>
+														<a class="headerBlock__btn" href="#">В каталог
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+							<div class="headerBlock__arrows">
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
@@ -127,9 +161,32 @@
 				<!-- start sCatalog-->
 				<div class="sCatalog section">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCatalog</h2>
-							<p>Выкупаем проблемные автомобили в день обращения</p>
+						<div class="sCatalog__top section-title text-center">
+							<ul class="sCatalog__top-tabs"> 
+								<li class="sCatalog__top-tab active"> 
+									<h2>Скидки</h2>
+								</li>
+								<li class="sCatalog__top-tab"> 
+									<h2>Новинки</h2>
+								</li>
+								<li class="sCatalog__top-tab"> 
+									<h2>В наличии</h2>
+								</li>
+							</ul>
+							<ul class="sCatalog__bottom-tabs"> 
+								<li class="sCatalog__bottom-tab active">Все
+								</li>
+								<li class="sCatalog__bottom-tab">Офисная мебель для персонала
+								</li>
+								<li class="sCatalog__bottom-tab">Мебель в кабинет руководителя
+								</li>
+								<li class="sCatalog__bottom-tab">Домашний офис
+								</li>
+								<li class="sCatalog__bottom-tab">Столы для переговоров
+								</li>
+								<li class="sCatalog__bottom-tab">еще
+								</li>
+							</ul>
 						</div>
 						<div class="sCatalog__row row">
 							<div class="sCatalog__col col-3">
@@ -291,29 +348,38 @@
 				<!-- start sForm-->
 				<section class="sForm section" id="sForm">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sForm</h2>
-						</div>
 						<div class="sForm__row row">
-						</div>
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+							<div class="sForm__col col-12"> 
+								<div class="sForm__img bg-wrap"><img class="object-fit-js picture-bg" src="img/form.jpg" alt="" loading="lazy"/>
 								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+							</div>
+							<div class="sForm__col col-12"> 
+								<div class="sForm__content justify-content-between"> 
+									<div class="sForm__content-left">
+										<h3 class="sForm__offer">Мы&nbsp;готовы разработать бесплатный эскиз растановки мебели или платный дизайн проект оформления офиса
+										</h3>
+										<p class="sForm__desc">Наши специлисты подберут все необходимые материалы, мебель и&nbsp;комплектующие. Вам останется только заехать и&nbsp;начать работать в&nbsp;новом офисе.
+										</p>
+									</div>
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder="Имя"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" placeholder="+7 (___) ___-__-__" step="any"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
+											</div>
+											<!-- +e.input-wrap-->
+											<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+											</button>
+											<div class="form-wrap__policy">Нажимая на кнопку, вы подтверждаете свое согласие на <a href="#">обработку персональных данных</a>
+											</div>
+										</form>
+									</div>
 								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn btn btn-primary" type="submit">Submit
-								</button>
-								<div class="form-wrap__policy">
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-									</label>
-								</div>
-							</form>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -322,9 +388,14 @@
 				<section class="sOurProjects section" id="sOurProjects">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>sOurProjects</h2>
+							<h2>Наши проекты</h2>
 						</div>
 						<div class="sOurProjects__row row">
+							<div class="sOurProjects__slider-wrapper">
+								<div class="sOurProjects__slider sOurProjects__slider--js default-slider swiper">
+									<div class="swiper-wrapper"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -337,12 +408,35 @@
 						</div>
 						<div class="sRews__row row">
 							<div class="sRews__col col-lg-4 col-md-6 col-12">
-								<div class="sRews__item">
+								<div class="sRews__item hidden">
 									<div class="sRews__item-title">Маргарита Славинская
 									</div>
 									<div class="sRews__item-sub">
 										<ul class="sRews__item-stars"> 
 											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
 											</li>
 										</ul>
 										<div class="sRews__item-date">8 декабря 2021
@@ -353,12 +447,35 @@
 								</div>
 							</div>
 							<div class="sRews__col col-lg-4 col-md-6 col-12">
-								<div class="sRews__item">
+								<div class="sRews__item hidden">
 									<div class="sRews__item-title">Тими А
 									</div>
 									<div class="sRews__item-sub">
 										<ul class="sRews__item-stars"> 
 											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
 											</li>
 										</ul>
 										<div class="sRews__item-date">3 июня 2023
@@ -369,12 +486,35 @@
 								</div>
 							</div>
 							<div class="sRews__col col-lg-4 col-md-6 col-12">
-								<div class="sRews__item">
+								<div class="sRews__item hidden">
 									<div class="sRews__item-title">Администрация lime-office
 									</div>
 									<div class="sRews__item-sub">
 										<ul class="sRews__item-stars"> 
 											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
+											</li>
+											<li class="sRews__item-star">
+												<svg class="icon icon-star ">
+													<use xlink:href="img/svg/sprite.svg#star"></use>
+												</svg>
 											</li>
 										</ul>
 										<div class="sRews__item-date">13 декабря 2022
@@ -383,6 +523,12 @@
 									<p class="sRews__item-text">Работаем с&nbsp;данной фабрикой уже 7&nbsp;лет. Спасибо ребятам за&nbsp;качественную и&nbsp;быструю работу. Своевременное решение любых проблем. За&nbsp;подробную информацию для выкладки товаров на&nbsp;сайт, что очень важно для продажи конечному клиенту! Так держать!!!
 									</p>
 								</div>
+							</div>
+						</div>
+						<div class="sRews__row row"> 
+							<div class="sRews__col offset-md-4 col-md-4">
+								<a class="sRews__btn" href="#">Показать ещё
+								</a>
 							</div>
 						</div>
 					</div>
@@ -395,7 +541,7 @@
 							<h2>Новости</h2>
 						</div>
 						<div class="sNews__row row">
-							<div class="sNews__col col-lg-6 col-md-6 col-12">
+							<div class="sNews__col col-lg-6 col-md-12 col-12">
 								<a class="sNews__big" href="#">
 									<div class="sNews__big-left">
 										<h3 class="sNews__big-offer">Комплект для главного лица компании
@@ -407,7 +553,7 @@
 									</div>
 								</a>
 							</div>
-							<div class="sNews__col col-lg-3 col-md-3 col-12">
+							<div class="sNews__col col-lg-3 col-md-6 col-12">
 								<a class="sNews__item" href="#">
 									<div class="sNews__item-img bg-wrap"><img class="object-fit-js picture-bg" src="img/news-2.jpg" alt="" loading="lazy"/>
 									</div>
@@ -417,7 +563,7 @@
 									</div>
 								</a>
 							</div>
-							<div class="sNews__col col-lg-3 col-md-3 col-12">
+							<div class="sNews__col col-lg-3 col-md-6 col-12">
 								<a class="sNews__item" href="#">
 									<div class="sNews__item-img bg-wrap"><img class="object-fit-js picture-bg" src="img/news-3.jpg" alt="" loading="lazy"/>
 									</div>

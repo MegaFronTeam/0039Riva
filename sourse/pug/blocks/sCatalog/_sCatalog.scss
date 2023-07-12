@@ -20,6 +20,53 @@
 	&__slide{
 		height: auto;
 	}
+	&__top-tabs {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		margin-bottom: rem(13);
+	}
+	&__top-tab {
+		margin: 0 rem(16);
+		cursor: pointer;
+		&.active, &:hover {
+			h2 {
+				color: $dark;
+			}
+		}
+		h2 {
+			@include mt;
+			color: $secondary;
+		}
+	}
+	&__bottom-tabs {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		margin-bottom: rem(39);
+	}
+	&__bottom-tab {
+		&.active, &:hover {
+			background: $dark;
+			color: white;
+		}
+		border-radius: $border-radius;
+		padding: rem(7) rem(12);
+		cursor: pointer;
+		color: $secondary;
+		font-weight: $font-weight-semibold;
+		font-size: rem(14);
+		line-height: 150%;
+		margin: 0 rem(4);
+		@include mt;
+		&:last-child {
+			color: $dark;
+			&:hover {
+				background: none;
+				color: $secondary;
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

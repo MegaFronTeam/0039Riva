@@ -5,6 +5,7 @@
 	// --sTPB: #{rem()}; 
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
+	padding-bottom: rem(48);
 	
 	
 	&__row{
@@ -13,16 +14,116 @@
 
 	}
 	.section-title{
-		
+		h1 {
+			font-weight: $font-weight-semibold;
+		}
+	}
+	&__slider-wrapper {
+		position: relative;
 	}
 	&__col{
 
 	}
-	&__item{
-
+	&__arrows {
+		.swiper-button-prev {
+			margin-left: rem(-40px);
+			&::after {
+				left: 47%;
+			}
+		}
+		.swiper-button-next {
+			margin-right: rem(-40px);
+			&::after {
+				left: 53%;
+			}
+		}
+		div {
+			background: $white;
+			border-radius: 100%;
+			filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06)) drop-shadow(0px 4px 6px rgba(192, 192, 192, 0.10));
+			width: rem(50);
+			height: rem(50);
+			@include media-breakpoint-up(md) {
+				width: rem(60);
+				height: rem(60);
+			}
+			&::after {
+				color: $primary;
+				font-size: rem(32);
+				z-index: 1;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				@include mt;
+			}
+		}
+		.swiper-button-disabled {
+			opacity: 1;
+			&::after {
+				font-size: rem(24);
+				color: $secondary;
+			}
+		}
 	}
-	&__slide{
+	.swiper-pagination {
+		margin-bottom: rem(-40);
+	}
+	.swiper-pagination-bullet {
+		width: rem(36);
+		height: rem(4);
+		border-radius: rem(100px);
+		margin: 0 rem(3) !important;
+	}
+	&__item{
 		height: auto;
+		border-radius: $border-radius;
+		overflow: hidden;
+		min-height: 357px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		@include media-breakpoint-up(md) {
+			min-height: 457px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 33.3%;
+			background: linear-gradient(90deg, $dark 15.42%, rgba(19, 23, 33, 0.00) 100%);
+			backdrop-filter: blur(2px);
+			z-index: 0;
+		}
+	}
+	&__row {
+		position: relative;
+		z-index: 1;
+	}
+	&__offer {
+		color: $white;
+		margin-bottom: rem(33);
+		font-size: rem(27);
+		font-weight: $font-weight-semibold;
+		line-height: normal;
+		@include media-breakpoint-up(md) {
+			font-size: rem(32);
+		}
+	}
+	&__btn {
+		border-radius: $border-radius;
+		background: $primary;
+		color: $white;
+		padding: rem(12) rem(23);
+		display: inline-block;
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		font-size: rem(12);
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+			padding: rem(15) rem(26);
+		}
 	}
 
 	@include media-breakpoint-up(xxl) {}

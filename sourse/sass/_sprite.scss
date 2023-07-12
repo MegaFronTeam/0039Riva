@@ -12,25 +12,70 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(22 / var(--h) *1em );
 }
+.icon-cart {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
 .icon-check {
 	--h: 27;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(27 / var(--h) *1em );
 }
 .icon-fb {
-	--h: 24;
+	--h: 31;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(24 / var(--h) *1em );
+	width: calc(31 / var(--h) *1em );
+}
+.icon-heart {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
 }
 .icon-instagram {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
-.icon-telegram {
-	--h: 16;
+.icon-logo {
+	--h: 47;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(16 / var(--h) *1em );
+	width: calc(111 / var(--h) *1em );
+}
+.icon-mail {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-marker {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-ok {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon-pinterest {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon-star {
+	--h: 14;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(14 / var(--h) *1em );
+}
+.icon-stats {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
+.icon-telegram {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
 }
 .icon-user {
 	--h: 28;
@@ -43,12 +88,12 @@
 	width: calc(16 / var(--h) *1em );
 }
 .icon-vk {
-	--h: 24;
+	--h: 31;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(24 / var(--h) *1em );
+	width: calc(31 / var(--h) *1em );
 }
 .icon-whatsapp {
-	--h: 16;
+	--h: 31;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(16 / var(--h) *1em );
+	width: calc(31 / var(--h) *1em );
 }

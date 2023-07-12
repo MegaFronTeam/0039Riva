@@ -2,8 +2,48 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
+			+e.row.row
+				.col.col-8
+					+e.items.d-flex.align-items-center
+						+e.item.d-flex.align-items-center 
+							+img('img/marker.svg')
+							+e.item-text Москва, Бизнес-центр «Тушино» Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
+						+e.item.d-flex.align-items-center 
+							+img('img/mail.svg')
+							+e.item-text info@riva.ru
+				.col.col-4
+					+e.top-right.d-flex.align-items-center
+						+e.UL.top-social.d-flex 
+							+e.LI.top-social-item
+								a(href="#")
+									+img('img/telegram.svg')
+							+e.LI.top-social-item
+								a(href="#")
+									+img('img/whatsapp.svg')
+						+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
+						+e(href="#").btn Заказать звонок
 				
 			+e.row.row
+				.col-12
+					+e.center.d-flex.align-items-center.justify-content-between
+						+e(href="#").logo
+							+img('img/logo.svg')
+						+form-wrap
+							+input("Поиск товаров", 'text')
+							+e.btn.btn(type="submit")
+								+img('img/search.svg')
+						+e.dropdown 
+							+e.dropdown-current.d-flex.align-items-center
+								span О компании
+								+img('img/dropdown-arrow.svg')
+						+e.controls 
+							mixin item(t, i, c)
+								+e(href="#").controls-item.text-center.d-inline-block
+									+icon(i)
+									div!= t
+									span!= c
+							+item('Кабинет', `user`)
+							+item('Сравнение', `stats`, 0)
+							+item('Избранное', `heart`, 0)
+							+item('Корзина', `cart`, 0)
 	// end topLine

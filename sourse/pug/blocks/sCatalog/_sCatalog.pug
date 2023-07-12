@@ -15,9 +15,21 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
+			+e.top.section-title.text-center
+				+e.UL.top-tabs 
+					+e.LI.top-tab.active 
+						h2 Скидки
+					+e.LI.top-tab 
+						h2 Новинки
+					+e.LI.top-tab 
+						h2 В наличии
+				+e.UL.bottom-tabs 
+					+e.LI.bottom-tab.active Все
+					+e.LI.bottom-tab Офисная мебель для персонала
+					+e.LI.bottom-tab Мебель в кабинет руководителя
+					+e.LI.bottom-tab Домашний офис
+					+e.LI.bottom-tab Столы для переговоров
+					+e.LI.bottom-tab еще
 
 			+e.row.row
 				- const wrapClass="col-3"

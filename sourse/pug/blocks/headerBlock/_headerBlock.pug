@@ -3,8 +3,24 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+				h1 Офисная мебель Riva
 
-			.row
+			+e.slider-wrapper
+				+e.slider--js.default-slider.swiper
+					.swiper-wrapper
+						mixin slide(i, t)
+							.swiper-slide
+								+e.item.bg-wrap
+									+img(`img/headerBlock-${i}.jpg`,'bg').picture-bg
+									+e.row.row 
+										+e.col.offset-1.col-5.col-md-3
+											+e.H2.offer!= t
+											+e.A.btn(href="#") В каталог
+						+slide(`1`,`Кабинеты руководителя`)
+						+slide(`1`,`Кабинеты руководителя`)
+				+e.arrows
+					.swiper-button-next
+					.swiper-button-prev
+				.swiper-pagination
 						
 	// end headerBlock

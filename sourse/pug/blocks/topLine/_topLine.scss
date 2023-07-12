@@ -10,18 +10,137 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
 	&__col{
 
 	}
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
+
+	&__items {}
+	&__item {
+		margin-right: rem(32);
 	}
+	&__item-text {
+		color: $secondary;
+		margin-left: rem(9);
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+	}
+	&__top-right {
+		float: right;
+	}
+	&__top-social {
+		margin-bottom: 0;
+		img {
+			width: rem(20);
+			height: rem(20);
+		}
+	}
+	&__top-social-item {
+		list-style: none;
+		margin-right: rem(7);
+	}
+	&__phone {
+		margin-left: rem(4);
+		color: $body-color;
+		font-size: rem(16);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		margin-right: rem(19);
+	}
+	&__btn {
+		font-size: rem(14);
+		color: $body-color;
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		padding: rem(7) rem(18);
+		border-radius: $border-radius;
+		border: 1px solid $primary;
+		@include mt;
+		&:hover {
+			background: $primary;
+			color: $white;
+		}
+	}
+	&__center {
+		margin-top: rem(21);
+	}
+	&__logo {
+		// margin-right: rem(31);
+	}
+	.form-wrap {
+		form {
+			display: flex;
+		}
+	}
+	.form-wrap__input-wrap {
+	}
+	.form-wrap__input {
+		padding: rem(10) rem(15);
+		border: none;
+		background: #F3F3F4;
+		outline: none;
+		font-weight: $font-weight-semibold;
+		font-size: rem(14);
+		line-height: 150%;
+		border-radius: rem(6) 0 0 rem(6);
+		width: rem(600);
+	}
+	.form-wrap__btn {
+		background: #F3F3F4;
+		border-radius: 0 rem(6) rem(6) 0;
+	}
+	&__dropdown {}
+	&__dropdown-current {
+		color: $primary;
+		font-size: rem(16);
+		line-height: 150%;
+		font-weight: $font-weight-semibold;
+	}
+	&__controls {}
+	&__controls-item {
+		position: relative;
+		margin-left: rem(21);
+		color: $body-color;
+		@include mt;
+		&:hover {
+			color: $primary;
+			div {
+				color: $primary;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			span {
+				right: rem(4);
+			}
+		}
+		svg {
+			font-size: rem(28);
+		}
+		div {
+			color: $secondary;
+			font-size: rem(12);
+			font-weight: $font-weight-semibold;
+			line-height: 150%;
+			margin-top: rem(1);
+			@include mt;
+		}
+		span {
+			position: absolute;
+			top: 0;
+			right: rem(11);
+			font-size: rem(12);
+			font-weight: $font-weight-semibold;
+			line-height: 150%;
+		}
+	}
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

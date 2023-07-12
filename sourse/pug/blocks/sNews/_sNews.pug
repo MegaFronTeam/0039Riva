@@ -6,7 +6,7 @@ mixin sNews(data)
 				h2 Новости
 				
 			+e.row.row
-				+e.col.col-lg-6.col-md-6.col-12
+				+e.col.col-lg-6.col-md-12.col-12
 					+e.big(href="#")
 						+e.big-left
 							+e.H3.big-offer Комплект для главного лица компании
@@ -14,7 +14,7 @@ mixin sNews(data)
 						+e.big-img.bg-wrap
 							+img(`img/news-1.jpg`,'bg').picture-bg
 				mixin item(i, t, d) 
-					+e.col.col-lg-3.col-md-3.col-12
+					+e.col.col-lg-3.col-md-6.col-12
 						+e.item(href="#")
 							+e.item-img.bg-wrap
 								+img(`img/news-${i}.jpg`,'bg').picture-bg

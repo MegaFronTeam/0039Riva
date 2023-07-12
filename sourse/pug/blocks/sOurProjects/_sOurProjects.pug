@@ -3,7 +3,16 @@ mixin sOurProjects(data)
 	+b.SECTION.sOurProjects.section#sOurProjects&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sOurProjects
+				h2 Наши проекты
 				
 			+e.row.row
+				+e.slider-wrapper
+					+e.slider--js.default-slider.swiper
+						.swiper-wrapper
+							//- mixin slide(i, t)
+							//- +e.slide.swiper-slide
+								+e.item.bg-wrap
+									//- +img(`img/headerBlock-${i}.jpg`,'bg').picture-bg
+									//- +e.col.offset-1.col-5.col-md-3
+										//- +e.H2.offer!= t
 	// end sOurProjects

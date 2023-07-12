@@ -1,5 +1,5 @@
 .footer {
-		
+	padding-bottom: rem(56);
 	margin-top: auto;
 // --sPT: #{rem()};
 	// --sPB: #{rem()};
@@ -18,8 +18,138 @@
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
+	&__subscribe {
+		border-radius: $border-radius;
+		background: $white;
+		box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.12);
+		padding: rem(18);
+		margin-bottom: rem(48);
+	}
+	&__subscribe-offer {
+		margin-bottom: 0;
+		font-size: rem(20);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		margin-right: rem(66);
+	}
+	.form-wrap {
+		form {
+			display: flex;
+		}
+	}
+	.form-wrap__input-wrap {
+		margin-right: rem(11);
+		min-width: rem(301);
+		input {
+			padding: rem(12) rem(20);
+			background: #F3F3F4;
+			border: none;
+			font-size: rem(14);
+			font-weight: $font-weight-semibold;
+			line-height: 150%;
+		}
+	}
+	.form-wrap__btn {
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		background: transparent;
+		color: $body-color;
+		padding: 0 rem(23);
+	}
+	&__left {}
+	&__phone {
+		font-size: rem(20);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		display: block;
+		color: $body-color;
+		margin-bottom: rem(6);
+	}
+	&__phone-btn {
+		border-radius: $border-radius;
+		border: 1px solid $primary;
+		color: $body-color;
+		display: inline-block;
+		padding: rem(9) rem(26);
+		margin-bottom: rem(6);
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		@include mt;
+		&:hover {
+			background: $primary;
+			color: $white;
+		}
+	}
+	&__text {
+		margin-bottom: rem(40);
+		color: $secondary;
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__offer {
+		margin-bottom: rem(2);
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+	}
+	&__right {
+		float: right;
+		height: 100%;
+	}
+	&__navs {}
+	&__nav {
+		margin-left: rem(43);
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	&__nav-item {
+		list-style: none;
+		a {
+			color: $body-color;
+			font-size: rem(14);
+			line-height: 150%;
+			font-weight: $font-weight-semibold;
+			@include mt;
+			&:hover {
+				color: $secondary;
+			}
+		}
+	}
+	&__bottom {}
+	&__bottom-item {
+		margin-bottom: rem(21);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__bottom-item-offer {
+		color: $secondary;
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+	}
+	&__social-ul {
+		margin-bottom: 0;
+		margin-left: rem(52);
+	}
+	&__social-li {
+		list-style: none;
+		margin-right: rem(9);
+	}
+	&__payment-ul {
+		margin-bottom: 0;
+		margin-left: rem(30);
+	}
+	&__payment-li {
+		list-style: none;
+		margin-right: rem(24);
 	}
 // 
 @include media-breakpoint-up(xl) {}
