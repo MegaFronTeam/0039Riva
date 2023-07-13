@@ -121,6 +121,8 @@
 		}
 		svg {
 			font-size: rem(28);
+			fill:none;
+			stroke: currentColor;
 		}
 		div {
 			color: $secondary;
