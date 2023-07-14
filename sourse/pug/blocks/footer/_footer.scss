@@ -9,11 +9,49 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+	.roww {
+		margin-bottom: rem(46);
+	}
+	.menu {
+		a {
+			padding: rem(10) rem(7.5);
+			font-size: rem(14);
+			line-height: 150%;
+			font-weight: $font-weight-semibold;
+			color: $body-color;
+		}
+	}
 	.section-title{
 		
 	}
 	&__col{
 
+	}
+	.logo-col {
+		padding-right: rem(10);
+	}
+	.beware-col {
+		padding-left: rem(3);
+	}
+	&__beware {
+		span {
+			padding-left: rem(6);
+			color: $primary;
+			font-size: rem(14);
+			font-weight: $font-weight-semibold;
+			line-height: 150%;
+		}
+	}
+	.menu-col {
+		padding-right: 0;
+	}
+	.menu-item {
+		a {
+			@include mt;
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 	&__item{
 
@@ -57,6 +95,9 @@
 		color: $body-color;
 		padding: 0 rem(23);
 	}
+
+
+
 	&__left {}
 	&__phone {
 		font-size: rem(20);

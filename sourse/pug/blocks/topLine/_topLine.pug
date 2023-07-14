@@ -2,8 +2,8 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+e.row.row
-				.col.col-8
+			+e.row.row.align-items-center
+				.col.col-md-8.col-9
 					+e.items.d-flex.align-items-center
 						+e.item.d-flex.align-items-center 
 							+img('img/marker.svg')
@@ -11,7 +11,7 @@ mixin topLine()
 						+e.item.d-flex.align-items-center 
 							+img('img/mail.svg')
 							+e.item-text info@riva.ru
-				.col.col-4
+				.col.col-md-4.col-3
 					+e.top-right.d-flex.align-items-center
 						+e.UL.top-social.d-flex 
 							+e.LI.top-social-item
@@ -22,7 +22,6 @@ mixin topLine()
 									+img('img/whatsapp.svg')
 						+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
 						+e(href="#").btn Заказать звонок
-				
 			+e.row.row
 				.col-12
 					+e.center.d-flex.align-items-center.justify-content-between

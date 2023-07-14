@@ -9,10 +9,14 @@ mixin sOurProjects(data)
 				+e.slider-wrapper
 					+e.slider--js.default-slider.swiper
 						.swiper-wrapper
-							//- mixin slide(i, t)
-							//- +e.slide.swiper-slide
-								+e.item.bg-wrap
-									//- +img(`img/headerBlock-${i}.jpg`,'bg').picture-bg
-									//- +e.col.offset-1.col-5.col-md-3
-										//- +e.H2.offer!= t
+							-for(let i = 0; i<2; i++) 
+								+e.slide.swiper-slide
+									+project('Объединённая компания по переработке молока FUDUNION– буйство красок', 'img/projects-1.jpg', 'img/projects-2.jpg', 'img/projects-3.jpg')
+								+e.slide.swiper-slide
+									+project('Частная клиника - кабинет главврача', 'img/projects-2.jpg', 'img/projects-3.jpg', 'img/projects-1.jpg')
+								+e.slide.swiper-slide
+									+project('Компания «Меркатор»','img/projects-3.jpg', 'img/projects-1.jpg', 'img/projects-2.jpg')
+					+e.arrows
+						.swiper-button-next
+						.swiper-button-prev
 	// end sOurProjects

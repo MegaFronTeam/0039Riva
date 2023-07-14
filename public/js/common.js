@@ -437,14 +437,6 @@ function eventHandler() {
 
 	const headerBlockSwiper = new Swiper('.headerBlock__slider--js', {
 		slidesPerView: 1,
-		// ...defaultSl,
-		// slidesPerView: 'auto',
-		// freeMode: true,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		// loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -453,11 +445,37 @@ function eventHandler() {
 			el: ' .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
 		},
 	});
+
+	const ourProjectsSwiper = new Swiper('.sOurProjects__slider--js', {
+		spaceBetween: 30,
+		slidesPerView: 3,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const catalogCards = $(".project");
+	for (const card of catalogCards) {
+		
+		const cardtSwiper = new Swiper($(card).find('.project__img-slider--js'), {
+			slidesPerView: 1,
+			spaceBetween: 2,
+			pagination: {
+				el: card.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+		//  при наведении меняется картинки на слайдере 
+		$(card).on('mouseenter', '.swiper-pagination-bullet', function() {
+			// $( this ).trigger( "click" );
+			cardtSwiper.slideTo($(this).index()) ;
+			// cardtSwiper.pagination.bullets[2]
+		});
+	}
 
 	// modal window
 

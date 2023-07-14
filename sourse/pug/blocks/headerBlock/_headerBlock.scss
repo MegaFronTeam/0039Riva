@@ -6,6 +6,7 @@
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	padding-bottom: rem(48);
+	padding-top: rem(36);
 	
 	
 	&__row{
@@ -14,6 +15,7 @@
 
 	}
 	.section-title{
+		margin-bottom: rem(20);
 		h1 {
 			font-weight: $font-weight-semibold;
 		}

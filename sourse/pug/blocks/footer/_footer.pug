@@ -7,9 +7,53 @@ mixin footer()
 					+form-wrap
 						+input("Email",'text')
 						+e.btn.btn.btn-primary(type="submit") Подписаться
+			
+			.row.roww.d-flex.align-items-center
+				+e.col.logo-col.col-auto
+					+e.logo 
+						+img('img/logo.svg')
+				.col-lg-auto.col
+					+b.catalog-block
+						+e.toggle
+							+e.gumburger
+								span
+							| Каталог
+						ul.main-ul
+							li.close-ul.d-lg-none.text-body 
+								.catalog-block__gumburger.on
+									span
+							
+								| Закрыть
+							mixin item(i,t)
+								li.has-children
+									a(href="#")
+										!=t
+									//- .dropdown-menu-second
+									ul
+										li
+											a.dropdown-item(href='catalog/plita/oblicovochnye-plity') Облицовочные плиты
+										li
+											a.dropdown-item(href='catalog/plita/plita-moshheniya') Плиты мощения
+										li
+											a.dropdown-item(href='catalog/taktilnye-plity') Тактильные плиты
+							+item(1,`Облицовочные плиты`)
+							+item(2,`Плиты мощения`)
+							+item(3,`Брусчатка`)
+							+item(4,`Ступени`)
+							+item(5,`Бордюры`)
+							+item(6,`Пандусы`)
+							+item(7,`Архитектурные изделия`)
+				.col-lg.order-lg-0.order-last.menu-col
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							+mnu()
+				+e.col.beware-col.col-auto
+					+e.beware.d-flex.align-items-center
+						+img('img/beware.svg')
+						span Остерегайтесь подделок
+			
 			.row
 				.col-12
-					
 				+e.col.col-5
 					+e.left
 						+e.phone(href="tel:+7 (495) 642-70-97") +7 (495) 642-70-97
