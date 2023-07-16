@@ -52,15 +52,13 @@ mixin parts(elem)
 	div(id=`${elem}Wrap`)
 
 mixin project(title='Цветной четырехсекционный шкаф для одежды', ...imgs)
-	+b.project
-		+e.content
-			a(href="#") 
-				+e.img-slider--js
-					.swiper-wrapper
-						each img in imgs
-							+e.slide.swiper-slide
-								+e.img-wrap
-									.bg-wrap
-										+img(img)
-					.swiper-pagination
-			+e.title!= title 
+	+b.project-item(href="#")
+		+b.card-slider
+			+e.DIV.img-slider.swiper.slider-card-js
+				.swiper-wrapper
+					each img in imgs
+						+e.DIV.slide.swiper-slide
+							+e.img-wrap.bg-wrap
+								+img(img,'bg').picture-bg
+			.swiper-pagination
+		+e.title!= title 

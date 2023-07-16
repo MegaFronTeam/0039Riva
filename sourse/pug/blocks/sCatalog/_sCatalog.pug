@@ -1,16 +1,65 @@
-mixin product-item(i, t, p ,pr)
+mixin product-item(i,t, p ,pr)
 	+b.ARTICLE.product-item
 		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
+			+b.card-slider
+				+e.DIV.img-slider.swiper.slider-card-js
+					.swiper-wrapper
+						+e.DIV.slide.swiper-slide
+							+e.img-wrap
+								.img-wrap-center
+									+img(`img/prod-${i}.jpg`).res-i
+						- for (var x =2; x < 5; x++)
+							+e.DIV.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img(`img/prod-${x+1}.jpg`)
+				.swiper-pagination
 		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
+			.row
+				+e.price.col-auto 12 000 ₽
+				.col-auto
+					+e.price--old 12 000 ₽
+			+e.text
+				| Код:  SK.SRT-200 (R)
+				br
+				| Мебель в кабинет руководителя
+			+e.title
+				a(href="#")  Стол руководителя с опорной тумбой, правый
+			+e.footer
+				.row
+					if block
+						block
+					else
+						.col-auto
+							+e.btn(type="button").btn.btn-outline-primary
+								+icon("cart")
+								| В корзину
+						+e.status.col
+							+icon("check")
+							| В&nbsp;наличии ~ 11&nbsp;шт.
+			+e.list
+				table
+					tr
+						th Длина
 
+						th Ширина
+
+						th Высота
+						th Материал
+					tr
+						td 180 см
+						td 90 см
+						td  75 см
+						td ЛДСП
+	// /.product-item
+mixin cataloglist()
+	+e.UL.bottom-tabs 
+					+e.LI.bottom-tab.active Все
+					+e.LI.bottom-tab Офисная мебель для персонала
+					+e.LI.bottom-tab Мебель в кабинет руководителя
+					+e.LI.bottom-tab Домашний офис
+					+e.LI.bottom-tab Столы для переговоров
+					+e.LI.bottom-tab еще
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
@@ -23,31 +72,73 @@ mixin sCatalog(data)
 						h2 Новинки
 					+e.LI.top-tab 
 						h2 В наличии
-				+e.UL.bottom-tabs 
-					+e.LI.bottom-tab.active Все
-					+e.LI.bottom-tab Офисная мебель для персонала
-					+e.LI.bottom-tab Мебель в кабинет руководителя
-					+e.LI.bottom-tab Домашний офис
-					+e.LI.bottom-tab Столы для переговоров
-					+e.LI.bottom-tab еще
-
+				+cataloglist()
 			+e.row.row
-				- const wrapClass="col-3"
+				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
 				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
+					+product-item(`1`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
+					+product-item(`2`,``,``,``)
+						.col-auto
+							+addblock()
+						+e.status.col
+							+icon("check")
+							| В&nbsp;наличии ~ 11&nbsp;шт.
 				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
+					+product-item(`3`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
+					+product-item(`4`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
+					+product-item(`5`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
+					+product-item(`6`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
+					+product-item(`7`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+					+product-item(`8`,``,``,``)
+						.col-auto
+							+e.btn(type="button").btn.btn-outline-primary
+								+icon("cart")
+								| В корзину
+						+e.status.col Нет в наличии
+			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
+			a.btn.btn-link.text-light(href="#").w-100.mt-2 Все товары со скидкой
+	// end sCatalog
+	
+mixin sCatalog2(data)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+e.top.section-title.text-center
+				+cataloglist()
+			+e.row.row
+				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
+				+e.col(class= wrapClass)
+					+product-item(`1`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`2`,``,``,``)
+						.col-auto
+							+addblock()
+						+e.status.col
+							+icon("check")
+							| В&nbsp;наличии ~ 11&nbsp;шт.
+				+e.col(class= wrapClass)
+					+product-item(`3`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`4`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`5`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`6`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`7`,``,``,``)
+				+e.col(class= wrapClass)
+					+product-item(`8`,``,``,``)
+						.col-auto
+							+e.btn(type="button").btn.btn-outline-primary
+								+icon("cart")
+								| В корзину
+						+e.status.col Нет в наличии
+			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
+			a.btn.btn-link.text-light(href="#").w-100.mt-2 Все товары со скидкой
 	// end sCatalog

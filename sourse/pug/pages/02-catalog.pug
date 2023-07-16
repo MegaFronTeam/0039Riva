@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sOurProjects/_sOurProjects.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Офисная мебель Riva','Каталог')
+
+		.row
+			.col-xxl-2.col-3 
+			.col-xxl-10.col-6
+				+sCatalog2
+		//- +sCategories
+		//- +sOurProjects
+		//- +sRews
+		//- +sNews
+		+sForm()
+		
+	+parts('footer')
+      
+
+
+

@@ -48,7 +48,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -70,35 +70,44 @@ $output-bourbon-deprecation-warnings: false;
 // Utilities
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+.breadcrumb-item+.breadcrumb-item:before{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10' fill='none'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23A1A2A6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  position: relative;
+  top: em(1);
+}
+.breadcrumb {
+  a{
+  &:not(:hover){
+    color: var(--bs-body-color);
+  }
+  }
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
+}
+@import "./node_modules/bootstrap/scss/pagination";
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
-// @import "./node_modules/bootstrap/scss/pagination";
+.pagination-wrapper ul {
+	@extend .pagination;
+}
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
+.pagination-wrapper li .page-numbers {
+	@extend .page-link;
+}
 
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper li {
+	@extend .page-item;
 
-// .pagination-wrapper li {
-// 	@extend .page-item;
-
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
-// }
+	.current {
+		z-index: 1;
+		// color: $pagination-active-color;
+		// background-color: $pagination-active-bg;
+		// border-color: $pagination-active-border-color;
+	}
+}
 @import "root";
 @import "base";
 

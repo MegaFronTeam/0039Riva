@@ -18,9 +18,19 @@
 	width: calc(28 / var(--h) *1em );
 }
 .icon-check {
-	--h: 27;
+	--h: 12;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(27 / var(--h) *1em );
+	width: calc(12 / var(--h) *1em );
+}
+.icon-chevron-left {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-chevron-right {
+	--h: 32;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(32 / var(--h) *1em );
 }
 .icon-fb {
 	--h: 31;

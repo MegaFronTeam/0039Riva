@@ -65,17 +65,21 @@
 		}
 	}
 	&__center {
+		@include roww(30px);
 		margin-top: rem(21);
 	}
 	&__logo {
 		// margin-right: rem(31);
 	}
 	.form-wrap {
+		flex-grow: 1;
 		form {
+			width: 100%;
 			display: flex;
 		}
 	}
 	.form-wrap__input-wrap {
+		flex-grow: 1;
 	}
 	.form-wrap__input {
 		padding: rem(10) rem(15);
@@ -86,7 +90,7 @@
 		font-size: rem(14);
 		line-height: 150%;
 		border-radius: rem(6) 0 0 rem(6);
-		width: rem(600);
+		// width: rem(600);
 	}
 	.form-wrap__btn {
 		background: #F3F3F4;

@@ -13,61 +13,18 @@
 	}
 	&__slider-wrapper {
 		position: relative;
-	}
-	&__arrows {
-		.swiper-button-prev {
-			margin-left: rem(-40px);
-			&::after {
-				left: 47%;
-			}
-		}
-		.swiper-button-next {
-			margin-right: rem(-40px);
-			&::after {
-				left: 53%;
-			}
-		}
-		div {
-			background: $white;
-			border-radius: 100%;
-			filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06)) drop-shadow(0px 4px 6px rgba(192, 192, 192, 0.10));
-			width: rem(50);
-			height: rem(50);
-			@include media-breakpoint-up(md) {
-				width: rem(60);
-				height: rem(60);
-			}
-			&::after {
-				color: $primary;
-				font-size: rem(32);
-				z-index: 1;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				@include mt;
-			}
-		}
-		.swiper-button-disabled {
-			opacity: 1;
-			&::after {
-				font-size: rem(24);
-				color: $secondary;
-			}
-		}
-	}
+	} 
 	&__col{
 
 	}
 	&__item{
 
 	}
-	&__title {
-		font-weight: $font-weight-semibold;
-		font-size: rem(14);
-		line-height: 150%;
+	 
+	.swiper-button-hand{
+		bottom: auto;
+		top: calc(var(--project-card-h) * 1px / 2 - var(--swiperArrowSize) / 2 );
 	}
-
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

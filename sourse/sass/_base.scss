@@ -311,8 +311,7 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	background-color: var(--swiperBgDef); 
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -326,13 +325,17 @@ ul {
 	user-select: none;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
-		color: var(--swiperColorDefHover);
+		background-color:$primary; 
+		color: #fff;
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(32);
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.5;
+		width: auto;
+		height: 1em;
 	}
 
 	&::after {
@@ -558,4 +561,15 @@ iframe {
 .center-offer {
 	font-weight: 600;
 	margin-bottom: rem(32px);
+}
+
+.arrows-wrap{
+
+}
+
+.btn-outline-primary{
+	--bs-btn-color: var(--bs-btn-color);
+}
+.btn-outline-light{
+	--bs-btn-color: var(--bs-btn-color);
 }
