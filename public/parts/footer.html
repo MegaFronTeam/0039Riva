@@ -2,7 +2,7 @@
 <footer class="footer section">
 	<div class="container">
 		<div class="row"> 
-			<div class="footer__subscribe d-flex align-items-center justify-content-center">
+			<div class="footer__subscribe d-flex align-items-center justify-content-center flex-column flex-lg-row">
 				<h3 class="footer__subscribe-offer">Подпишитесь на рассылку, чтобы узнавать об акциях первым!
 				</h3>
 				<div class="form-wrap">
@@ -10,7 +10,7 @@
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Email"/>
 						</div>
 						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn btn-primary" type="submit">Подписаться
+						<button class="form-wrap__btn btn-outline-primary btn" type="submit">Подписаться
 						</button>
 					</form>
 				</div>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="col-lg-auto col">
-				<div class="catalog-block">
+				<div class="catalog-block d-inline-block">
 					<div class="catalog-block__toggle">
 						<div class="catalog-block__gumburger"><span></span>
 						</div>Каталог
@@ -99,18 +99,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer__col beware-col col-auto">
+			<div class="footer__col beware-col col-12 col-sm-auto">
 				<div class="footer__beware d-flex align-items-center"><img src="img/beware.svg" alt="" loading="lazy"/><span>Остерегайтесь подделок</span>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12"></div>
-			<div class="footer__col col-5">
+			<div class="footer__col col">
 				<div class="footer__left">
 					<a class="footer__phone" href="tel:+7 (495) 642-70-97">+7 (495) 642-70-97
 					</a>
-					<a class="footer__phone-btn" href="#">Заказать звонок
+					<a class="footer__btn btn-outline-primary btn" href="#">Заказать звонок
 					</a>
 					<div class="footer__text">Ежедневно, с 09:00 до 21:00
 					</div>
@@ -122,88 +121,74 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer__col col-6 offset-1">
+			<div class="footer__col col-auto">
 				<div class="footer__right d-flex flex-column float-right justify-content-between">
-					<div class="footer__navs d-flex">
-						<ul class="footer__nav"> 
-							<li class="footer__nav-item"><a href="#">Контакты</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">О компании</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Доставка</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Оплата</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Возврат товара</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Гарантия</a>
-							</li>
-						</ul>
-						<ul class="footer__nav"> 
-							<li class="footer__nav-item"><a href="#">Блог</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Отзывы</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Акции и скидки</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Рассрочка и кредит</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Новые поступления</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Бренды</a>
-							</li>
-						</ul>
-						<ul class="footer__nav"> 
-							<li class="footer__nav-item"><a href="#">Как заказать</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Дизайнерам </a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Оптовикам</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Корпоративным клиентам</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Политика конфиденциальности</a>
-							</li>
-							<li class="footer__nav-item"><a href="#">Публичная оферта</a>
-							</li>
-						</ul>
+					<div class="footer__nav">
+						<nav class="d-flex flex-column flex-sm-row">
+							<ul>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">Возврат товара</a></li>
+								<li><a href="#">Гарантия</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блог</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Акции и скидки</a></li>
+								<li><a href="#">Рассрочка и кредит</a></li>
+								<li><a href="#">Новые поступления</a></li>
+								<li><a href="#">Бренды</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Как заказать</a></li>
+								<li><a href="#">Дизайнерам </a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Корпоративным клиентам</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Публичная оферта</a></li>
+							</ul>
+						</nav>
 					</div>
 					<div class="footer__bottom">
-						<div class="footer__bottom-item d-flex align-items-center">
+						<div class="footer__bottom-item d-flex align-items-left align-items-sm-center flex-column flex-sm-row">
 							<div class="footer__bottom-item-offer">Давайте дружить
 							</div>
-							<ul class="footer__social-ul d-flex">
-								<li class="footer__social-li"> <a href="#"><img src="img/vk.svg" alt="" loading="lazy"/></a>
-								</li>
-								<li class="footer__social-li"> <a href="#"><img src="img/ok.svg" alt="" loading="lazy"/></a>
-								</li>
-								<li class="footer__social-li"> <a href="#"><img src="img/pinterest.svg" alt="" loading="lazy"/></a>
-								</li>
-								<li class="footer__social-li"> <a href="#"><img src="img/fb.svg" alt="" loading="lazy"/></a>
-								</li>
-								<li class="footer__social-li"> <a href="#"><img src="img/telegram.svg" alt="" loading="lazy"/></a>
-								</li>
-								<li class="footer__social-li"> <a href="#"><img src="img/whatsapp.svg" alt="" loading="lazy"/></a>
-								</li>
-							</ul>
+							<div class="footer__soc-wrapper">
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank"><img src="img/vk.svg" alt="" loading="lazy"/>
+									</a>
+									<a class="soc__item" href="#" target="_blank"><img src="img/ok.svg" alt="" loading="lazy"/>
+									</a>
+									<a class="soc__item" href="#" target="_blank"><img src="img/pinterest.svg" alt="" loading="lazy"/>
+									</a>
+									<a class="soc__item" href="#" target="_blank"><img src="img/fb.svg" alt="" loading="lazy"/>
+									</a>
+									<a class="soc__item" href="#" target="_blank"><img src="img/telegram.svg" alt="" loading="lazy"/>
+									</a>
+									<a class="soc__item" href="#" target="_blank"><img src="img/whatsapp.svg" alt="" loading="lazy"/>
+									</a>
+								</div>
+							</div>
 						</div>
-						<div class="footer__bottom-item d-flex align-items-center">
+						<div class="footer__bottom-item d-flex align-items-left align-items-sm-center flex-column flex-sm-row">
 							<div class="footer__bottom-item-offer">Принимаем к оплате
 							</div>
-							<ul class="footer__payment-ul d-flex"> 
-								<li class="footer__payment-li"> <a href="#"><img src="img/visa.svg" alt="" loading="lazy"/></a>
+							<ul class="footer__payment-ul d-flex flex-wrap flex-sm-nowrap">
+								<li class="footer__payment-li"><img src="img/visa.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/mastercard.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/mastercard.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/maestro.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/maestro.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/mir.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/mir.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/wallet.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/wallet.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/webmoney.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/webmoney.svg" alt="" loading="lazy"/>
 								</li>
-								<li class="footer__payment-li"> <a href="#"><img src="img/qiwi.svg" alt="" loading="lazy"/></a>
+								<li class="footer__payment-li"><img src="img/qiwi.svg" alt="" loading="lazy"/>
 								</li>
 							</ul>
 						</div>

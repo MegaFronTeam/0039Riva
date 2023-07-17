@@ -5,7 +5,7 @@
 	<div class="topLine section" id="topLine">
 		<div class="container">
 			<div class="topLine__row row align-items-center">
-				<div class="col col-md-8 col-9">
+				<div class="col-auto col-lg d-none d-sm-flex">
 					<div class="topLine__items d-flex align-items-center">
 						<div class="topLine__item d-flex align-items-center"> <img src="img/marker.svg" alt="" loading="lazy"/>
 							<div class="topLine__item-text">Москва, Бизнес-центр «Тушино» Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
@@ -17,13 +17,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col col-md-4 col-3">
+				<div class="col-auto d-none d-lg-flex">
 					<div class="topLine__top-right d-flex align-items-center">
-						<ul class="topLine__top-social d-flex"> 
-							<li class="topLine__top-social-item"><a href="#"><img src="img/telegram.svg" alt="" loading="lazy"/></a>
-							</li>
-							<li class="topLine__top-social-item"><a href="#"><img src="img/whatsapp.svg" alt="" loading="lazy"/></a>
-							</li>
+						<ul class="topLine__top-social d-flex"> <li>
+							<a class="topLine__item" href="#" target="_blank"><img src="img/telegram.svg" alt="" loading="lazy"/>
+							</a></li><li>
+							<a class="topLine__item" href="#" target="_blank"><img src="img/whatsapp.svg" alt="" loading="lazy"/>
+							</a></li>
 						</ul>
 						<a class="topLine__phone" href="tel:+7 (495) 642-70-97">+7 (495) 642-70-97
 						</a>
@@ -32,51 +32,47 @@
 					</div>
 				</div>
 			</div>
-			<div class="topLine__row row">
-				<div class="col-12">
-					<div class="topLine__center d-flex align-items-center justify-content-between">
-						<a class="topLine__logo" href="#"><img src="img/logo.svg" alt="" loading="lazy"/>
-						</a>
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск товаров"/>
-								</div>
-								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn btn" type="submit"><img src="img/search.svg" alt="" loading="lazy"/>
-								</button>
-							</form>
+			<div class="topLine__bottom row">
+				<a class="topLine__logo col-lg-auto col" href="#"><img src="img/logo.svg" alt="" loading="lazy"/>
+				</a>
+				<div class="form-wrap col-lg order-lg-0 order-first">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск товаров"/>
 						</div>
-						<div class="topLine__dropdown"> 
-							<div class="topLine__dropdown-current d-flex align-items-center"><span>О компании</span><img src="img/dropdown-arrow.svg" alt="" loading="lazy"/>
-							</div>
-						</div>
-						<div class="topLine__controls"> 
-							<a class="topLine__controls-item text-center d-inline-block" href="#">
-								<svg class="icon icon-user ">
-									<use xlink:href="img/svg/sprite.svg#user"></use>
-								</svg>
-								<div>Кабинет</div><span></span>
-							</a>
-							<a class="topLine__controls-item text-center d-inline-block" href="#">
-								<svg class="icon icon-stats ">
-									<use xlink:href="img/svg/sprite.svg#stats"></use>
-								</svg>
-								<div>Сравнение</div><span>0</span>
-							</a>
-							<a class="topLine__controls-item text-center d-inline-block" href="#">
-								<svg class="icon icon-heart ">
-									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg>
-								<div>Избранное</div><span>0</span>
-							</a>
-							<a class="topLine__controls-item text-center d-inline-block" href="#">
-								<svg class="icon icon-cart ">
-									<use xlink:href="img/svg/sprite.svg#cart"></use>
-								</svg>
-								<div>Корзина</div><span>0</span>
-							</a>
-						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit"><img src="img/search.svg" alt="" loading="lazy"/>
+						</button>
+					</form>
+				</div>
+				<div class="topLine__dropdown col-auto d-flex">
+					<div class="topLine__dropdown-current d-flex align-items-center"><span>О компании</span><img src="img/dropdown-arrow.svg" alt="" loading="lazy"/>
 					</div>
+				</div>
+				<div class="topLine__controls col-auto d-flex align-items-center">
+					<a class="topLine__controls-item text-center d-inline-block" href="#">
+						<svg class="icon icon-user ">
+							<use xlink:href="img/svg/sprite.svg#user"></use>
+						</svg>
+						<div>Кабинет</div><span></span>
+					</a>
+					<a class="topLine__controls-item text-center d-inline-block" href="#">
+						<svg class="icon icon-stats ">
+							<use xlink:href="img/svg/sprite.svg#stats"></use>
+						</svg>
+						<div>Сравнение</div><span>0</span>
+					</a>
+					<a class="topLine__controls-item text-center d-inline-block" href="#">
+						<svg class="icon icon-heart ">
+							<use xlink:href="img/svg/sprite.svg#heart"></use>
+						</svg>
+						<div>Избранное</div><span>0</span>
+					</a>
+					<a class="topLine__controls-item text-center d-inline-block" href="#">
+						<svg class="icon icon-cart ">
+							<use xlink:href="img/svg/sprite.svg#cart"></use>
+						</svg>
+						<div>Корзина</div><span>0</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -87,7 +83,7 @@
 		<div class="container">
 			<div class="row roww">
 				<div class="col-lg-auto col">
-					<div class="catalog-block">
+					<div class="catalog-block d-inline-block">
 						<div class="catalog-block__toggle">
 							<div class="catalog-block__gumburger"><span></span>
 							</div>Каталог
@@ -163,10 +159,40 @@
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мягкая мебель</a></li>
 								</ul>
 							</nav>
+							<div class="topLine d-lg-none">
+								<div class="container"> 
+									<div class="mb-2">
+										<div class="top-nav__beware d-flex align-items-center"><img src="img/beware.svg" alt="" loading="lazy"/><span>Остерегайтесь подделок</span>
+										</div>
+									</div>
+									<div class="mb-2">
+										<div class="topLine__item d-flex align-items-center"> <img src="img/mail.svg" alt="" loading="lazy"/>
+											<div class="topLine__item-text">info@riva.ru
+											</div>
+										</div>
+									</div>
+									<div class="mb-2">
+										<ul class="topLine__top-social d-flex"> <li>
+											<a class="topLine__item" href="#" target="_blank"><img src="img/telegram.svg" alt="" loading="lazy"/>
+											</a></li><li>
+											<a class="topLine__item" href="#" target="_blank"><img src="img/whatsapp.svg" alt="" loading="lazy"/>
+											</a></li>
+										</ul>
+									</div>
+									<div class="mb-2">
+										<a class="topLine__phone" href="tel:+7 (495) 642-70-97">+7 (495) 642-70-97
+										</a>
+									</div>
+									<div class="mb-2">
+										<a class="topLine__btn" href="#">Заказать звонок
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="top-nav__col col-auto">
+				<div class="top-nav__col col-auto d-none d-sm-flex">
 					<div class="top-nav__beware d-flex align-items-center"><img src="img/beware.svg" alt="" loading="lazy"/><span>Остерегайтесь подделок</span>
 					</div>
 				</div>

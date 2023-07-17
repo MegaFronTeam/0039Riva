@@ -34,6 +34,10 @@
 		padding-left: rem(3);
 	}
 	&__beware {
+		margin-top: rem(15);
+		@include media-breakpoint-up(sm) {
+			margin-top: 0;
+		}
 		span {
 			padding-left: rem(6);
 			color: $primary;
@@ -68,7 +72,14 @@
 		font-size: rem(20);
 		font-weight: $font-weight-semibold;
 		line-height: 150%;
-		margin-right: rem(66);
+		margin-right: rem(0);
+		margin-bottom: rem(20);
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(66);
+			text-align: left;
+			margin-bottom: 0;
+		}
 	}
 	.form-wrap {
 		form {
@@ -77,26 +88,19 @@
 	}
 	.form-wrap__input-wrap {
 		margin-right: rem(11);
-		min-width: rem(301);
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			min-width: rem(301);
+		}
 		input {
-			padding: rem(12) rem(20);
 			background: #F3F3F4;
 			border: none;
-			font-size: rem(14);
 			font-weight: $font-weight-semibold;
-			line-height: 150%;
 		}
 	}
 	.form-wrap__btn {
-		font-size: rem(14);
-		font-weight: $font-weight-semibold;
-		line-height: 150%;
-		background: transparent;
-		color: $body-color;
 		padding: 0 rem(23);
 	}
-
-
 
 	&__left {}
 	&__phone {
@@ -107,21 +111,9 @@
 		color: $body-color;
 		margin-bottom: rem(6);
 	}
-	&__phone-btn {
-		border-radius: $border-radius;
-		border: 1px solid $primary;
-		color: $body-color;
-		display: inline-block;
-		padding: rem(9) rem(26);
+	&__btn {
+		padding: rem(10) rem(34);
 		margin-bottom: rem(6);
-		font-size: rem(14);
-		font-weight: $font-weight-semibold;
-		line-height: 150%;
-		@include mt;
-		&:hover {
-			background: $primary;
-			color: $white;
-		}
 	}
 	&__text {
 		margin-bottom: rem(40);
@@ -142,24 +134,34 @@
 	&__right {
 		float: right;
 		height: 100%;
-	}
-	&__navs {}
-	&__nav {
-		margin-left: rem(43);
-		&:first-child {
-			margin-left: 0;
+		margin-top: rem(20);
+		float: left;
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+			float: right;
 		}
 	}
-	&__nav-item {
-		list-style: none;
-		a {
-			color: $body-color;
-			font-size: rem(14);
-			line-height: 150%;
-			font-weight: $font-weight-semibold;
-			@include mt;
-			&:hover {
-				color: $secondary;
+	&__nav {
+		ul {
+			margin-left: 0;
+			&:first-child {
+				margin-left: 0;
+			}
+			@include media-breakpoint-up(sm) {
+				margin-left: rem(43);
+			}
+		}
+		li {
+			list-style: none;
+			a {
+				color: $body-color;
+				font-size: rem(14);
+				line-height: 150%;
+				font-weight: $font-weight-semibold;
+				@include mt;
+				&:hover {
+					color: $secondary;
+				}
 			}
 		}
 	}
@@ -175,22 +177,46 @@
 		font-size: rem(14);
 		font-weight: $font-weight-semibold;
 		line-height: 150%;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
 	}
-	&__social-ul {
+	&__soc-wrapper {
 		margin-bottom: 0;
-		margin-left: rem(52);
+		margin-left: 0;
+		@include media-breakpoint-up(sm) {
+			margin-left: rem(52);
+		}
 	}
 	&__social-li {
 		list-style: none;
 		margin-right: rem(9);
+		margin-bottom: rem(10);
+		&:last-child {
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
 	}
 	&__payment-ul {
 		margin-bottom: 0;
-		margin-left: rem(30);
+		margin-left: 0;
+		@include media-breakpoint-up(sm) {
+			margin-left: rem(30);
+		}
 	}
 	&__payment-li {
 		list-style: none;
 		margin-right: rem(24);
+		margin-bottom: rem(10);
+		&:last-child {
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
 	}
 // 
 @include media-breakpoint-up(xl) {}

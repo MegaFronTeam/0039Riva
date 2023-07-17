@@ -22,10 +22,13 @@
 	}
 	a{
 		display: block;
-		padding: rem(10) rem(16.5);
+		padding: rem(10);
 		font-size: rem(14);
 		font-weight: $font-weight-semibold;
 		line-height: 150%;
+		@include media-breakpoint-up(xl) {
+			padding: rem(10) rem(16.5);
+		}
 	}
 }
 
@@ -133,7 +136,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
-		// background: #352D29;
+		background: $body-color;
 		&:not(.active){
 			transform: translate3d(120%, 0,0);
 			--opacity: 0;
@@ -190,6 +193,7 @@
 
 				padding: 10px;
 				display: block;
+				color: $white;
 
 			}
 		}
@@ -197,7 +201,14 @@
 			background: none;
 			padding-left: rem(10);
 			padding-top: 20px;
-
+			&__phone {
+				color: white;
+				display: block;
+				margin-bottom: rem(15);
+			}
+			&__btn {
+				color: white;
+			}
 		}
 	}
 }

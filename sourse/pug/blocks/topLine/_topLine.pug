@@ -3,7 +3,7 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			+e.row.row.align-items-center
-				.col.col-md-8.col-9
+				.col-auto.col-lg.d-none.d-sm-flex
 					+e.items.d-flex.align-items-center
 						+e.item.d-flex.align-items-center 
 							+img('img/marker.svg')
@@ -11,38 +11,32 @@ mixin topLine()
 						+e.item.d-flex.align-items-center 
 							+img('img/mail.svg')
 							+e.item-text info@riva.ru
-				.col.col-md-4.col-3
+				.col-auto.d-none.d-lg-flex
 					+e.top-right.d-flex.align-items-center
 						+e.UL.top-social.d-flex 
-							+e.LI.top-social-item
-								a(href="#")
-									+img('img/telegram.svg')
-							+e.LI.top-social-item
-								a(href="#")
-									+img('img/whatsapp.svg')
+							+item-sos('telegram')
+							+item-sos('whatsapp')
 						+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
 						+e(href="#").btn Заказать звонок
-			+e.row.row
-				.col-12
-					+e.center.d-flex.align-items-center.justify-content-between
-						+e(href="#").logo
-							+img('img/logo.svg')
-						+form-wrap
-							+input("Поиск товаров", 'text')
-							+e.btn.btn(type="submit")
-								+img('img/search.svg')
-						+e.dropdown 
-							+e.dropdown-current.d-flex.align-items-center
-								span О компании
-								+img('img/dropdown-arrow.svg')
-						+e.controls 
-							mixin item(t, i, c)
-								+e(href="#").controls-item.text-center.d-inline-block
-									+icon(i)
-									div!= t
-									span!= c
-							+item('Кабинет', `user`)
-							+item('Сравнение', `stats`, 0)
-							+item('Избранное', `heart`, 0)
-							+item('Корзина', `cart`, 0)
+			+e.bottom.row
+				+e(href="#").logo.col-lg-auto.col
+					+img('img/logo.svg')
+				+form-wrap.col-lg.order-lg-0.order-first
+					+input("Поиск товаров", 'text')
+					+e.btn.btn(type="submit")
+						+img('img/search.svg')
+				+e.dropdown.col-auto.d-flex
+					+e.dropdown-current.d-flex.align-items-center
+						span О компании
+						+img('img/dropdown-arrow.svg')
+				+e.controls.col-auto.d-flex.align-items-center
+					mixin item(t, i, c)
+						+e(href="#").controls-item.text-center.d-inline-block
+							+icon(i)
+							div!= t
+							span!= c
+					+item('Кабинет', `user`)
+					+item('Сравнение', `stats`, 0)
+					+item('Избранное', `heart`, 0)
+					+item('Корзина', `cart`, 0)
 	// end topLine

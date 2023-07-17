@@ -423,6 +423,18 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
+
+	var nav = priorityNav.init({
+		mainNavWrapper: ".sCatalog__bottom-tabs-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
+		mainNav: ".sCatalog__bottom-tabs", // mainnav selector. (must be inline-block)
+		navDropdownLabel: 'еще',
+		navDropdownClassName: "menu__dropdown", // class used for the dropdown.
+		navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
+		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
+		breakPoint: 0,
+		// moved: function () { scrolldrop()}, // executed when item is moved to dropdown
+		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
+	}); 
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
@@ -443,7 +455,7 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
@@ -451,10 +463,19 @@ function eventHandler() {
 
 	const ourProjectsSwiper = new Swiper('.sOurProjects__slider--js', {
 		spaceBetween: 30,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			480: {
+			  slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
 		},
 	});
 	function cardSliders(slider){

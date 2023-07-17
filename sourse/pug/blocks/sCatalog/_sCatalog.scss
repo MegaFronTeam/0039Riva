@@ -40,12 +40,15 @@
 		}
 	}
 	&__bottom-tabs {
-		display: flex;
+		// display: inline-block;
 		list-style: none;
 		justify-content: center;
 		margin-bottom: rem(39);
+		// @include media-breakpoint-up(md) {
+			display: flex;
+		// }
 	}
-	&__bottom-tab {
+	&__bottom-tab, .menu__dropdown-toggle {
 		&.active, &:hover {
 			background: $dark;
 			color: white;
@@ -59,13 +62,9 @@
 		line-height: 150%;
 		margin: 0 rem(4);
 		@include mt;
-		&:last-child {
-			color: $dark;
-			&:hover {
-				background: none;
-				color: $secondary;
-			}
-		}
+		background: none;
+		outline: none;
+		border: none;
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -233,5 +232,70 @@
 	&:hover{
 		z-index: 100;
 		--op: 1; 
+	}
+}
+
+.menu__dropdown{
+	// width: rem(200);
+	background: #FFFFFF;
+	border: 1px solid #DBE4EC; 
+	box-shadow: 0px 5px 15px rgba(45, 55, 65, 0.1);
+
+	border-radius: 5px;
+	// margin-top: 10px;
+	top: rem(40);
+	right: 0;
+	z-index: 200;
+	transform-origin: 0 0;
+	// @include mt;
+	// --s: 1s;
+	&:not(.show) {
+		opacity: 0;
+		// display: none;
+		
+	}
+	&::before {
+
+		content: '';
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 5px;
+		top: -5px;
+		transform: rotate(45deg);
+		background: #FFFFFF;
+		// pointer-events: none;
+		border: 1px solid #DBE4EC;  
+		z-index: 2;
+	}
+	// &::before{ 
+	// 	// width: 17px;
+	// 	// height: 17px;
+	// 	z-index: -1;
+	// }
+ 
+
+	li{
+			z-index: 4;
+		position: relative;
+		list-style: none;
+		&:first-child{
+			border-radius: 5px 5px 0 0;
+			background-color: #fff;
+		}
+
+		&:not(:last-child){
+	
+			border-bottom: 1px solid #DBE4EC;
+		}
+	}
+	a{
+		font-weight: 600;
+		padding: rem(13) rem(14);
+		color: $body-color;
+		display: block;
+		&:hover{
+			color: $primary;
+		}
 	}
 }

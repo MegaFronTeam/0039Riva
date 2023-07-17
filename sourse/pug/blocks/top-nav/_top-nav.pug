@@ -23,7 +23,7 @@ mixin top-nav()
 		.container
 			.row.roww
 				.col-lg-auto.col
-					+b.catalog-block
+					+b.catalog-block.d-inline-block
 						+e.toggle
 							+e.gumburger
 								span
@@ -59,8 +59,29 @@ mixin top-nav()
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
+							+b.topLine.d-lg-none
+								.container 
+										.mb-2
+											.top-nav__beware.d-flex.align-items-center
+												+img('img/beware.svg')
+												span Остерегайтесь подделок
+											
+										.mb-2
+											+e.item.d-flex.align-items-center 
+												+img('img/mail.svg')
+												+e.item-text info@riva.ru
+										.mb-2
+											+e.UL.top-social.d-flex 
+												+item-sos('telegram')
+												+item-sos('whatsapp')
 
-				+e.col.col-auto
+										.mb-2
+											+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
+
+										.mb-2
+											+e(href="#").btn Заказать звонок
+
+				+e.col.col-auto.d-none.d-sm-flex
 					+e.beware.d-flex.align-items-center
 						+img('img/beware.svg')
 						span Остерегайтесь подделок

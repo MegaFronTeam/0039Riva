@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -37,7 +38,7 @@
 							<h1>Офисная мебель Riva</h1>
 						</div>
 						<div class="headerBlock__slider-wrapper">
-							<div class="headerBlock__slider headerBlock__slider--js default-slider swiper">
+							<div class="headerBlock__slider headerBlock__slider--js swiper">
 								<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<div class="headerBlock__item bg-wrap"><img class="object-fit-js picture-bg" src="img/headerBlock-1.jpg" alt="" loading="lazy"/>
@@ -45,7 +46,7 @@
 													<div class="headerBlock__col offset-1 col-5 col-md-3">
 														<h2 class="headerBlock__offer">Кабинеты руководителя
 														</h2>
-														<a class="headerBlock__btn" href="#">В каталог
+														<a class="headerBlock__btn btn-primary btn" href="#">В каталог
 														</a>
 													</div>
 												</div>
@@ -57,7 +58,7 @@
 													<div class="headerBlock__col offset-1 col-5 col-md-3">
 														<h2 class="headerBlock__offer">Кабинеты руководителя
 														</h2>
-														<a class="headerBlock__btn" href="#">В каталог
+														<a class="headerBlock__btn btn-primary btn" href="#">В каталог
 														</a>
 													</div>
 												</div>
@@ -167,7 +168,7 @@
 				<div class="sCatalog section">
 					<div class="container">
 						<div class="sCatalog__top section-title text-center">
-							<ul class="sCatalog__top-tabs"> 
+							<ul class="sCatalog__top-tabs d-flex flex-column flex-sm-row">
 								<li class="sCatalog__top-tab active"> 
 									<h2>Скидки</h2>
 								</li>
@@ -178,20 +179,20 @@
 									<h2>В наличии</h2>
 								</li>
 							</ul>
-							<ul class="sCatalog__bottom-tabs"> 
-								<li class="sCatalog__bottom-tab active">Все
-								</li>
-								<li class="sCatalog__bottom-tab">Офисная мебель для персонала
-								</li>
-								<li class="sCatalog__bottom-tab">Мебель в кабинет руководителя
-								</li>
-								<li class="sCatalog__bottom-tab">Домашний офис
-								</li>
-								<li class="sCatalog__bottom-tab">Столы для переговоров
-								</li>
-								<li class="sCatalog__bottom-tab">еще
-								</li>
-							</ul>
+							<nav class="sCatalog__bottom-tabs-wrapper">
+								<ul class="sCatalog__bottom-tabs d-inline-block">
+									<li class="sCatalog__bottom-tab active">Все
+									</li>
+									<li class="sCatalog__bottom-tab">Офисная мебель для персонала
+									</li>
+									<li class="sCatalog__bottom-tab">Мебель в кабинет руководителя
+									</li>
+									<li class="sCatalog__bottom-tab">Домашний офис
+									</li>
+									<li class="sCatalog__bottom-tab">Столы для переговоров
+									</li>
+								</ul>
+							</nav>
 						</div>
 						<div class="sCatalog__row row">
 							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
@@ -872,37 +873,31 @@
 				<!-- start sForm-->
 				<section class="sForm section" id="sForm">
 					<div class="container">
-						<div class="sForm__row row">
-							<div class="sForm__col col-12"> 
-								<div class="sForm__img bg-wrap"><img class="object-fit-js picture-bg" src="img/form.jpg" alt="" loading="lazy"/>
-								</div>
+						<div class="sForm__img bg-wrap"><img class="object-fit-js picture-bg" src="img/form.jpg" alt="" loading="lazy"/>
+						</div>
+						<div class="sForm__content justify-content-between flex-column flex-lg-row">
+							<div class="sForm__content-left">
+								<h3 class="sForm__offer">Мы&nbsp;готовы разработать бесплатный эскиз растановки мебели или платный дизайн проект оформления офиса
+								</h3>
+								<p class="sForm__desc">Наши специлисты подберут все необходимые материалы, мебель и&nbsp;комплектующие. Вам останется только заехать и&nbsp;начать работать в&nbsp;новом офисе.
+								</p>
 							</div>
-							<div class="sForm__col col-12"> 
-								<div class="sForm__content justify-content-between"> 
-									<div class="sForm__content-left">
-										<h3 class="sForm__offer">Мы&nbsp;готовы разработать бесплатный эскиз растановки мебели или платный дизайн проект оформления офиса
-										</h3>
-										<p class="sForm__desc">Наши специлисты подберут все необходимые материалы, мебель и&nbsp;комплектующие. Вам останется только заехать и&nbsp;начать работать в&nbsp;новом офисе.
-										</p>
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/>
 									</div>
-									<div class="form-wrap">
-										<form>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) ___-__-__"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
-											</div>
-											<!-- +e.input-wrap-->
-											<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
-											</button>
-											<div class="form-wrap__policy">Нажимая на кнопку, вы подтверждаете свое согласие на <a href="#">обработку персональных данных</a>
-											</div>
-										</form>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) ___-__-__"/>
 									</div>
-								</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+									<div class="form-wrap__policy">Нажимая на кнопку, вы подтверждаете свое согласие на <a href="#">обработку персональных данных</a>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -1264,6 +1259,7 @@
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/priority-nav/priority-nav.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

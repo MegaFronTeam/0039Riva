@@ -19,7 +19,16 @@
 
 	&__items {}
 	&__item {
-		margin-right: rem(32);
+		margin-right: rem(10);
+		&:last-child {
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(32);
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 	&__item-text {
 		color: $secondary;
@@ -37,10 +46,10 @@
 			width: rem(20);
 			height: rem(20);
 		}
-	}
-	&__top-social-item {
-		list-style: none;
-		margin-right: rem(7);
+		li {
+			list-style: none;
+			margin-right: rem(7);
+		}
 	}
 	&__phone {
 		margin-left: rem(4);
@@ -68,47 +77,73 @@
 		@include roww(30px);
 		margin-top: rem(21);
 	}
+	&__bottom {
+		margin-top: rem(21);
+	}
 	&__logo {
 		// margin-right: rem(31);
 	}
 	.form-wrap {
 		flex-grow: 1;
+		margin-bottom: 20px;
+		margin-top: rem(5);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-top: 0;
+		}
 		form {
 			width: 100%;
-			display: flex;
+			position: relative;
 		}
 	}
 	.form-wrap__input-wrap {
 		flex-grow: 1;
 	}
 	.form-wrap__input {
-		padding: rem(10) rem(15);
 		border: none;
 		background: #F3F3F4;
 		outline: none;
 		font-weight: $font-weight-semibold;
 		font-size: rem(14);
 		line-height: 150%;
-		border-radius: rem(6) 0 0 rem(6);
-		// width: rem(600);
+		border-radius: $border-radius;
+		&::placeholder {
+			color: $secondary;
+		}
 	}
 	.form-wrap__btn {
-		background: #F3F3F4;
-		border-radius: 0 rem(6) rem(6) 0;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
 	}
-	&__dropdown {}
+	&__dropdown {
+		margin: 0;
+		@include media-breakpoint-up(xl) {
+			margin: 0 rem(33) 0 rem(10);
+		}
+	}
 	&__dropdown-current {
 		color: $primary;
 		font-size: rem(16);
 		line-height: 150%;
 		font-weight: $font-weight-semibold;
 	}
-	&__controls {}
+	&__controls {
+		@media (max-width: 455px) {
+			margin-top: rem(10);
+		}
+	}
 	&__controls-item {
 		position: relative;
-		margin-left: rem(21);
+		margin-left: rem(15);
 		color: $body-color;
 		@include mt;
+		@include media-breakpoint-up(md) {
+			margin-left: rem(21);
+		}
 		&:hover {
 			color: $primary;
 			div {
@@ -120,7 +155,10 @@
 		}
 		&:last-child {
 			span {
-				right: rem(4);
+				right: rem(-5);
+				@include media-breakpoint-up(md) {
+					right: rem(4);
+				}
 			}
 		}
 		svg {
@@ -135,14 +173,21 @@
 			line-height: 150%;
 			margin-top: rem(1);
 			@include mt;
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
 		}
 		span {
 			position: absolute;
 			top: 0;
-			right: rem(11);
+			right: rem(-7);
 			font-size: rem(12);
 			font-weight: $font-weight-semibold;
 			line-height: 150%;
+			@include media-breakpoint-up(md) {
+				right: rem(11);
+			}
 		}
 	}
 
