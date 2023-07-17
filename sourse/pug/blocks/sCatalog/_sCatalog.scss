@@ -254,6 +254,9 @@
 		// display: none;
 		
 	}
+	@media (max-width: 400px) {
+		right: -40px;
+	}
 	&::before {
 
 		content: '';
@@ -267,6 +270,9 @@
 		// pointer-events: none;
 		border: 1px solid #DBE4EC;  
 		z-index: 2;
+		@media (max-width: 400px) {
+			display: none;
+		}
 	}
 	// &::before{ 
 	// 	// width: 17px;
@@ -298,4 +304,8 @@
 			color: $primary;
 		}
 	}
+}
+
+.menu__dropdown-toggle {
+	margin-left: auto;
 }
