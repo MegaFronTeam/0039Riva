@@ -35,6 +35,9 @@
 		margin-bottom: rem(12);
 		flex-grow: 1;
 		width: 100%;
+		@include media-breakpoint-down(lg) {
+			overflow: visible;
+		}
 	}
 	&__slider-wrap {
 		display: flex;
