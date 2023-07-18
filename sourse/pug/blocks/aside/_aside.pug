@@ -1,0 +1,34 @@
+mixin aside(data)
+	// start aside
+	+b.ASIDE.aside.section#aside&attributes(attributes)
+		+e.also Смотрите также
+		+e.NAV.nav
+			ul 
+				li
+					a(href="#") О компании
+				li
+					a(href="#") Контакты
+				li
+					a(href="#") Как заказать
+				li
+					a(href="#") Сертификаты
+				li
+					a(href="#") Оплата
+				li
+					a(href="#") Доставка
+				li
+					a(href="#") Блог
+				li.active
+					a(href="#") Гарантия
+				li
+					a(href="#") Возврат товара
+				li
+					a(href="#") Рассрочка и кредит
+				li
+					a(href="#") Отзывы
+				li
+					a(href="#") Дизайнерам
+				li
+					a(href="#") Корпоративным клиентам
+		+e.A.btn.btn.btn-outline-primary(href="#") Перейти в каталог	 
+	// end aside

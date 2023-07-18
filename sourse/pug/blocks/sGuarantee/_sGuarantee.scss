@@ -1,0 +1,60 @@
+// start .sGuarantee
+.sGuarantee {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+		h2 {
+			margin-bottom: rem(20);
+		}
+		p {
+			margin-bottom: rem(32);
+		}
+	}
+	&__item{
+		margin-bottom: rem(26);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__item-content {
+		margin-left: rem(19);
+		margin-top: rem(-2);
+	}
+	&__item-offer {
+		color: $secondary;
+		text-transform: uppercase;
+		margin-bottom: rem(8);
+	}
+	&__img {
+		height: 100%;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	.sertificates {
+		margin-top: rem(48);
+	}
+	.sertificates__sertificate {
+		margin-top: rem(24);
+		img {
+			width: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sGuarantee

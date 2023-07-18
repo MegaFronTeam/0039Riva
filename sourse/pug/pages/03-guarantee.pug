@@ -12,13 +12,15 @@ include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sOurProjects/_sOurProjects.pug
 include ../blocks/sRews/_sRews.pug
 include ../blocks/sNews/_sNews.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
+include ../blocks/aside/_aside.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'Каталог'
+	- let  title= 'Гарантия'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -26,12 +28,13 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head('Офисная мебель Riva','Каталог')
-
-		.row
-			.col-xxl-2.col-3 
-			.col-xxl-10.col-6
-				+sCatalog2
+		.container
+			.row
+				.col-2.pr-0
+					+aside
+				.col-9.offset-1
+					.content
+						+sGuarantee
 		
 	+parts('footer')
       
