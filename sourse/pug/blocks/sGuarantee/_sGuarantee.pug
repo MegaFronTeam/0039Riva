@@ -1,0 +1,40 @@
+mixin sGuarantee(data)
+	// start sGuarantee
+	+b.sGuarantee.section#sGuarantee&attributes(attributes)
+		+b.section-title
+			h1 Гарантия
+			
+		+e.row.row
+			+e.col.col
+				h2 Срок гарантии на мебель — <br>от 1 года до 5 лет
+				p Мы&nbsp;предоставляем официальную гарантию от<br>производителей. Информация о&nbsp;гарантийном сроке указана в&nbsp;карточке товара. <br>Вы&nbsp;получите бесплатный ремонт или замену элементов, если в&nbsp;процессе использования мебели обнаружится производственный дефект. <br>В&nbsp;такой ситуации вам не&nbsp;нужно обращаться к&nbsp;изготовителю&nbsp;&mdash; оставьте заявку в&nbsp;отделе качества. Мы&nbsp;принимаем активное участие в&nbsp;решении вопросов гарантийного обслуживания, а&nbsp;обратная связь от&nbsp;клиентов позволяет совершенствовать нашу работу и&nbsp;ассортимент.
+				+e.item.d-flex.align-items-start
+					+img('img/phone.svg')
+					+e.item-content 
+						+e.item-offer Отдел качества
+						h4 +7 (495) 642-70-97
+				+e.item.d-flex.align-items-start
+					+img('img/time.svg')
+					+e.item-content 
+						+e.item-offer график работы
+						div пн-пт - 9:00-18:00; сб, вс - выходной
+			+e.col.col-5 
+				+e.img.bg-wrap
+					+img('img/guarantee.jpg', 'bg').picture-bg
+
+		+b.sertificates 
+			+e.row.row 
+				h2 Сертификаты
+				+e.col.col-3
+					+e.sertificate 
+						+img('img/sertificate.jpg')
+				+e.col.col-3
+					+e.sertificate 
+						+img('img/sertificate.jpg')
+				+e.col.col-3
+					+e.sertificate 
+						+img('img/sertificate.jpg')
+				+e.col.col-3
+					+e.sertificate 
+						+img('img/sertificate.jpg')
+	// end sGuarantee

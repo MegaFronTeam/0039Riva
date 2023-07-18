@@ -1,0 +1,66 @@
+// start .aside
+.aside {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	margin-right: rem(-30);
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__also {
+		margin-bottom: rem(18);
+		color: $secondary;
+	}
+	&__nav {
+		ul {
+			list-style: none;
+			background: $white;
+			border-radius: $border-radius;
+			box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.12);
+		}
+		li {
+			&.active, &:hover {
+				a {
+					color: $primary;
+					border-color: $primary;
+					background: rgba(227, 6, 17, 0.05);
+				}
+			}
+			&.active {
+				a {
+					font-weight: $font-weight-semibold;
+				}
+			}
+		}
+		a {
+			padding: rem(12) rem(10) rem(12) rem(16);
+			border-left: 3px solid white;
+			display: block;
+			font-weight: 400;
+			color: $body-color;
+			font-size: rem(14);
+		}
+	}
+	&__btn {
+		display: block;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.aside
