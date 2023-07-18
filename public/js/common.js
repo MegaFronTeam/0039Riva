@@ -354,7 +354,7 @@ const $ = jQuery;
 
 function eventHandler() { 
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -417,12 +417,19 @@ function eventHandler() {
 			// }
 		},
 	}
+
+	const swiperTabs = new Swiper('.tabs-slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
 	
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
+
 
 	var nav = priorityNav.init({
 		mainNavWrapper: ".sCatalog__bottom-tabs-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
@@ -508,7 +515,34 @@ function eventHandler() {
 	// modal window
 
 	
-    
+  let  sliderWrap = document.querySelectorAll(".sProdCard__slider-wrap");
+	sliderWrap.forEach((element) => {
+		let thumbs = element.querySelector(".sProdCard__slider-thumbs--js");
+		// let loopThumb = (thumbs.querySelector(".swiper-slide").length > 4) ? true : false;
+		var sProdCardswiperThumbs = new Swiper(thumbs, {
+			// init:false,
+			// loop: loopThumb,
+			loop: false,
+			spaceBetween: 12,
+			slidesPerView: 'auto',
+			freeMode: true,
+			observeParents: true, 
+			watchSlidesProgress: true,
+		});
+		var sProdCardswiper2 = new Swiper(element.querySelector(".sProdCard__slider--js"), {
+			loop: false,
+			spaceBetween: 0,
+			slidesPerView: 1, 
+			loopFillGroupWithBlank: true,
+			// autoplay: {
+			// 	delay: 5000,
+			// },
+			watchOverflow: true,
+			thumbs: {
+				swiper: sProdCardswiperThumbs,
+			}
+		});
+	});
  
 
 };

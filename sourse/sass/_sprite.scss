@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-bar {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
 .icon-basket {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -71,6 +76,11 @@
 	--h: 30;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(31 / var(--h) *1em );
+}
+.icon-rateStar {
+	--h: 13;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(15 / var(--h) *1em );
 }
 .icon-star {
 	--h: 14;

@@ -237,3 +237,97 @@
 			font-weight: 600;
 	}
 }
+
+.rating {
+	margin: 0 0 1em 0;
+	padding: 0;
+	border: none;
+
+	/* Caption */
+
+	&__caption {
+		margin-bottom: 0.5em;
+		padding: 0;
+	}
+
+	/* Group */
+
+	&__group {
+		position: relative;
+		width: rem(140);
+		height: rem(28);
+		background-image: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0164 0L17.905 8.66415L27.3468 9.68509L20.3083 16.0608L22.255 25.3559L14.0164 20.6321L5.77776 25.3559L7.72445 16.0608L0.686011 9.68509L10.1278 8.66415L14.0164 0Z' fill='%23E8E8E9'/%3E%3C/svg%3E%0A");
+		background-size: rem(28);
+		background-repeat: repeat-x;
+	}
+
+	/* Input */
+
+	&__input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+	}
+
+	&__input:focus ~ &__focus {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		// outline: 0.2em solid #4a90e2;
+		// outline-offset: 0.2em;
+	}
+
+	/* Star */
+
+	&__star {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		height: rem(28);
+		background-size: rem(28);
+		background-repeat: repeat-x;
+		margin-right: 12px;
+	}
+
+	&__star:hover,
+	&__input:checked + &__star {
+		background-image: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0164 0L17.905 8.66415L27.3468 9.68509L20.3083 16.0608L22.255 25.3559L14.0164 20.6321L5.77776 25.3559L7.72445 16.0608L0.686011 9.68509L10.1278 8.66415L14.0164 0Z' fill='%23FED42B'/%3E%3C/svg%3E%0A");
+	}
+
+	&__star:hover ~ &__star {
+		background-image: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0164 0L17.905 8.66415L27.3468 9.68509L20.3083 16.0608L22.255 25.3559L14.0164 20.6321L5.77776 25.3559L7.72445 16.0608L0.686011 9.68509L10.1278 8.66415L14.0164 0Z' fill='%23E8E8E9'/%3E%3C/svg%3E%0A");
+	}
+
+	/* Options */
+
+	&__star:nth-of-type(1) {
+		z-index: 5;
+		width: rem(28);
+	}
+
+	&__star:nth-of-type(2) {
+		z-index: 4;
+		width: calc(rem(28) * 2);
+	}
+
+	&__star:nth-of-type(3) {
+		z-index: 3;
+		width: calc(rem(28) * 3);
+	}
+
+	&__star:nth-of-type(4) {
+		z-index: 2;
+		width: calc(rem(28) * 4);
+	}
+
+	&__star:nth-of-type(5) {
+		z-index: 1;
+		width: calc(rem(28) * 5);
+	}
+}
