@@ -97,6 +97,11 @@
 		align-items: center;
 		justify-content: center;
 	}
+	&__greetings-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

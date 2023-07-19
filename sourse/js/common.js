@@ -469,20 +469,44 @@ function eventHandler() {
 	});
 
 	const clientsSlider = new Swiper('.clients-slider', {
-		slidesPerView: 4,
+		slidesPerView: 1,
 		spaceBetween: 30,
 		navigation: {
 			nextEl: '.clients-wrapper .swiper-button-next',
 			prevEl: '.clients-wrapper .swiper-button-prev',
 		},
+		breakpoints: {
+			// when window width is >= 480px
+			480: {
+			  slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+		},
 	});
 
 	const greetingsSlider = new Swiper('.greetings-slider', {
-		slidesPerView: 4,
+		slidesPerView: 1,
 		spaceBetween: 30,
 		navigation: {
 			nextEl: '.greetings-wrapper .swiper-button-next',
 			prevEl: '.greetings-wrapper .swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			480: {
+			  slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
 		},
 	});
 

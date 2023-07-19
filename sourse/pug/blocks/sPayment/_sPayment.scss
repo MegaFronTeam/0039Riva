@@ -67,6 +67,7 @@
 		&:last-child {
 			font-weight: $font-weight-semibold;
 			text-align: right;
+			overflow-wrap: anywhere;
 		}
 	}
 
