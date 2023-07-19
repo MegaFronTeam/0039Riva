@@ -1,6 +1,11 @@
-mixin product-item(i,t, p ,pr)
+mixin product-item(i,t, p ,pr, badge)
 	+b.ARTICLE.product-item
 		+e.img-wrap(href="#")
+			if badge
+				+b.prod-tags
+					.badge.bg-primary -15%
+					.badge.custom-badge Новинка
+					.badge.custom-badge Популярный
 			+b.card-slider
 				+e.DIV.img-slider.swiper.slider-card-js
 					.swiper-wrapper
@@ -53,18 +58,22 @@ mixin product-item(i,t, p ,pr)
 						td ЛДСП
 	// /.product-item
 mixin cataloglist()
-	+e.UL.bottom-tabs.d-inline-block
-		+e.LI.bottom-tab.active Все
-		+e.LI.bottom-tab Офисная мебель для персонала
-		+e.LI.bottom-tab Мебель в кабинет руководителя
-		+e.LI.bottom-tab Домашний офис
-		+e.LI.bottom-tab Столы для переговоров
+	+e.UL.bottom-tabs
+		+e.LI.bottom-tab: a(href="#").active   Все
+		+e.LI.bottom-tab: a(href="#")  Офисная мебель для персонала
+		+e.LI.bottom-tab: a(href="#")  Мебель в кабинет руководителя
+		+e.LI.bottom-tab: a(href="#")  Домашний офис
+		+e.LI.bottom-tab: a(href="#")  Столы для переговоров
+		+e.LI.bottom-tab: a(href="#")  Столы для переговоров
+		+e.LI.bottom-tab: a(href="#")  Столы для переговоров
+		+e.LI.bottom-tab: a(href="#")  Столы для переговоров
+		+e.LI.bottom-tab: a(href="#")  Столы для переговоров
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+e.top.section-title.text-center
-				+e.UL.top-tabs.d-flex.flex-column.flex-sm-row
+				+e.UL.top-tabs.d-flex
 					+e.LI.top-tab.active 
 						h2 Скидки
 					+e.LI.top-tab 
@@ -76,7 +85,7 @@ mixin sCatalog(data)
 			+e.row.row
 				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
 				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``)
+					+product-item(`1`,``,``,``, 'badge')
 				+e.col(class= wrapClass)
 					+product-item(`2`,``,``,``)
 						.col-auto
@@ -85,7 +94,7 @@ mixin sCatalog(data)
 							+icon("check")
 							| В&nbsp;наличии ~ 11&nbsp;шт.
 				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``)
+					+product-item(`3`,``,``,`badge`)
 				+e.col(class= wrapClass)
 					+product-item(`4`,``,``,``)
 				+e.col(class= wrapClass)
@@ -114,7 +123,7 @@ mixin sCatalog2(data)
 			+e.row.row
 				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
 				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``)
+					+product-item(`1`,``,``,`badge`)
 				+e.col(class= wrapClass)
 					+product-item(`2`,``,``,``)
 						.col-auto

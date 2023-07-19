@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
-		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="libs/priority-plus/priority-plus.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -168,7 +168,7 @@
 				<div class="sCatalog section">
 					<div class="container">
 						<div class="sCatalog__top section-title text-center">
-							<ul class="sCatalog__top-tabs d-flex flex-column flex-sm-row">
+							<ul class="sCatalog__top-tabs d-flex">
 								<li class="sCatalog__top-tab active"> 
 									<h2>Скидки</h2>
 								</li>
@@ -180,16 +180,24 @@
 								</li>
 							</ul>
 							<nav class="sCatalog__bottom-tabs-wrapper">
-								<ul class="sCatalog__bottom-tabs d-inline-block">
-									<li class="sCatalog__bottom-tab active">Все
+								<ul class="sCatalog__bottom-tabs">
+									<li class="sCatalog__bottom-tab"><a class="active" href="#">  Все</a>
 									</li>
-									<li class="sCatalog__bottom-tab">Офисная мебель для персонала
+									<li class="sCatalog__bottom-tab"><a href="#"> Офисная мебель для персонала</a>
 									</li>
-									<li class="sCatalog__bottom-tab">Мебель в кабинет руководителя
+									<li class="sCatalog__bottom-tab"><a href="#"> Мебель в кабинет руководителя</a>
 									</li>
-									<li class="sCatalog__bottom-tab">Домашний офис
+									<li class="sCatalog__bottom-tab"><a href="#"> Домашний офис</a>
 									</li>
-									<li class="sCatalog__bottom-tab">Столы для переговоров
+									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									</li>
+									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									</li>
+									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									</li>
+									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									</li>
+									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
 									</li>
 								</ul>
 							</nav>
@@ -198,6 +206,11 @@
 							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
+										<div class="prod-tags">
+											<div class="badge bg-primary">-15%</div>
+											<div class="badge custom-badge">Новинка</div>
+											<div class="badge custom-badge">Популярный</div>
+										</div>
 										<div class="card-slider">
 											<div class="card-slider__img-slider swiper slider-card-js">
 												<div class="swiper-wrapper">
@@ -1255,11 +1268,11 @@
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
 		</div>
-		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="libs/priority-nav/priority-nav.min.js"> </script>
+		<script src="libs/priority-plus/priority-plus.js"> </script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

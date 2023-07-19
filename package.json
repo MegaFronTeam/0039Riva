@@ -46,7 +46,7 @@
     "@fancyapps/ui": "^5.0.16",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.0",
-    "priority-nav": "^1.0.13",
+    "priority-plus": "^1.5.1",
     "swiper": "^10.0.3"
   }
 }

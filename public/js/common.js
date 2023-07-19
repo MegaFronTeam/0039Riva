@@ -431,17 +431,14 @@ function eventHandler() {
 	});
 
 
-	var nav = priorityNav.init({
-		mainNavWrapper: ".sCatalog__bottom-tabs-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
-		mainNav: ".sCatalog__bottom-tabs", // mainnav selector. (must be inline-block)
-		navDropdownLabel: 'еще',
-		navDropdownClassName: "menu__dropdown", // class used for the dropdown.
-		navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
-		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
-		breakPoint: 0,
-		// moved: function () { scrolldrop()}, // executed when item is moved to dropdown
-		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
-	}); 
+
+	let listnav = document.querySelector('.sCatalog__bottom-tabs');
+	if(listnav){
+
+		const inst = priorityPlus(listnav,{
+			innerToggleTemplate: "еще"
+		});
+	}
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
