@@ -72,6 +72,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(40 / var(--h) *1em );
 }
+.icon-move {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
 .icon-ok {
 	--h: 30;
 	font-size:calc( var(--h) / 10 * 1rem);
