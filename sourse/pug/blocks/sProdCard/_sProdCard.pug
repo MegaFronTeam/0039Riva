@@ -5,6 +5,10 @@ mixin sProdCard(data)
 			+e.row.row
 				+e.col.col-lg
 					+e.slider-wrap
+						+e.tags
+							.badge.bg-primary -15%
+							.badge.custom-badge Новинка
+							.badge.custom-badge Популярный
 						+e.slider--js.swiper
 							.swiper-wrapper
 								mixin slide2(img='sProductCard-img-1.png')
@@ -61,19 +65,21 @@ mixin sProdCard(data)
 								+e.btn-buy.btn.btn-outline-secondary(href='#') Купить в 1 клик
 							+e.discount(href='#') Хочу скидку!
 							+e.beware
-								+img('img/beware.svg')
+								//- +img('img/beware.svg')
+								+icon2('beware')
 								| Остерегайтесь подделок
 						h5 Доставка
 						+e.delivery
 							mixin deliveryItem(icon, text)
 								+e.delivery-item 
-									+img(`img/svg/${icon}`)
+									//- +img(`img/svg/${icon}`)
+									+icon2(icon)
 									!= text
-							+deliveryItem('done.svg', 'Ожидается')
-							+deliveryItem('fast-delivery.svg', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
-							+deliveryItem('delivery.svg', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
-							+deliveryItem('settings.svg', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
-							+deliveryItem('shield.svg', 'Гарантия: 1&nbsp;год')
+							+deliveryItem('done', 'Ожидается')
+							+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+							+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+							+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+							+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
 				.col-12
 					mixin tr(key, val)
 						tr
