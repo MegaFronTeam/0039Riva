@@ -22,6 +22,8 @@
 	}
 	&__top-tabs {
 		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 		list-style: none;
 		justify-content: center;
 		margin-bottom: rem(13);
@@ -42,13 +44,14 @@
 	&__bottom-tabs {
 		// display: inline-block;
 		list-style: none;
-		justify-content: center;
-		margin-bottom: rem(39);
-		// @include media-breakpoint-up(md) {
-			display: flex;
+		
 		// }
 	}
-	&__bottom-tab, .menu__dropdown-toggle {
+
+	&__bottom-tab{
+		display: inline-block;
+	}
+	&__bottom-tab a, .p-plus__toggle-btn {
 		&.active, &:hover {
 			background: $dark;
 			color: white;
@@ -66,7 +69,9 @@
 		outline: none;
 		border: none;
 	}
-
+	.p-plus__toggle-btn{
+		color: $body-color;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -235,7 +240,7 @@
 	}
 }
 
-.menu__dropdown{
+.p-plus__overflow{
 	// width: rem(200);
 	background: #FFFFFF;
 	border: 1px solid #DBE4EC; 
@@ -249,7 +254,7 @@
 	transform-origin: 0 0;
 	// @include mt;
 	// --s: 1s;
-	&:not(.show) {
+	&:not([aria-hidden="false"]) {
 		opacity: 0;
 		// display: none;
 		
@@ -268,8 +273,7 @@
 		transform: rotate(45deg);
 		background: #FFFFFF;
 		// pointer-events: none;
-		border: 1px solid #DBE4EC;  
-		z-index: 2;
+		border: 1px solid #DBE4EC;   
 		@media (max-width: 400px) {
 			display: none;
 		}
@@ -279,33 +283,68 @@
 	// 	// height: 17px;
 	// 	z-index: -1;
 	// }
- 
+	.sCatalog__bottom-tab{
+		margin: 0;
+	}
+	.sCatalog__bottom-tab{
+		a{
 
-	li{
-			z-index: 4;
-		position: relative;
-		list-style: none;
-		&:first-child{
-			border-radius: 5px 5px 0 0;
-			background-color: #fff;
+			border-radius: 0;
 		}
+		&:first-child a{
+			border-radius: 5px 5px 0 0;
+			// background-color: #fff;
+		}
+		
+		&:last-child a{
+			border-radius: 0 0 5px 5px;
 
-		&:not(:last-child){
-	
+		}
+		&:not(:last-child) a{
+			
 			border-bottom: 1px solid #DBE4EC;
 		}
 	}
-	a{
+	.sCatalog__bottom-tab a{
+		position: relative;
+		z-index: 20;
+		margin: 0;
+		background-color: #fff; 
 		font-weight: 600;
 		padding: rem(13) rem(14);
 		color: $body-color;
 		display: block;
 		&:hover{
-			color: $primary;
+			color: #fff;
+			background-color: $dark;
 		}
 	}
+
+	s{
+			z-index: 4;
+		position: relative;
+		list-style: none;
+		margin: 0;
+		
+	}
+	
 }
 
-.menu__dropdown-toggle {
+.p-plus__toggle-btn{
 	margin-left: auto;
 }
+
+	.p-plus{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.p-plus__primary-wrapper{
+		flex-grow: 0;
+	}
+	.p-plus__primary-nav-item{
+		display: block;
+	}
+	.p-plus-container{
+		z-index: 200;
+	}
