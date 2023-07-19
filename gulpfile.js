@@ -206,7 +206,7 @@ function svgCopy() {
 }
 
 function svg2() {
-    return src('./' + sourse + '/svg/*.svg')
+    return src('./' + sourse + '/svg2/*.svg')
         .pipe(svgmin({
             js2svg: {
                 pretty: true
@@ -292,7 +292,7 @@ function startwatch() {
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
     
-    watch(sourse + '/svg/*.svg', { usePolling: true }, svg2);
+    watch(sourse + '/svg2/*.svg', { usePolling: true }, svg2);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy2);
 
     watch([sourse + '/js/common.js'], { usePolling: true }, common);
