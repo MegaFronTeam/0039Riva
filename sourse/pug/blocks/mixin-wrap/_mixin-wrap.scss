@@ -180,7 +180,7 @@
 	position: relative;
 	margin-bottom: rem(10);
 	&__img-wrap {
-		@include block(213, 275);
+		@include block(275, 213);
 	}
 	&__img-slider {
 		padding-bottom: rem(10);
