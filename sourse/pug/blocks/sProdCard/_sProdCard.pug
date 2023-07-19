@@ -3,7 +3,7 @@ mixin sProdCard(data)
 	+b.sProdCard.section#sProdCard&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col.col-lg
+				+e.col.col-lg-6.col-xxl
 					+e.slider-wrap
 						+e.tags
 							.badge.bg-primary -15%
@@ -11,7 +11,7 @@ mixin sProdCard(data)
 							.badge.custom-badge Популярный
 						+e.slider--js.swiper
 							.swiper-wrapper
-								mixin slide2(img='sProductCard-img-1.png')
+								mixin slide2()
 									+e.slide.swiper-slide(data-src=`img/sProductCard-img-1.png` data-fancybox=`sCard-gallery`)
 										+e.img-wrap
 											//- img(src=`img/card-md-1.png` alt='')
@@ -32,7 +32,6 @@ mixin sProdCard(data)
 								+slide(2)
 								+slide(3)
 								+slide(4)
-				.col-lg.ms-auto
 					+e.side-wrap
 						+e.product-info
 							+e.product-info-head-row.row
@@ -80,7 +79,316 @@ mixin sProdCard(data)
 							+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
 							+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
 							+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
-				.col-12
+						+e.create
+							+icon2('move')
+							p Разработаем #[span бесплатный] эскиз растановки мебели
+					//- .col-lg.ms-auto
+					//- +e.side-wrap
+					//- 	+e.product-info
+					//- 		+e.product-info-head-row.row
+					//- 			.col.me-auto: +e.code Код:  SK.SRT-200 (R)
+					//- 			.col-auto
+					//- 				+e.product-link.active(href='#'): +icon('heart')
+					//- 			.col-auto
+					//- 				+e.product-link(href='#'): +icon('bar')
+					//- 		+e.product-types
+					//- 			mixin productType(img)
+					//- 				+in-c('radio', '', 'type')
+					//- 					.img-wrap-center
+					//- 						+img(img)
+					//- 			+productType('img/sProductCard-img-sm-1.png')
+					//- 			+productType('img/product-type-img-1.png')
+					//- 		+e.price
+					//- 			h3 12 000 ₽
+					//- 			+e.old-price 15 000 ₽
+					//- 			.badge.bg-primary -15%
+					//- 		+e.in-stock
+					//- 			+e.update Дата обновления: Сегодня в 07:26
+					//- 			p 
+					//- 				+icon('check')
+					//- 				| В наличии~ 11 шт.
+					//- 		+e.action
+					//- 			+addblock()
+					//- 			+e.btn(type="button").btn.btn-outline-primary
+					//- 				+icon("cart")
+					//- 				| В корзину
+					//- 			+e.btn-buy.btn.btn-outline-secondary(href='#') Купить в 1 клик
+					//- 		+e.discount(href='#') Хочу скидку!
+					//- 		+e.beware
+					//- 			//- +img('img/beware.svg')
+					//- 			+icon2('beware')
+					//- 			| Остерегайтесь подделок
+					//- 	h5 Доставка
+					//- 	+e.delivery
+					//- 		mixin deliveryItem(icon, text)
+					//- 			+e.delivery-item 
+					//- 				//- +img(`img/svg/${icon}`)
+					//- 				+icon2(icon)
+					//- 				!= text
+					//- 		+deliveryItem('done', 'Ожидается')
+					//- 		+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+					//- 		+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+					//- 		+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+					//- 		+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
+					//- 	+e.create
+					//- 		+icon2('move')
+					//- 		p Разработаем #[span бесплатный] эскиз растановки мебели
+					//- .col-12
+					mixin tr(key, val)
+						tr
+							td(colspan=(!val ? "2" : ''))!= key
+							if val
+								td!= val
+					.tabs.tabs-slider--js.swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide.active Описание
+							.tabs__btn.swiper-slide Характеристики
+							.tabs__btn.swiper-slide Доставка и оплата
+							.tabs__btn.swiper-slide Отзывы 
+								span 2
+						.tabs__content.active
+							.h3.mb-0 Описание
+							p Офисное кресло для руководителя с&nbsp;обивкой из&nbsp;коричневой экокожи и&nbsp;хромированным металлическим каркасом. Высокая спинка удобным подголовником и&nbsp;ортопедическим поясничным упором. Оно оснащено механизмом регулировки качания спинки Tilt, возможностью настройки степени его жесткости. Высота сидения составляет 49-59&nbsp;см. Конструкция рассчитана на&nbsp;высокие нагрузки&nbsp;&mdash; до&nbsp;250&nbsp;кг.
+						.tabs__content
+							.h3 Характеристики
+							+e.characteristics-item
+								.h4 Основные характеристики
+								table
+									+tr('Материал', 'эко-кожа')
+									+tr('Цвет эко-кожи', 'черный, белый')
+									+tr('Механизм качания', 'синхромеханизм')
+									+tr('Подлокотники', 'алюминий полированный с накладками из мягкого пластика')
+									+tr('Пятилучье', '720 мм, алюминий полированный, усиленное')
+									+tr('Ролики', 'Ø50 PU, накладки хром')
+									+tr('Гарантия', '1 год')
+									+tr('Производитель', 'Рива Чейр')
+							+e.characteristics-item
+								.h4 Габариты
+								table
+									+tr('Ширина сиденья', '52 см')
+									+tr('Глубина сиденья', '50 см')
+									+tr('Высота спинки', '76 см')
+									+tr('Диапазон регулировки', '45-53 см')
+									+tr('Габариты изделия', '69х69х127 см')
+									+tr('Габариты упаковки', '87х34х64 см')
+									+tr('Вес', '22,2 кг')
+									+tr('Объем', '0,19 м.куб.')
+						.tabs__content
+							.h3 Доставка и оплата
+							+e.characteristics-item
+								.h4 Доставка
+								table
+									+tr('Город', 'Москва')
+									+tr('Доставим', 'за 1700₽')
+									+tr('Сборка', 'от 1 000₽')
+									+tr('Подъем', '100₽ за этаж/1 коробка')
+							+e.characteristics-item
+								.h4 Оплата
+								table
+									+tr('Яндекс касса')
+									+tr('Выставить счет', 'Оплата через банк') 
+						.tabs__content
+							.h3 Отзывы
+							mixin reviewItem(name, rating, text)
+								+e.review-item
+									+e.name!= name
+									+e.review-wrap
+										+e.stars(data-rating=rating)
+											+icon('rateStar')
+											+icon('rateStar')
+											+icon('rateStar')
+											+icon('rateStar')
+											+icon('rateStar')
+										span 07.11.2021
+									p!= text
+							+reviewItem('Игорь', 3, 'Кресло действительно достойно места в&nbsp;кабинете руководителя. Материалы качественные, выглядит внушительно, вместо пластика хромированные детали. В&nbsp;реальности лучше, чем на&nbsp;фото.')
+							+reviewItem('Наталья', 5, 'Массивное, наимягчайшее, удобнейшее кресло! Порадовала продуманность производителя: офисное кресло RCH 9373 достаточно тяжелое, поэтому крестовина выполнена полностью из&nbsp;металла, шансов сломать практически никаких. И&nbsp;в&nbsp;нем даже есть механизм качания, так что приятно не&nbsp;только работать, но&nbsp;и&nbsp;отдохнуть. Экокожа мягкая, словно натуральная. Доставка от&nbsp;&laquo;Экспресс Офис&raquo;, на&nbsp;мой взгляд, просто обязательная&nbsp;&mdash; самим грузить такую красоту не&nbsp;стоит.')
+							+e.send-review
+								.h4 Ваш отзыв о товаре
+								+e.review-row.row.align-items-center
+									.col-md-auto
+										.h6 Общая оценка
+									.col-md
+										.rating__group
+											input#mood-1.rating__input(type='radio' name='mood' value='1')
+											label.rating__star(for='mood-1' aria-label='Ужасно')
+											input#mood-2.rating__input(type='radio' name='mood' value='2')
+											label.rating__star(for='mood-2' aria-label='Сносно')
+											input#mood-3.rating__input(type='radio' name='mood' value='3' checked='')
+											label.rating__star(for='mood-3' aria-label='Нормально')
+											input#mood-4.rating__input(type='radio' name='mood' value='4')
+											label.rating__star(for='mood-4' aria-label='Хорошо')
+											input#mood-5.rating__input(type='radio' name='mood' value='5')
+											label.rating__star(for='mood-5' aria-label='Отлично')
+											.rating__focus
+								+e.review-row.row
+									.col-md-auto
+										.h6 Расскажите подробнее
+									.col-md
+										+input('Отзыв', 'textarea')
+								+e.review-btn.btn.btn-outline-primary(href='#') Отправить
+	// end sProdCard
+
+mixin sProdCard2(data)
+	// start sProdCard
+	+b.sProdCard--2.section#sProdCard&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-6.col-xxl
+					+e.slider-wrap
+						+e.tags
+							.badge.bg-primary -15%
+							.badge.custom-badge Новинка
+							.badge.custom-badge Популярный
+						+e.slider--js.swiper
+							.swiper-wrapper
+								mixin slide2(img)
+									+e.slide.swiper-slide(data-src=`img/${img}` data-fancybox=`sCard-gallery`)
+										+e.img-wrap
+											.img-wrap-center
+												+img(`img/${img}`, 'bg')
+								+slide2('sProductCard-img-2.png')
+								+slide2('sProductCard-img-1.png')
+								+slide2('sProductCard-img-2.png')
+								+slide2('sProductCard-img-2.png')
+							+arrow
+						+e.slider-thumbs--js.swiper
+							.swiper-wrapper
+								mixin slide(i)
+									+e.slide--thumbs.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img(`img/sProductCard-img-sm-${i}.png`, 'bg')
+								+slide(5)
+								+slide(1)
+								+slide(6)
+								+slide(7)
+					+e.side-wrap
+						+e.product-info
+							+e.product-info-head-row.row
+								.col.me-auto: +e.code Код:  SK.SRT-200 (R)
+								.col-auto
+									+e.product-link.active(href='#'): +icon('heart')
+								.col-auto
+									+e.product-link(href='#'): +icon('bar')
+							+e.price
+								h3 12 000 ₽
+								+e.old-price 15 000 ₽
+								.badge.bg-primary -15%
+							+e.materials
+								+in-c('radio', 'ЛДСП', 'material')
+								+in-c('radio', 'Металл', 'material')
+								+in-c('radio', 'Ткань', 'material')
+							+e.color
+								+in-c('radio', '', 'color')(style='--bgColor: #C6AB8E')
+								+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5')
+								+in-c('radio', '', 'color')(style='--bgColor: #36251F')
+								+in-c('radio', '', 'color')(style='--bgColor: #252724')
+								+in-c('radio', '', 'color')(style='--bgColor: #706152')
+								+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+							+e.characteristics-item
+								mixin tr(key, val)
+									tr
+										td!= key
+										if val
+											td!= val
+								table
+									+tr('Страна производитель:', 'России')
+									+tr('Срок доставки:', '1-5 рабочих дней')
+									+tr('Гарантия:', '12 месяцев')
+									+tr('Серия:', 'RIVA')
+									+tr('Код товара:', '001-001')
+									+tr('Материал столешницы', 'ЛДСП')
+									+tr('Материал опор', 'Металл')
+									+tr('Толщина столешницы, мм:', '22')
+							+e.in-stock
+								+e.update Дата обновления: Сегодня в 07:26
+								p 
+									+icon('check')
+									| В наличии~ 11 шт.
+							+e.beware
+								//- +img('img/beware.svg')
+								+icon2('beware')
+								| Остерегайтесь подделок
+						h5 Доставка
+						+e.delivery
+							mixin deliveryItem(icon, text)
+								+e.delivery-item 
+									//- +img(`img/svg/${icon}`)
+									+icon2(icon)
+									!= text
+							+deliveryItem('done', 'Ожидается')
+							+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+							+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+							+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+							+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
+						+e.create
+							+icon2('move')
+							p Разработаем #[span бесплатный] эскиз растановки мебели			
+					//- .col-lg.ms-auto
+					//- +e.side-wrap
+					//- 	+e.product-info
+					//- 		+e.product-info-head-row.row
+					//- 			.col.me-auto: +e.code Код:  SK.SRT-200 (R)
+					//- 			.col-auto
+					//- 				+e.product-link.active(href='#'): +icon('heart')
+					//- 			.col-auto
+					//- 				+e.product-link(href='#'): +icon('bar')
+					//- 		+e.price
+					//- 			h3 12 000 ₽
+					//- 			+e.old-price 15 000 ₽
+					//- 			.badge.bg-primary -15%
+					//- 		+e.materials
+					//- 			+in-c('radio', 'ЛДСП', 'material')
+					//- 			+in-c('radio', 'Металл', 'material')
+					//- 			+in-c('radio', 'Ткань', 'material')
+					//- 		+e.color
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #C6AB8E')
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5')
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #36251F')
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #252724')
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #706152')
+					//- 			+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+					//- 		+e.characteristics-item
+					//- 			mixin tr(key, val)
+					//- 				tr
+					//- 					td!= key
+					//- 					if val
+					//- 						td!= val
+					//- 			table
+					//- 				+tr('Страна производитель:', 'России')
+					//- 				+tr('Срок доставки:', '1-5 рабочих дней')
+					//- 				+tr('Гарантия:', '12 месяцев')
+					//- 				+tr('Серия:', 'RIVA')
+					//- 				+tr('Код товара:', '001-001')
+					//- 				+tr('Материал столешницы', 'ЛДСП')
+					//- 				+tr('Материал опор', 'Металл')
+					//- 				+tr('Толщина столешницы, мм:', '22')
+					//- 		+e.in-stock
+					//- 			+e.update Дата обновления: Сегодня в 07:26
+					//- 			p 
+					//- 				+icon('check')
+					//- 				| В наличии~ 11 шт.
+					//- 		+e.beware
+					//- 			//- +img('img/beware.svg')
+					//- 			+icon2('beware')
+					//- 			| Остерегайтесь подделок
+					//- 	h5 Доставка
+					//- 	+e.delivery
+					//- 		mixin deliveryItem(icon, text)
+					//- 			+e.delivery-item 
+					//- 				//- +img(`img/svg/${icon}`)
+					//- 				+icon2(icon)
+					//- 				!= text
+					//- 		+deliveryItem('done', 'Ожидается')
+					//- 		+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+					//- 		+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+					//- 		+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+					//- 		+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
+					//- 	+e.create
+					//- 		+icon2('move')
+					//- 		p Разработаем #[span бесплатный] эскиз растановки мебели
+					//- .col-12
 					mixin tr(key, val)
 						tr
 							td(colspan=(!val ? "2" : ''))!= key

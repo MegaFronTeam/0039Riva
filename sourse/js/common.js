@@ -558,7 +558,11 @@ function eventHandler() {
 			watchOverflow: true,
 			thumbs: {
 				swiper: sProdCardswiperThumbs,
-			}
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 		});
 	});
  
