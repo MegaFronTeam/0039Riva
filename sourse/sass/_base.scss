@@ -576,6 +576,10 @@ iframe {
 
 .badge {
 	line-height: 1.5;
+	&.custom-badge {
+		--bs-badge-color: #{$dark};
+		background-color: #F3F3F4;
+	}
 }
 
 .icon2 {

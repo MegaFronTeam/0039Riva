@@ -7,7 +7,37 @@
 	fill: currentColor;
 }
 
+.icon-beware {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-delivery {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-done {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-fast-delivery {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
 .icon-marker {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-settings {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-shield {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );

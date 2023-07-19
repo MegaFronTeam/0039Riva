@@ -62,3 +62,22 @@ mixin project(title='Цветной четырехсекционный шкаф 
 								+img(img,'bg').picture-bg
 			.swiper-pagination
 		+e.title!= title 
+
+mixin tags()
+	mixin tag(tag,activeClass)
+		+e.col.col-6.col-sm-4.col-md-3.col-lg-auto
+			+e.tag(href='#' class=(activeClass))!= tag
+	+b.tags
+		.container
+			.row
+				+tag('Столы<br>в&nbsp;стиле хай-тек', 'active')
+				+tag('Столы классические')
+				+tag('Столы в стиле лофт')
+				+tag('Детские столы')
+				+tag('Угловые столы')
+				+tag('Из МДФ')
+				+tag('ЛДСП')
+				+tag('Столы с плиткой керамической')
+				+tag('Столы классические')
+				+tag('Столы в стиле лофт')
+				+tag('Детские столы')

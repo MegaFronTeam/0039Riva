@@ -335,3 +335,49 @@
 		width: calc(rem(28) * 5);
 	}
 }
+
+.dd-group {
+	&__content {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.tags {
+	padding-top: rem(16);
+	padding-bottom: rem(15);
+	.row {
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(10)};
+	}
+	&__col {
+		// max-width: calc(rem(160) + var(--bs-gutter-x));
+		@media (max-width: 340px) {
+			width: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 100%;
+			max-width: calc(rem(162) + var(--bs-gutter-x));
+		}
+	}
+	&__tag {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(4) rem(4);
+		border-radius: 6px;
+		border: 1px solid $light;
+		color: #000;
+		text-align: center;
+		line-height: 1.5;
+		height: 100%;
+		min-height: rem(58);
+		font-size: rem(14);
+		&:hover,
+		&.active {
+			border-color: $primary;
+		}
+	}
+}
