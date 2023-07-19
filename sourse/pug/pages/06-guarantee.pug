@@ -27,12 +27,13 @@ block pagecontent
 	
 	
 	+parts('header')
-	main
+	main.cat
 		.container
+			+breadcrumb('Главная', 'Гарантия')
 			.row
-				.col-2.pr-0
+				.col-12.pr-xl-0.col-xl-2
 					+aside
-				.col-9.offset-1
+				.col-12.offset-xl-1.col-xl-9
 					.content
 						+sGuarantee
 		

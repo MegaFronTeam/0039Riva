@@ -1,0 +1,108 @@
+// start .sAbout
+.sAbout {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	padding-bottom: rem(15);
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	h3, p {
+		margin-bottom: rem(24);
+	}
+	h6 {
+		margin-bottom: rem(18);
+	}
+	&__img {
+		height: 330px;
+		border-radius: $border-radius;
+		overflow: hidden;
+		margin-bottom: rem(40);
+	}
+	&__item{
+		margin-left: rem(20);
+		margin-bottom: rem(20);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		div {
+			margin-left: rem(8);
+		}
+	}
+	&__promo {
+		font-size: rem(28);
+		line-height: 140%;
+		font-weight: $font-weight-semibold;
+		margin: rem(48) 0;
+		padding-left: rem(32);
+		border-left: 3px solid $primary;
+	}
+
+	&__slider-wrapper {
+		position: relative;
+	}
+	.greetings-slider {
+		margin-bottom: rem(48);
+	}
+	&__arrows {
+		.swiper-button-prev {
+			margin-left: rem(-40px);
+			&::after {
+				left: 47%;
+			}
+		}
+		.swiper-button-next {
+			margin-right: rem(-40px);
+			&::after {
+				left: 53%;
+			}
+		}
+		div {
+			background: $white;
+			border-radius: 100%;
+			filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06)) drop-shadow(0px 4px 6px rgba(192, 192, 192, 0.10));
+			width: rem(50);
+			height: rem(50);
+			@include media-breakpoint-up(md) {
+				width: rem(60);
+				height: rem(60);
+			}
+			&::after {
+				color: $primary;
+				font-size: rem(32);
+				z-index: 1;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				@include mt;
+			}
+		}
+		.swiper-button-disabled {
+			opacity: 1;
+			.icon {
+				font-size: rem(24);
+				color: $secondary;
+			}
+		}
+	}
+
+	&__clients-item {
+		border-radius: $border-radius;
+		border: 1px solid #E8E8E9;
+		height: rem(120);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAbout

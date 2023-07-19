@@ -1,0 +1,44 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sOurProjects/_sOurProjects.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPayment/_sPayment.pug
+include ../blocks/aside/_aside.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Оплата'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main.cat
+		.container
+			+breadcrumb('Главная', 'Оплата')
+			.row
+				.col-12.pr-xl-0.col-xl-2
+					+aside
+				.col-12.offset-xl-1.col-xl-9
+					.content
+						+sPayment
+		
+	+parts('footer')
+      
+
+
+

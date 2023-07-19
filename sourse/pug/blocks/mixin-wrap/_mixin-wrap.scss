@@ -15,7 +15,7 @@
 		}
 		
 	}
-	.icon{
+	.icon2{
 		font-size: rem(30);
 	}
 
@@ -35,7 +35,9 @@
 }
 
 .content {
-	margin-left: rem(-30);
+	@include media-breakpoint-up(xl) {
+		margin-left: rem(-30);
+	}
 }
 
 
@@ -134,6 +136,18 @@
 .breadcrumb-item{
 	width: auto;
 	// margin-right: rem(32);
+	font-size: rem(12);
+	font-weight: $font-weight-semibold;
+	color: $body-color;
+	&.active {
+		color: $secondary;
+	}
+}
+
+.cat{
+	.section {
+		padding-top: rem(10);
+	}
 }
 
 .project-item {

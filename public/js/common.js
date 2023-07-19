@@ -468,6 +468,24 @@ function eventHandler() {
 		},
 	});
 
+	const clientsSlider = new Swiper('.clients-slider', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.clients-wrapper .swiper-button-next',
+			prevEl: '.clients-wrapper .swiper-button-prev',
+		},
+	});
+
+	const greetingsSlider = new Swiper('.greetings-slider', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.greetings-wrapper .swiper-button-next',
+			prevEl: '.greetings-wrapper .swiper-button-prev',
+		},
+	});
+
 	const ourProjectsSwiper = new Swiper('.sOurProjects__slider--js', {
 		spaceBetween: 30,
 		slidesPerView: 1,

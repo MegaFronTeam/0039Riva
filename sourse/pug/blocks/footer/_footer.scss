@@ -29,6 +29,10 @@
 	}
 	.logo-col {
 		padding-right: rem(10);
+		.icon2 {
+			font-size: rem(111);
+			height: rem(46.7);
+		}
 	}
 	.beware-col {
 		padding-left: rem(3);
@@ -211,11 +215,31 @@
 		list-style: none;
 		margin-right: rem(24);
 		margin-bottom: rem(10);
+		display: flex;
+		align-items: center;
+		svg {
+			font-size: rem(22);
+		}
 		&:last-child {
 			margin-right: 0;
 		}
 		@include media-breakpoint-up(sm) {
 			margin-bottom: 0;
+		}
+	}
+	.visa {
+		svg {
+			font-size: rem(45);
+		}
+	}
+	.mastercard, .maestro {
+		svg {
+			font-size: rem(34);
+		}
+	}
+	.mir {
+		svg {
+			font-size: rem(38);
 		}
 	}
 // 

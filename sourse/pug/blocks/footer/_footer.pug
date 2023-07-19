@@ -11,7 +11,7 @@ mixin footer()
 			.row.roww.d-flex.align-items-center
 				+e.col.logo-col.col-auto
 					+e.logo 
-						+img('img/logo.svg')
+						+icon2('logo')
 				.col-lg-auto.col
 					+b.catalog-block.d-inline-block
 						+e.toggle
@@ -49,7 +49,7 @@ mixin footer()
 							+mnu()
 				+e.col.beware-col.col-12.col-sm-auto
 					+e.beware.d-flex.align-items-center
-						+img('img/beware.svg')
+						+icon2('beware')
 						span Остерегайтесь подделок
 			
 			.row
@@ -112,13 +112,17 @@ mixin footer()
 							+e.bottom-item.d-flex.align-items-left.align-items-sm-center.flex-column.flex-sm-row
 								+e.bottom-item-offer Принимаем к оплате
 								+e.UL.payment-ul.d-flex.flex-wrap.flex-sm-nowrap
-									mixin payment(i)
-										+e.LI.payment-li
-											+img(`img/${i}.svg`)  
-									+payment('visa')
-									+payment('mastercard')
-									+payment('maestro')
-									+payment('mir')
-									+payment('wallet')
-									+payment('webmoney')
-									+payment('qiwi')
+									+e.LI.payment-li.visa
+										+icon2('visa')
+									+e.LI.payment-li.mastercard
+										+icon2('mastercard')
+									+e.LI.payment-li.maestro
+										+icon2('maestro')
+									+e.LI.payment-li
+										+img('img/mir.svg')
+									+e.LI.payment-li
+										+icon2('wallet')
+									+e.LI.payment-li
+										+icon2('webmoney')
+									+e.LI.payment-li
+										+icon2('qiwi')

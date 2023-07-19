@@ -4,6 +4,7 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	padding-bottom: rem(22);
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -15,11 +16,79 @@
 	&__col{
 
 	}
-	&__item{
-
+	ul {
+		margin-bottom: 0;
 	}
-	&__slide{
-		height: auto;
+	&__item{
+		margin-bottom: rem(26);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.icon2 {
+			font-size: rem(18);
+		}
+		ul {
+			list-style: none;
+			.icon2 {
+				font-size: rem(30);
+				margin-right: rem(9);
+			}
+			h4 {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__item-content {
+		margin-left: rem(19);
+		margin-top: rem(-2);
+	}
+	&__item-offer {
+		color: $secondary;
+		text-transform: uppercase;
+		margin-bottom: rem(8);
+		font-size: rem(14);
+	}
+	&__call {
+		border-radius: $border-radius;
+		background: $white;
+		box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.16);
+		padding: rem(63) rem(70);
+		h3 {
+			margin-bottom: rem(16);
+		}
+	}
+	.form-wrap__input-wrap {
+		margin-bottom: rem(12);
+		input {
+			background: #F3F3F4;
+			border: none;
+			font-weight: $font-weight-semibold;
+			&::placeholder {
+				color: $secondary;
+			}
+		}
+	}
+	.form-wrap__btn {
+		display: block;
+		width: 100%;
+		font-weight: $font-weight-semibold;
+		margin-bottom: rem(16);
+	}
+	.form-wrap__policy {
+		font-size: rem(12);
+		font-weight: $font-weight-semibold;
+		color: $secondary;
+		a {
+			text-decoration: underline;
+			color: $secondary;
+		}
+	}
+	&__map {
+		overflow: hidden;
+		margin-top: rem(48);
+		iframe {
+			border-radius: $border-radius;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

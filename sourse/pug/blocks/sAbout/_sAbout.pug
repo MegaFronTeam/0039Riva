@@ -1,0 +1,47 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.sAbout.section#sAbout&attributes(attributes)
+		+b.section-title
+			h1 О компании
+
+		+e.row.row
+			.col-12
+				+e.img.bg-wrap
+					+img('img/about.jpg', 'bg').picture-bg
+
+				h3 Описание
+				h5 Наш ассортимент
+				p Мы предлагаем огромный выбор различной мебели. Весь наш ассортимент включает в себя абсолютно все виды мебели, необходимые для создания уюта и комфорта Вашего дома, что является неоспоримым преимуществом нашей компании.
+				h6 Среди прочего:
+				mixin item(t) 
+					+e.item.d-flex.align-items-center
+						+icon2('arrow-right')
+						div!= t 
+				+item('Мебель для персонала')
+				+item('Кабинет руководителя')
+				+item('Переговорные зоны')
+				+item('Приемные зоны')
+				+item('Кресла')
+				+item('Мягкая мебель')
+				+e.promo Мы ориентированы на долгосрочное и взаимовыгодное сотрудничество с юридическими лицами, снабженцами, бюджетными и коммерческими организациями.
+				
+				h3 Благодарственные письма
+				+e.slider-wrapper.greetings-wrapper
+					+e.slider--js.greetings-slider.swiper
+						.swiper-wrapper
+							-for(var i = 0; i < 7; i++)
+								.swiper-slide
+									+e.greetings-item
+										+img(`img/greetings.png`)
+					+arrow
+
+				h3 Наши клиенты
+				+e.slider-wrapper.clients-wrapper
+					+e.slider--js.clients-slider.swiper
+						.swiper-wrapper
+							-for(var i = 0; i < 8; i++)
+								.swiper-slide
+									+e.clients-item
+										+img(`img/clients.png`)
+					+arrow
+	// end sAbout

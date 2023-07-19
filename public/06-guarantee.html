@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Гарантия</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main class="cat">
+				<div class="container">
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Гарантия</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+					<div class="row">
+						<div class="col-12 pr-xl-0 col-xl-2">
+							<!-- start aside-->
+							<aside class="aside section" id="aside">
+								<div class="aside__also">Смотрите также
+								</div>
+								<nav class="aside__nav">
+									<ul> 
+										<li><a href="#">О компании</a></li>
+										<li><a href="#">Контакты</a></li>
+										<li><a href="#">Как заказать</a></li>
+										<li><a href="#">Сертификаты</a></li>
+										<li><a href="#">Оплата</a></li>
+										<li><a href="#">Доставка</a></li>
+										<li><a href="#">Блог</a></li>
+										<li class="active"><a href="#">Гарантия</a></li>
+										<li><a href="#">Возврат товара</a></li>
+										<li><a href="#">Рассрочка и кредит</a></li>
+										<li><a href="#">Отзывы</a></li>
+										<li><a href="#">Дизайнерам</a></li>
+										<li><a href="#">Корпоративным клиентам</a></li>
+									</ul>
+								</nav>
+								<a class="aside__btn btn btn-outline-primary" href="#">Перейти в каталог	 
+								</a>
+							</aside>
+							<!-- end aside-->
+						</div>
+						<div class="col-12 offset-xl-1 col-xl-9">
+							<div class="content">
+								<!-- start sGuarantee-->
+								<div class="sGuarantee section" id="sGuarantee">
+									<div class="section-title">
+										<h1>Гарантия</h1>
+									</div>
+									<div class="sGuarantee__row row">
+										<div class="sGuarantee__col col">
+											<h2>Срок гарантии на мебель — <br>от 1 года до 5 лет</h2>
+											<p>Мы&nbsp;предоставляем официальную гарантию от<br>производителей. Информация о&nbsp;гарантийном сроке указана в&nbsp;карточке товара. <br>Вы&nbsp;получите бесплатный ремонт или замену элементов, если в&nbsp;процессе использования мебели обнаружится производственный дефект. <br>В&nbsp;такой ситуации вам не&nbsp;нужно обращаться к&nbsp;изготовителю&nbsp;&mdash; оставьте заявку в&nbsp;отделе качества. Мы&nbsp;принимаем активное участие в&nbsp;решении вопросов гарантийного обслуживания, а&nbsp;обратная связь от&nbsp;клиентов позволяет совершенствовать нашу работу и&nbsp;ассортимент.</p>
+											<div class="sGuarantee__item d-flex align-items-start">
+												<svg class="icon2 icon2-phone ">
+													<use xlink:href="img/svg/sprite2.svg#phone"></use>
+												</svg>
+												<div class="sGuarantee__item-content"> 
+													<div class="sGuarantee__item-offer">Отдел качества
+													</div>
+													<h4>+7 (495) 642-70-97</h4>
+												</div>
+											</div>
+											<div class="sGuarantee__item d-flex align-items-start">
+												<svg class="icon2 icon2-time ">
+													<use xlink:href="img/svg/sprite2.svg#time"></use>
+												</svg>
+												<div class="sGuarantee__item-content"> 
+													<div class="sGuarantee__item-offer">график работы
+													</div>
+													<div>пн-пт - 9:00-18:00; сб, вс - выходной</div>
+												</div>
+											</div>
+										</div>
+										<div class="sGuarantee__col col-5"> 
+											<div class="sGuarantee__img bg-wrap"><img class="object-fit-js picture-bg" src="img/guarantee.jpg" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+									<div class="sertificates"> 
+										<div class="sertificates__row row"> 
+											<h2>Сертификаты</h2>
+											<div class="sertificates__col col-3">
+												<div class="sertificates__sertificate"> <img src="img/sertificate.jpg" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<div class="sertificates__col col-3">
+												<div class="sertificates__sertificate"> <img src="img/sertificate.jpg" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<div class="sertificates__col col-3">
+												<div class="sertificates__sertificate"> <img src="img/sertificate.jpg" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<div class="sertificates__col col-3">
+												<div class="sertificates__sertificate"> <img src="img/sertificate.jpg" alt="" loading="lazy"/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end sGuarantee-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/priority-nav/priority-nav.min.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

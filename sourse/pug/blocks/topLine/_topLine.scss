@@ -82,6 +82,11 @@
 	}
 	&__logo {
 		// margin-right: rem(31);
+
+		.icon2 {
+			font-size: rem(111);
+			height: rem(46.7);
+		}
 	}
 	.form-wrap {
 		flex-grow: 1;

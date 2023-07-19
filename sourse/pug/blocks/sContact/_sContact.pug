@@ -1,9 +1,56 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
+		+b.section-title
+			h1 Контакты
 				
-			+e.row.row
+		+e.row.row
+			+e.col.col-12.col-xl-6
+				+e.item.d-flex.align-items-start
+					+icon2('phone')
+					+e.item-content 
+						+e.item-offer Отдел качества
+						+e.UL.top-social.d-flex.align-items-center
+							+item-sos()
+								+icon2('telegram2')
+							+item-sos()
+								+icon2('whatsapp2')
+							h4 +7 (495) 642-70-97
+					mixin item(i, o, t)
+						+e.item.d-flex.align-items-start
+							+icon2(i)
+							+e.item-content 
+								+e.item-offer!= o
+								div!= t
+				+item(`mail`,`вопросы по заказам`,`zakaz@riva.ru`)
+				+item(`mail`,`вопросы по доставке`,`zakaz@riva.ru`)
+				+item(`time`,`САМОВЫВОЗ`,`пн-пт - 9:00-18:00; сб, вс - выходной`)
+				+item(`marker`,`адрес офиса`,`Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж`)
+				+item(`route`,`координаты офиса для навигатора`,`Координаты для навигатора 55.487767, 37.594851`)
+				+item(`marker`,`адрес склада`,`Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж`)
+				+item(`route`,`координаты склада для навигатора`,`Координаты для навигатора 55.487767, 37.594851`)
+				+e.item.d-flex.align-items-start
+					+icon2('')
+					+e.item-content 
+						+e.item-offer мы в соц. сетях
+						+e.UL.top-social.d-flex 
+							+item-sos()
+								+icon2('vk')
+							+item-sos()
+								+icon2('ok')
+							+item-sos()
+								+icon2('pinterest')
+							+item-sos()
+								+icon2('fb')
+			+e.col.col-12.col-xl-6
+				+e.call.text-center
+					h3 Перезвоните мне
+					+form-wrap
+						+input("Имя")
+						+input("+7 (900) 000-00-00",'tel')
+						+e.btn.btn-outline-primary.btn(type="submit") Жду звонка
+						+e.policy Продолжая, вы принимаете <a href="#">правила продажи <br>товаров</a> и соглашаетесь на <a href="#">обработку <br>персональных данных</a>
+			
+			+e.map
+				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade8dac1c36369cb125afff546f09521396d33ecec2940210d8e85b2820d0ba98&amp;source=constructor" width="100%" height="309" frameborder="0")
 	// end sContact

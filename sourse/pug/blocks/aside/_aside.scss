@@ -3,7 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	margin-right: rem(-30);
+	@include media-breakpoint-up(xl) {
+		margin-right: rem(-30);
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};

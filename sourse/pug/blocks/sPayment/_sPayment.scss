@@ -1,0 +1,80 @@
+// start .sPayment
+.sPayment {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	padding-bottom: 0;
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	h3 {
+		margin-bottom: rem(26);
+	}
+	h5 {
+		margin-bottom: rem(16);
+	}
+	&__col{
+	}
+	&__item{
+		margin-top: rem(-16);
+		margin-bottom: rem(26);
+	}
+	&__item-img {
+		height: rem(120);
+		display: flex;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__req-items {
+		margin-bottom: rem(33);
+	}
+	&__req-item {
+		border-radius: $border-radius;
+		width: 178px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: rem(12);
+	}
+	.alphabank {
+		border: 1px solid $primary;
+	}
+	.sberbank {
+		border: 1px solid $secondary;
+	}
+	table {
+		margin-bottom: rem(43);
+		border-collapse: collapse;
+		width: 100%;
+		&:last-child {
+			margin-bottom: rem(10);
+		}
+	}
+	tbody {}
+	tr {
+		border-bottom: 1px solid $secondary;
+		&:last-child {
+			border: none;
+		}
+	}
+	td {
+		padding: rem(10) 0;
+		&:last-child {
+			font-weight: $font-weight-semibold;
+			text-align: right;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPayment
