@@ -13,9 +13,7 @@ include ../blocks/sOurProjects/_sOurProjects.pug
 include ../blocks/sRews/_sRews.pug
 include ../blocks/sNews/_sNews.pug
 include ../blocks/sProdCard/_sProdCard.pug
-include ../blocks/sFaq/_sFaq.pug
-include ../blocks/sProductExamples/_sProductExamples.pug
-
+include ../blocks/sFaq/_sFaq.pug 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
@@ -32,8 +30,8 @@ block pagecontent
 		+page-head('Кресло Riva Chair A9184','Кресла руководителя', 'Кресло Riva Chair A9184')
 		+sProdCard
 		+sFaq
-		+sProductExamples('Похожие товары')
-		+sProductExamples('Вы смотрели')
+		+sCatalog3('Похожие товары')
+		+sCatalog3('Вы смотрели')
 		+tags
 		+sForm()
 	+parts('footer')

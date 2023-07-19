@@ -151,3 +151,24 @@ mixin sCatalog2(data)
 			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
 			a.btn.btn-link.text-light(href="#").w-100.mt-2 Все товары со скидкой
 	// end sCatalog
+mixin sCatalog3(title)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+b.section-title
+				h2!= title
+			+e.row.row
+				.col-xl-3.col-lg-4.col-sm-6
+					+product-item(`8`,``,``,``)
+				.col-xl-3.col-lg-4.col-sm-6
+					+product-item(`8`,``,``,``)
+				.col-xl-3.col-lg-4.col-sm-6
+					+product-item(`8`,``,``,``)
+				.col-xl-3.col-lg-4.col-sm-6
+					+product-item(`8`,``,``,``)
+						.col-auto
+							+e.btn(type="button").btn.btn-outline-primary
+								+icon("cart")
+								| В корзину
+						+e.status.col Нет в наличии
+	// end sCatalog
