@@ -205,6 +205,57 @@ function svgCopy() {
     
 }
 
+function svg2() {
+    return src('./' + sourse + '/svg/*.svg')
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        // .pipe(cheerio({
+        //     run: function ($) {
+        //         $('[fill]').removeAttr('fill');
+        //         $('[stroke]').removeAttr('stroke');
+        //         $('[style]').removeAttr('style');
+        //         $('[opacity]').removeAttr('opacity');
+        //     },
+        //     parserOptions: { xmlMode: true }
+        // }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            shape: {
+                dimension: {         // Set maximum dimensions
+                    maxWidth: 500,
+                    maxHeight: 500
+                },
+                spacing: {         // Add padding
+                    padding: 0
+                }
+            },
+            mode: {
+                symbol: {
+                    sprite: "../sprite2.svg",
+                    render: {
+                        scss: {
+                            template: './' + sourse + '/sass/templates/_sprite_template.scss',
+                            dest: destSprite,
+                        }
+                    }
+                }
+            }
+
+        }))
+
+        .pipe(dest(`${sourse}/sass/`)); 
+}
+
+function svgCopy2() {
+return src(`${sourse}/sass/sprite2.svg`)
+    .pipe(plumber())
+    .pipe(dest(`${publicPath}/img/svg/`))
+
+}
+
 function cleanimg() {
     const path = publicPath + '/img';
     return deleteAsync([path + '/@*'])
@@ -240,6 +291,9 @@ function startwatch() {
     watch(sourse + '/svg/*.svg', { usePolling: true }, svg);
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
+    
+    watch(sourse + '/svg/*.svg', { usePolling: true }, svg2);
+    watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy2);
 
     watch([sourse + '/js/common.js'], { usePolling: true }, common);
     // watch(sourse + '/img', { usePolling: true }, img);
@@ -248,9 +302,10 @@ function startwatch() {
 export let imgAll = series(cleanimg, img) 
 export let libs = series(cleanlibs, copyLibs)
 export let sprite = series(svg, svgCopy)
+export let sprite2 = series(svg2, svgCopy2)
 
 
 
 export default series(common, libs, styles, 
     // imgAll, 
-    sprite, pugFiles, parallel(browsersync, startwatch))
+    sprite, sprite2, pugFiles, parallel(browsersync, startwatch))

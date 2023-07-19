@@ -4,3 +4,8 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/svg/sprite.svg#" + name)
 //-/ svg-sprite
+
+mixin icon2(name,mod)
+	- mod = mod || ''
+	svg(class="icon2 icon2-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite2.svg#" + name)

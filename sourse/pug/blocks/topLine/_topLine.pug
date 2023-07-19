@@ -6,7 +6,8 @@ mixin topLine()
 				.col-auto.col-lg.d-none.d-sm-flex
 					+e.items.d-flex.align-items-center
 						+e.item.d-flex.align-items-center 
-							+img('img/marker.svg')
+							//- +img('img/marker.svg')
+							+icon2('marker')
 							+e.item-text Москва, Бизнес-центр «Тушино» Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
 						+e.item.d-flex.align-items-center 
 							+img('img/mail.svg')
@@ -14,8 +15,10 @@ mixin topLine()
 				.col-auto.d-none.d-lg-flex
 					+e.top-right.d-flex.align-items-center
 						+e.UL.top-social.d-flex 
-							+item-sos('telegram')
-							+item-sos('whatsapp')
+							+item-sos()
+								+icon2('telegram2')
+							+item-sos()
+								+icon2('whatsapp2')
 						+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
 						+e(href="#").btn Заказать звонок
 			+e.bottom.row
