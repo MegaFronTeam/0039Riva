@@ -8,8 +8,34 @@
 		--bs-gutter-y: 40px;
 
 	}
+	&__series {
+		text-align: center;
+		margin-bottom: rem(22);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(39);
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(12)};
+
+		justify-content: center;
+		margin-top: rem(14);
+	}
+	&__link {
+		padding: rem(8) rem(12.5);
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: 1.5;
+		border-radius: 6px;
+		color: $secondary;
+		&:hover,
+		&.active {
+			color: #fff;
+			background-color: $dark;
+		}
+	}
 	.section-title{
-		
 	}
 	&__col{
 

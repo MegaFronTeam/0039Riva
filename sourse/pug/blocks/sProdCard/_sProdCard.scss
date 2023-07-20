@@ -430,8 +430,9 @@
 				border-radius: 3px;
 				@include media-breakpoint-up(lg) {
 					width: 100%;
-					left: calc(var(--bs-btn-padding-x) / 2);
+					left: calc(var(--bs-gutter-x) / 2);
 					max-width: rem(766);
+					min-width: rem(546);
 				}
 			}
 		}
