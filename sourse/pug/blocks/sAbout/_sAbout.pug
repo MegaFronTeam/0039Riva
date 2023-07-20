@@ -31,7 +31,7 @@ mixin sAbout(data)
 						.swiper-wrapper
 							-for(var i = 0; i < 7; i++)
 								.swiper-slide
-									+e.greetings-item
+									+e.greetings-item(data-src=`img/greetings.png` data-fancybox=`sAbout-gallery`)
 										+img(`img/greetings.png`)
 					+arrow
 

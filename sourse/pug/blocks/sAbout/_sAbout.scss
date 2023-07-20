@@ -101,6 +101,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 	}
 
 	@include media-breakpoint-up(xl) {}
