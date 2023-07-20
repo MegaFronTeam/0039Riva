@@ -587,10 +587,9 @@ iframe {
 	// font-size: rem(24);
 	// width: 1em;
 	// height: 1em;
-	&-telegram2,
-	&-whatsapp2 {
-		font-size: rem(20);
-	}
+	--h: 24;
+	font-size: calc(var(--h)/16*1rem);
+	width: calc(24/var(--h)*1em);
 }
 
 .form-switch .form-check-input{
