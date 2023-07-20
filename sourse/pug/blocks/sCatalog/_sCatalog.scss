@@ -72,6 +72,13 @@
 	.p-plus__toggle-btn{
 		color: $body-color;
 	}
+
+	&__sort-wrap{
+		.form-select{
+			--bs-border-color: #F3F3F4;
+			--bs-form-control-bg: #F3F3F4;
+		}	
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -138,6 +145,9 @@
 	}
 	&__footer{
 		margin-top: auto;
+		.row{
+			--bs-gutter-y: 10px;
+		}
 	}	
 	&__status{
 		font-size: 12px;
@@ -237,6 +247,27 @@
 	&:hover{
 		z-index: 100;
 		--op: 1; 
+	}
+	.card-slider__img-wrap{
+		--ratio: 1;
+	}
+	&__img-wrap--eskiz{
+		border-radius: 6px;
+		border: 1px solid #E8E8E9;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1;
+		text-align: center;
+		p{
+			max-width: 80%;
+			color: $body-color;
+		}
+		.icon2{
+			margin-bottom: 7px;
+			font-size: 46px;
+		}
 	}
 }
 

@@ -588,6 +588,85 @@ function eventHandler() {
 	});
  
 
+	$(".range-wrap").each(function () {
+		let _this = $(this);
+		var $d3 = _this.find(".slider-js");
+
+		var slider = $d3.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			hide_from_to: true,
+			onStart: function (data) {
+				_this.find('.minus').val(data.from);
+				_this.find('.plus').val(data.to);
+			},
+			onChange: function (data) {
+				_this.find('.minus').val(data.from);
+				_this.find('.plus').val(data.to);
+			},
+			onFinish: function (data) {
+				_this.find('.minus').val(data.from);
+				_this.find('.plus').val(data.to);
+			},
+			onUpdate: function (data) {
+				_this.find('.minus').val(data.from);
+				_this.find('.plus').val(data.to);
+			}
+		});
+		var $d3_instance = slider.data("ionRangeSlider");
+		$(this).on('change  input  cut  copy  paste', '.minus', function () {
+			var th = $(this);
+			var data = th.val();
+			var min = +data;
+			// th.val(data + ' т')
+			console.log(1);
+			$d3_instance.update({
+				from: min,
+			})
+		});
+
+		$(this).on('change  input  cut  copy  paste', '.plus', function () {
+			var th = $(this);
+			var data = th.val();
+			var max = +data;
+
+			//max => new val of max inp
+			//min => value of the min inp
+
+			let min = Number(document.querySelector('.range-result.range-result--minus.minus').value);
+			if (min >= max) {
+				min = 0;
+				$d3_instance.update({
+					from: min,
+					to: max,
+				});
+			}
+			else {
+				$d3_instance.update({
+					to: max,
+				});
+			}
+		});
+		// $d3.on("change", function () {
+		// 	var $inp = $(this);
+		// 	var from = $inp.prop("value"); // reading input value
+		// 	var from2 = $inp.data("from"); // reading input data-from attribute
+
+		// 	_this.find('range-result--minus').val(from); // FROM value
+		// 	_this.find('range-result--plus').val(from); // FROM value
+		// });
+
+
+	})
+
+	$(document).on("click", '.toggle-filter-mobile-js', function () {
+		$(this).next().slideToggle(300);
+	})
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

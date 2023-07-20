@@ -51,7 +51,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 @import "./node_modules/bootstrap/scss/badge";
-// @import "./node_modules/bootstrap/scss/alert";
+@import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
 // @import "./node_modules/bootstrap/scss/list-group";
 // @import "./node_modules/bootstrap/scss/close";
@@ -90,12 +90,30 @@ $output-bourbon-deprecation-warnings: false;
 }
 @import "./node_modules/bootstrap/scss/pagination";
 
+.pagination-wrapper{
+}
+.page-numbers{
+	justify-content: center;
+	margin-top: 12px;
+
+}
 .pagination-wrapper ul {
 	@extend .pagination;
 }
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	display: inline-flex;
+	min-width: 44px;
+	height: 44px;
+	margin: 0 6px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	&.next,
+	&.prev{
+		min-width: 91px;
+	}
 }
 
 .pagination-wrapper li {
@@ -103,9 +121,9 @@ $output-bourbon-deprecation-warnings: false;
 
 	.current {
 		z-index: 1;
-		// color: $pagination-active-color;
-		// background-color: $pagination-active-bg;
-		// border-color: $pagination-active-border-color;
+		color: $pagination-active-color;
+		background-color: $pagination-active-bg;
+		border-color: $pagination-active-border-color;
 	}
 }
 @import "root";

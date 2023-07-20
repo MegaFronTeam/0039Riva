@@ -1,0 +1,81 @@
+mixin catalogFilter(data)
+	// start catalogFilter
+	+b.catalogFilter&attributes(attributes)
+		button.btn.btn-outline-primary(type="button").toggle-filter-mobile-js.d-lg-none.w-100.mb-3 Фильтр товаров
+		.dropdowns.d-lg-block
+			mixin item(t)
+				+b.dropdown-item
+					+e.toggle.dd-head-js
+						+icon("chevron-down")
+						= t
+					+e.body.dd-group__content
+						block
+			+item(`Категории`)
+			.dropdown-item
+				label.form-check.form-switch.fw-600
+					.form-check-label  В наличии
+					input.form-check-input(type='checkbox' role='switch' checked='')
+			+item(`Цена`)
+				.range-wrap
+					.row.g-2
+						.col-6
+							+input("20").minus
+						.col-6
+							+input("200").plus
+					input(type="text").slider-js
+			+item(`Цвет`)
+				.mb-2: +in-c( "checkbox", 'Белый').--color(style="--bg-color:#fff")
+				.mb-2: +in-c( "checkbox", 'Черный').--color(style="--bg-color:#000")
+				.mb-2: +in-c( "checkbox", 'Серый').--color(style="--bg-color:#999999")
+				.mb-2: +in-c( "checkbox", 'Кофейный').--color(style="--bg-color:#3D2B24")
+				.mb-2: +in-c( "checkbox", 'Латте').--color(style="--bg-color:#DBC1A2")
+				.mb-2: +in-c( "checkbox", 'Бежевый').--color(style="--bg-color:#DCC5AD")
+				.mb-2: +in-c( "checkbox", 'Дуб').--color(style="--bg-color:#BBA46D")
+				.mb-2: +in-c( "checkbox", 'Желтый').--color(style="--bg-color:#FFFF00")
+				.mb-2: +in-c( "checkbox", 'Оранжевый').--color(style="--bg-color:#FF9900")
+			mixin input-sizes()
+				.row.g-2
+					.col-6
+						+input("20")
+					.col-6
+						+input("200")
+			+item(`Ширина, см`)
+				+input-sizes()
+			+item(`Высота`)
+				+input-sizes()
+			+item(`Глубина `) 
+				+input-sizes()
+			mixin inputs-checks()
+				.mb-2: +in-c("checkbox", 'Прямоугольный')
+				.mb-2: +in-c("checkbox", 'Круглый')
+				.mb-2: +in-c("checkbox", 'Овальный')
+				.mb-2: +in-c("checkbox", 'Квадратный')
+			+item(`Форма стола `)
+				+inputs-checks()
+			+item(`Материал столешницы `) 
+				+inputs-checks()
+			+item(`Материал основания `) 
+				+inputs-checks()
+			+item(`Стиль мебели`)
+				+inputs-checks()
+			+e.btn.BUTTON.btn.btn-outline-primary.w-100.mb-2  Показать 72 товара
+			+e.btn.BUTTON.btn.btn-outline-secondary.w-100.mb-2  Сбросить фильтр
+			.dropdown-item.mt-4
+				p.fw-600 Популярные категории
+				ul
+					li
+						a(href="") Кресла руководителя
+					li
+						a(href="") Приемные зоны
+					li
+						a(href="") Шкафы
+					li
+						a(href="") Мебель для персонала
+					li
+						a(href="") Зона ресепшн
+					li
+						a(href="") Тумбы
+			a.aside-banner.bg-wrap(href="#") 
+				+e.title Скидка на столы до 55%
+				+img(`img/aside-img.jpg`,'bg').picture-bg
+	// end catalogFilter

@@ -1,11 +1,11 @@
 //- svg-sprite
 mixin icon(name,mod)
 	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
+	svg(class="icon icon-" + name + ' ' + mod)&attributes(attributes)
 		use(xlink:href="img/svg/sprite.svg#" + name)
 //-/ svg-sprite
 
 mixin icon2(name,mod)
 	- mod = mod || ''
-	svg(class="icon2 icon2-" + name + ' ' + mod)
+	svg(class="icon2 icon2-" + name + ' ' + mod)&attributes(attributes)
 		use(xlink:href="img/svg/sprite2.svg#" + name)

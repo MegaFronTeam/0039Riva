@@ -120,6 +120,27 @@ mixin sCatalog2(data)
 		.container
 			+e.top.section-title.text-center
 				+cataloglist()
+			
+			+e.sort-wrap.row.gy-3.mb-4
+				.col-sm
+					label.row.d-md-inline-flex.align-items-center
+						span.col-md-auto.fw-600 Сортировать:
+						span.col-md-auto
+							select.form-select
+								option По популярности
+								option По популярности
+								option По популярности
+								option По популярности
+				.col-md-auto.col-sm-4.col-12
+					label.row.align-items-center.d-md-inline-flex
+						span.col-md-auto.fw-600 Показать по:
+						span.col-md-auto
+							select.form-select
+								option 20
+								option 50
+								option 100
+								option 200
+
 			+e.row.row
 				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
 				+e.col(class= wrapClass)
@@ -134,7 +155,33 @@ mixin sCatalog2(data)
 				+e.col(class= wrapClass)
 					+product-item(`3`,``,``,``)
 				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``)
+					+b.ARTICLE.product-item
+						+e.img-wrap(href="#").--eskiz
+							+icon2('moveCopyObjects')
+							p Разработаем <span class="text-primary">бесплатный</span>  эскиз растановки мебели
+							
+						+e.caption
+							.row
+								+e.price.col-auto 0 ₽
+							+e.text
+								| Код:  SK.SRT-200 (R)
+								br
+								| Услуги
+							+e.title
+								a(href="#") Эскиз растановки мебели
+							+e.footer
+								.row 
+									.col-auto
+										+e.btn(type="button").btn.btn-outline-primary
+											+icon("cart")
+											| В корзину
+									+e.status.col
+										+icon("check")
+										| В&nbsp;наличии ~ 11&nbsp;шт.
+				.col-12
+					.alert.alert-primary.h4.text-center 
+						+icon2("fastDelivery").me-2
+						| Бесплатная доставка по Москве со склада
 				+e.col(class= wrapClass)
 					+product-item(`5`,``,``,``)
 				+e.col(class= wrapClass)
@@ -149,7 +196,7 @@ mixin sCatalog2(data)
 								| В корзину
 						+e.status.col Нет в наличии
 			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
-			a.btn.btn-link.text-light(href="#").w-100.mt-2 Все товары со скидкой
+			+pugin()
 	// end sCatalog
 mixin sCatalog3(title)
 	// start sCatalog

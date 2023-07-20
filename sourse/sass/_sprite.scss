@@ -37,6 +37,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.icon-fastDelivery {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(30 / var(--h) *1em );
+}
 .icon-fb {
 	--h: 31;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -76,6 +81,11 @@
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
+}
+.icon-moveCopyObjects {
+	--h: 46;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(46 / var(--h) *1em );
 }
 .icon-ok {
 	--h: 30;

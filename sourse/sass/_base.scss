@@ -592,3 +592,17 @@ iframe {
 		font-size: rem(20);
 	}
 }
+
+.form-switch .form-check-input{
+	height: 18px;
+}
+.form-switch .form-check-input:checked{
+	background-color: #67C15F;
+}
+
+
+.alert-primary {
+	--bs-alert-color: var(--bs-primary);
+	--bs-alert-bg: #FDE7E8; 
+	--bs-alert-link-color: var(--bs-primary);
+}
