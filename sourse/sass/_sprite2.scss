@@ -1,0 +1,179 @@
+@use "sass:math";
+
+.icon2 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon2-arrow-right {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-beware {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-delivery {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-done {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-dropdown-arrow {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-fast-delivery {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-fastDelivery {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(30 / var(--h) *1em );
+}
+.icon2-fb {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-logo {
+	--h: 47;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(111 / var(--h) *1em );
+}
+.icon2-maestro {
+	--h: 22;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(36 / var(--h) *1em );
+}
+.icon2-mail {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-marker {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-mastercard {
+	--h: 22;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(35 / var(--h) *1em );
+}
+.icon2-mir {
+	--h: 12;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(40 / var(--h) *1em );
+}
+.icon2-move {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-moveCopyObjects {
+	--h: 46;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(46 / var(--h) *1em );
+}
+.icon2-ok {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-phone {
+	--h: 18;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(18 / var(--h) *1em );
+}
+.icon2-phone_copy {
+	--h: 18;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(18 / var(--h) *1em );
+}
+.icon2-pinterest {
+	--h: 30;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-qiwi {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-route {
+	--h: 18;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(18 / var(--h) *1em );
+}
+.icon2-search {
+	--h: 28;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
+.icon2-settings {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-shield {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-telegram {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-telegram2 {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-time {
+	--h: 18;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(18 / var(--h) *1em );
+}
+.icon2-visa {
+	--h: 14;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(46 / var(--h) *1em );
+}
+.icon2-vk {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-wallet {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(22 / var(--h) *1em );
+}
+.icon2-webmoney {
+	--h: 23;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon2-whatsapp {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
+.icon2-whatsapp2 {
+	--h: 31;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(31 / var(--h) *1em );
+}
