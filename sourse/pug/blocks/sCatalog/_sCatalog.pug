@@ -39,9 +39,8 @@ mixin product-item(i,t, p ,pr, badge)
 							+e.btn(type="button").btn.btn-outline-primary
 								+icon("cart")
 								| В корзину
-						+e.status.col
-							+icon("check")
-							| В&nbsp;наличии ~ 11&nbsp;шт.
+						.col
+							+status()
 			+e.list
 				table
 					tr
@@ -90,9 +89,8 @@ mixin sCatalog(data)
 					+product-item(`2`,``,``,``)
 						.col-auto
 							+addblock()
-						+e.status.col
-							+icon("check")
-							| В&nbsp;наличии ~ 11&nbsp;шт.
+						.col
+							+status()
 				+e.col(class= wrapClass)
 					+product-item(`3`,``,``,`badge`)
 				+e.col(class= wrapClass)
@@ -109,7 +107,8 @@ mixin sCatalog(data)
 							+e.btn(type="button").btn.btn-outline-primary
 								+icon("cart")
 								| В корзину
-						+e.status.col Нет в наличии
+						.col
+							+status(true)
 			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
 			a.btn.btn-link.text-light(href="#").w-100.mt-2 Все товары со скидкой
 	// end sCatalog
@@ -149,9 +148,8 @@ mixin sCatalog2(data)
 					+product-item(`2`,``,``,``)
 						.col-auto
 							+addblock()
-						+e.status.col
-							+icon("check")
-							| В&nbsp;наличии ~ 11&nbsp;шт.
+						.col
+							+status()
 				+e.col(class= wrapClass)
 					+product-item(`3`,``,``,``)
 				+e.col(class= wrapClass)
@@ -175,9 +173,8 @@ mixin sCatalog2(data)
 										+e.btn(type="button").btn.btn-outline-primary
 											+icon("cart")
 											| В корзину
-									+e.status.col
-										+icon("check")
-										| В&nbsp;наличии ~ 11&nbsp;шт.
+									.col
+										+status()
 				.col-12
 					.alert.alert-primary.h4.text-center 
 						+icon2("fastDelivery").me-2
@@ -194,7 +191,8 @@ mixin sCatalog2(data)
 							+e.btn(type="button").btn.btn-outline-primary
 								+icon("cart")
 								| В корзину
-						+e.status.col Нет в наличии
+						.col
+							+status(true)
 			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
 			+pugin()
 	// end sCatalog
@@ -224,5 +222,6 @@ mixin sCatalog3(title, series)
 							+e.btn(type="button").btn.btn-outline-primary
 								+icon("cart")
 								| В корзину
-						+e.status.col Нет в наличии
+						.col
+							+status(true)
 	// end sCatalog

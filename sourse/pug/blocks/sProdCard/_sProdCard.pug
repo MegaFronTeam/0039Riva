@@ -53,9 +53,7 @@ mixin sProdCard(data)
 								.badge.bg-primary -15%
 							+e.in-stock
 								+e.update Дата обновления: Сегодня в 07:26
-								p 
-									+icon('check')
-									| В наличии~ 11 шт.
+								+status()
 							+e.action
 								+addblock()
 								+e.btn(type="button").btn.btn-outline-primary

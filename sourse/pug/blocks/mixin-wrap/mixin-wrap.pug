@@ -81,3 +81,11 @@ mixin tags()
 				+tag('Столы классические')
 				+tag('Столы в стиле лофт')
 				+tag('Детские столы')
+
+mixin status(empty)
+	+b.status
+		if empty
+			| Нет в наличии
+		else
+			+icon("check")
+			| В&nbsp;наличии ~ 11&nbsp;шт.
