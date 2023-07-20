@@ -198,11 +198,18 @@ mixin sCatalog2(data)
 			a.btn.btn-outline-light(href="#").w-100.mt-4 Показать ещё
 			+pugin()
 	// end sCatalog
-mixin sCatalog3(title)
+mixin sCatalog3(title, series)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title
+			if series
+				+e.series
+					h2 Элементы серии
+					+e.row.row
+						.col-auto: +e.link.active(href="#") Все 
+						.col-auto: +e.link(href="#") Столы 
+						.col-auto: +e.link(href="#") Сборные элементы 
+			+b.section-title.text-center
 				h2!= title
 			+e.row.row
 				.col-xl-3.col-lg-4.col-sm-6
