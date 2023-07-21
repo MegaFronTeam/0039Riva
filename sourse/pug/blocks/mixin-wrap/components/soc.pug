@@ -13,4 +13,11 @@ mixin soc()
 			each soc in social
 				+item-sos(soc)
 
+mixin socChosen(...items)
+	+b.soc 
+		if block 
+			block
+		else 
+			-for (var i = 0; i < items.length; i++)
+				+item-sos(items[i])
 //- /social buttons 

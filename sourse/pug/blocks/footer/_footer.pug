@@ -1,9 +1,11 @@
+include ../top-nav/_top-nav.pug
+
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
 			.row 
 				+e.subscribe.d-flex.align-items-center.justify-content-center.flex-column.flex-lg-row
-					+e.H3.subscribe-offer Подпишитесь на рассылку, чтобы узнавать об акциях первым!
+					+e.subscribe-offer Подпишитесь на рассылку, чтобы узнавать об акциях первым!
 					+form-wrap
 						+input("Email",'text')
 						+e.btn.btn-outline-primary.btn(type="submit") Подписаться
@@ -43,15 +45,45 @@ mixin footer()
 							+item(5,`Бордюры`)
 							+item(6,`Пандусы`)
 							+item(7,`Архитектурные изделия`)
-				.col-lg.order-lg-0.order-last.menu-col
+
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
+							+menu-toggle()
 							+mnu()
-				+e.col.beware-col.col-12.col-sm-auto
-					+e.beware.d-flex.align-items-center
+							+b.topLine.d-lg-none
+								.container 
+										.mb-2
+											.top-nav__beware.d-flex.align-items-center
+												+img('img/beware.svg')
+												span Остерегайтесь подделок
+
+										.mb-2 
+											.top-nav__text Ежедневно, с 09:00 до 21:00
+											.top-nav__offer Бизнес-центр «Тушино»
+											.top-nav__text Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
+											
+										.mb-2
+											+e.item.d-flex.align-items-center 
+												+img('img/mail.svg')
+												+e.item-text info@riva.ru
+										.mb-2
+											+e.UL.top-social.d-flex 
+												+item-sos('telegram')
+												+item-sos('whatsapp')
+
+										.mb-2
+											+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
+
+										.mb-2
+											+e(href="#").btn Заказать звонок
+
+				+e.beware.col-auto.d-none.d-md-flex.align-items-center
 						+icon2('beware')
 						span Остерегайтесь подделок
-			
+					
+				.col-auto.d-lg-none
+					+menu-toggle()
 			.row
 				+e.col.col
 					+e.left
@@ -63,47 +95,46 @@ mixin footer()
 						+e.text Копирайт: 2020 — 2023г. «Riva – фабрика офисной мебели» ©
 				+e.col.col-auto
 					+e.right.d-flex.flex-column.float-right.justify-content-between
-						+e.nav
-							nav.d-flex.flex-column.flex-sm-row
-								ul
-									li
-										a(href="#") Контакты
-									li
-										a(href="#") О компании
-									li
-										a(href="#") Доставка
-									li
-										a(href="#") Оплата
-									li
-										a(href="#") Возврат товара
-									li
-										a(href="#") Гарантия
-								ul
-									li
-										a(href="#") Блог
-									li
-										a(href="#") Отзывы
-									li
-										a(href="#") Акции и скидки
-									li
-										a(href="#") Рассрочка и кредит
-									li
-										a(href="#") Новые поступления
-									li
-										a(href="#") Бренды
-								ul
-									li
-										a(href="#") Как заказать
-									li
-										a(href="#") Дизайнерам 
-									li
-										a(href="#") Оптовикам
-									li
-										a(href="#") Корпоративным клиентам
-									li
-										a(href="#") Политика конфиденциальности
-									li
-										a(href="#") Публичная оферта
+						nav.d-flex.flex-column.flex-sm-row
+							ul
+								li
+									a(href="#") Контакты
+								li
+									a(href="#") О компании
+								li
+									a(href="#") Доставка
+								li
+									a(href="#") Оплата
+								li
+									a(href="#") Возврат товара
+								li
+									a(href="#") Гарантия
+							ul
+								li
+									a(href="#") Блог
+								li
+									a(href="#") Отзывы
+								li
+									a(href="#") Акции и скидки
+								li
+									a(href="#") Рассрочка и кредит
+								li
+									a(href="#") Новые поступления
+								li
+									a(href="#") Бренды
+							ul
+								li
+									a(href="#") Как заказать
+								li
+									a(href="#") Дизайнерам 
+								li
+									a(href="#") Оптовикам
+								li
+									a(href="#") Корпоративным клиентам
+								li
+									a(href="#") Политика конфиденциальности
+								li
+									a(href="#") Публичная оферта
 						+e.bottom
 							+e.bottom-item.d-flex.align-items-left.align-items-sm-center.flex-column.flex-sm-row
 								+e.bottom-item-offer Давайте дружить
@@ -111,18 +142,18 @@ mixin footer()
 									+soc
 							+e.bottom-item.d-flex.align-items-left.align-items-sm-center.flex-column.flex-sm-row
 								+e.bottom-item-offer Принимаем к оплате
-								+e.UL.payment-ul.d-flex.flex-wrap.flex-sm-nowrap
-									+e.LI.payment-li.visa
+								+e.payment-items.d-flex.flex-wrap.flex-sm-nowrap
+									+e.payment-item.visa
 										+icon2('visa')
-									+e.LI.payment-li.mastercard
+									+e.payment-item.mastercard
 										+icon2('mastercard')
-									+e.LI.payment-li.maestro
+									+e.payment-item.maestro
 										+icon2('maestro')
-									+e.LI.payment-li
+									+e.payment-item
 										+img('img/mir.svg')
-									+e.LI.payment-li
+									+e.payment-item
 										+icon2('wallet')
-									+e.LI.payment-li
+									+e.payment-item
 										+icon2('webmoney')
-									+e.LI.payment-li
+									+e.payment-item
 										+icon2('qiwi')

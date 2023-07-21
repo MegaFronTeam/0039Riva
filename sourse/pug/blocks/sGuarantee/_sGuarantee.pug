@@ -6,13 +6,16 @@ mixin sGuarantee(data)
 			
 		+e.row.row
 			+e.col.col
-				h2 Срок гарантии на мебель — <br>от 1 года до 5 лет
-				p Мы&nbsp;предоставляем официальную гарантию от<br>производителей. Информация о&nbsp;гарантийном сроке указана в&nbsp;карточке товара. <br>Вы&nbsp;получите бесплатный ремонт или замену элементов, если в&nbsp;процессе использования мебели обнаружится производственный дефект. <br>В&nbsp;такой ситуации вам не&nbsp;нужно обращаться к&nbsp;изготовителю&nbsp;&mdash; оставьте заявку в&nbsp;отделе качества. Мы&nbsp;принимаем активное участие в&nbsp;решении вопросов гарантийного обслуживания, а&nbsp;обратная связь от&nbsp;клиентов позволяет совершенствовать нашу работу и&nbsp;ассортимент.
+				+e.offer-constr
+					h2 Срок гарантии на мебель — <br>от 1 года до 5 лет
+					p Мы&nbsp;предоставляем официальную гарантию от<br>производителей. Информация о&nbsp;гарантийном сроке указана в&nbsp;карточке товара. 
+					p Вы&nbsp;получите бесплатный ремонт или замену элементов, если в&nbsp;процессе использования мебели обнаружится производственный дефект. 
+					p В&nbsp;такой ситуации вам не&nbsp;нужно обращаться к&nbsp;изготовителю&nbsp;&mdash; оставьте заявку в&nbsp;отделе качества. Мы&nbsp;принимаем активное участие в&nbsp;решении вопросов гарантийного обслуживания, а&nbsp;обратная связь от&nbsp;клиентов позволяет совершенствовать нашу работу и&nbsp;ассортимент.
 				+e.item.d-flex.align-items-start
 					+icon2('phone')
 					+e.item-content 
 						+e.item-offer Отдел качества
-						h4 +7 (495) 642-70-97
+						a(href="tel:+74956427097") +7 (495) 642-70-97
 				+e.item.d-flex.align-items-start
 					+icon2('time')
 					+e.item-content 
@@ -27,14 +30,14 @@ mixin sGuarantee(data)
 				h2 Сертификаты
 				+e.col.col-6.col-sm-4.col-md-3
 					+e.sertificate(data-src=`img/sertificate.jpg` data-fancybox=`sGuarantee-gallery`)
-						+img('img/sertificate.jpg')
+						+img('img/sertificate.jpg').object-fit-js
 				+e.col.col-6.col-sm-4.col-md-3
 					+e.sertificate(data-src=`img/sertificate.jpg` data-fancybox=`sGuarantee-gallery`) 
-						+img('img/sertificate.jpg')
+						+img('img/sertificate.jpg').object-fit-js
 				+e.col.col-6.col-sm-4.col-md-3
 					+e.sertificate(data-src=`img/sertificate.jpg` data-fancybox=`sGuarantee-gallery`) 
-						+img('img/sertificate.jpg')
+						+img('img/sertificate.jpg').object-fit-js
 				+e.col.col-6.col-sm-4.col-md-3
 					+e.sertificate(data-src=`img/sertificate.jpg` data-fancybox=`sGuarantee-gallery`) 
-						+img('img/sertificate.jpg')
+						+img('img/sertificate.jpg').object-fit-js
 	// end sGuarantee

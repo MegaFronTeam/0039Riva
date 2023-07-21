@@ -21,9 +21,26 @@
 		overflow: hidden;
 		margin-bottom: rem(40);
 	}
-	&__item{
-		margin-left: rem(20);
+	ul {
+		margin-bottom: 0;
+	}
+	li{
+		list-style: none;
+		margin-left: rem(47);
 		margin-bottom: rem(20);
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: -32px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url('../img/arrow-right.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 24px;
+			height: 24px;
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -31,7 +48,7 @@
 			margin-left: rem(8);
 		}
 	}
-	&__promo {
+	blockquote {
 		font-size: rem(28);
 		line-height: 140%;
 		font-weight: $font-weight-semibold;

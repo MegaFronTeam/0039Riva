@@ -25,14 +25,11 @@
 		height: rem(120);
 		display: flex;
 		align-items: center;
-		img {
-			max-width: 100%;
-		}
 	}
-	&__req-items {
+	.tabs__caption {
 		margin-bottom: rem(33);
 	}
-	&__req-item {
+	.tabs__btn {
 		border-radius: $border-radius;
 		width: 178px;
 		height: 48px;
@@ -43,6 +40,9 @@
 	}
 	.alphabank {
 		border: 1px solid $primary;
+		img {
+			transform: translateY(2px);
+		}
 	}
 	.sberbank {
 		border: 1px solid $secondary;
@@ -57,17 +57,30 @@
 	}
 	tbody {}
 	tr {
-		border-bottom: 1px solid $secondary;
+		border-bottom: 1px solid #E8E8E9;
+		display: flex;
+		flex-direction: column;
+		padding: rem(10) 0;
+		@include media-breakpoint-up(sm) {
+			display: table-row;
+			padding: 0;
+		}
 		&:last-child {
 			border: none;
 		}
 	}
 	td {
-		padding: rem(10) 0;
+		padding: rem(1) 0;
+		@include media-breakpoint-up(sm) {
+			padding: rem(10) 0;
+		}
 		&:last-child {
 			font-weight: $font-weight-semibold;
-			text-align: right;
+			text-align: left;
 			overflow-wrap: anywhere;
+			@include media-breakpoint-up(sm) {
+				text-align: right;
+			}
 		}
 	}
 

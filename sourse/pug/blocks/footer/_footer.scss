@@ -34,10 +34,8 @@
 			height: rem(46.7);
 		}
 	}
-	.beware-col {
-		padding-left: rem(3);
-	}
 	&__beware {
+		padding-left: 0;
 		margin-top: rem(15);
 		@include media-breakpoint-up(sm) {
 			margin-top: 0;
@@ -48,17 +46,6 @@
 			font-size: rem(14);
 			font-weight: $font-weight-semibold;
 			line-height: 150%;
-		}
-	}
-	.menu-col {
-		padding-right: 0;
-	}
-	.menu-item {
-		a {
-			@include mt;
-			&:hover {
-				color: $primary;
-			}
 		}
 	}
 	&__item{
@@ -103,7 +90,10 @@
 		}
 	}
 	.form-wrap__btn {
-		padding: 0 rem(23);
+		padding: 0 rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: 0 rem(23);
+		}
 	}
 
 	&__left {}
@@ -145,7 +135,7 @@
 			float: right;
 		}
 	}
-	&__nav {
+	nav {
 		ul {
 			margin-left: 0;
 			&:first-child {
@@ -195,7 +185,7 @@
 	}
 	&__social-li {
 		list-style: none;
-		margin-right: rem(9);
+		// margin-right: rem(9);
 		margin-bottom: rem(10);
 		&:last-child {
 			margin-right: 0;
@@ -204,14 +194,14 @@
 			margin-bottom: 0;
 		}
 	}
-	&__payment-ul {
+	&__payment-items {
 		margin-bottom: 0;
 		margin-left: 0;
 		@include media-breakpoint-up(sm) {
 			margin-left: rem(30);
 		}
 	}
-	&__payment-li {
+	&__payment-item {
 		list-style: none;
 		margin-right: rem(24);
 		margin-bottom: rem(10);

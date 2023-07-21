@@ -65,15 +65,18 @@ mixin top-nav()
 											.top-nav__beware.d-flex.align-items-center
 												+img('img/beware.svg')
 												span Остерегайтесь подделок
+
+										.mb-2 
+											.top-nav__text Ежедневно, с 09:00 до 21:00
+											.top-nav__offer Бизнес-центр «Тушино»
+											.top-nav__text Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
 											
 										.mb-2
 											+e.item.d-flex.align-items-center 
 												+img('img/mail.svg')
 												+e.item-text info@riva.ru
 										.mb-2
-											+e.UL.top-social.d-flex 
-												+item-sos('telegram')
-												+item-sos('whatsapp')
+											+socChosen('telegram2', 'whatsapp2')
 
 										.mb-2
 											+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
@@ -88,4 +91,9 @@ mixin top-nav()
 					
 				.col-auto.d-lg-none
 					+menu-toggle()
+
+			+form-wrap.form-wrap--mob
+				+input("Поиск товаров", 'text')
+				+e.btn.btn(type="submit")
+					+icon2('search')
 	// end top-nav

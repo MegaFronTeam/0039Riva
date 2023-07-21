@@ -5,20 +5,17 @@ mixin sContact()
 			h1 Контакты
 				
 		+e.row.row
-			+e.col.col-12.col-xl-6
+			+e.col.col-12.col-lg-6
 				+e.item.d-flex.align-items-start
-					+icon2('phone')
+					+icon2('phone').item-icon
 					+e.item-content 
 						+e.item-offer Отдел качества
-						+e.UL.top-social.d-flex.align-items-center
-							+item-sos()
-								+icon2('telegram2')
-							+item-sos()
-								+icon2('whatsapp2')
+						+e.top-social.d-flex.align-items-center
+							+socChosen('telegram2', 'whatsapp2')
 							h4 +7 (495) 642-70-97
 					mixin item(i, o, t)
 						+e.item.d-flex.align-items-start
-							+icon2(i)
+							+icon2(i).item-icon
 							+e.item-content 
 								+e.item-offer!= o
 								div!= t
@@ -33,16 +30,8 @@ mixin sContact()
 					+icon2('')
 					+e.item-content 
 						+e.item-offer мы в соц. сетях
-						+e.UL.top-social.d-flex 
-							+item-sos()
-								+icon2('vk')
-							+item-sos()
-								+icon2('ok')
-							+item-sos()
-								+icon2('pinterest')
-							+item-sos()
-								+icon2('fb')
-			+e.col.col-12.col-xl-6
+						+socChosen('vk', 'ok', 'pinterest', 'fb')
+			+e.col.col-12.col-lg-6
 				+e.call.text-center
 					h3 Перезвоните мне
 					+form-wrap

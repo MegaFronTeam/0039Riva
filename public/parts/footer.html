@@ -3,8 +3,8 @@
 	<div class="container">
 		<div class="row"> 
 			<div class="footer__subscribe d-flex align-items-center justify-content-center flex-column flex-lg-row">
-				<h3 class="footer__subscribe-offer">Подпишитесь на рассылку, чтобы узнавать об акциях первым!
-				</h3>
+				<div class="footer__subscribe-offer">Подпишитесь на рассылку, чтобы узнавать об акциях первым!
+				</div>
 				<div class="form-wrap">
 					<form>
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Email"/>
@@ -86,9 +86,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg order-lg-0 order-last menu-col">
+			<div class="col-lg order-lg-0 order-last">
 				<div class="menu-mobile menu-mobile--js">
 					<div class="menu-mobile__inner">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
 						<nav>
 							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мебель для персонала</a></li>
@@ -99,14 +101,57 @@
 								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мягкая мебель</a></li>
 							</ul>
 						</nav>
+						<div class="topLine d-lg-none">
+							<div class="container"> 
+								<div class="mb-2">
+									<div class="top-nav__beware d-flex align-items-center"><img src="img/beware.svg" alt="" loading="lazy"/><span>Остерегайтесь подделок</span>
+									</div>
+								</div>
+								<div class="mb-2"> 
+									<div class="top-nav__text">Ежедневно, с 09:00 до 21:00</div>
+									<div class="top-nav__offer">Бизнес-центр «Тушино»</div>
+									<div class="top-nav__text">Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж</div>
+								</div>
+								<div class="mb-2">
+									<div class="topLine__item d-flex align-items-center"> <img src="img/mail.svg" alt="" loading="lazy"/>
+										<div class="topLine__item-text">info@riva.ru
+										</div>
+									</div>
+								</div>
+								<div class="mb-2">
+									<ul class="topLine__top-social d-flex"> <li>
+										<a class="topLine__item" href="#" target="_blank">
+											<svg class="icon2 icon2-telegram ">
+												<use xlink:href="img/svg/sprite2.svg#telegram"></use>
+											</svg>
+										</a></li><li>
+										<a class="topLine__item" href="#" target="_blank">
+											<svg class="icon2 icon2-whatsapp ">
+												<use xlink:href="img/svg/sprite2.svg#whatsapp"></use>
+											</svg>
+										</a></li>
+									</ul>
+								</div>
+								<div class="mb-2">
+									<a class="topLine__phone" href="tel:+7 (495) 642-70-97">+7 (495) 642-70-97
+									</a>
+								</div>
+								<div class="mb-2">
+									<a class="topLine__btn" href="#">Заказать звонок
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer__col beware-col col-12 col-sm-auto">
-				<div class="footer__beware d-flex align-items-center">
-					<svg class="icon2 icon2-beware ">
-						<use xlink:href="img/svg/sprite2.svg#beware"></use>
-					</svg><span>Остерегайтесь подделок</span>
+			<div class="footer__beware col-auto d-none d-md-flex align-items-center">
+				<svg class="icon2 icon2-beware ">
+					<use xlink:href="img/svg/sprite2.svg#beware"></use>
+				</svg><span>Остерегайтесь подделок</span>
+			</div>
+			<div class="col-auto d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 				</div>
 			</div>
 		</div>
@@ -129,34 +174,32 @@
 			</div>
 			<div class="footer__col col-auto">
 				<div class="footer__right d-flex flex-column float-right justify-content-between">
-					<div class="footer__nav">
-						<nav class="d-flex flex-column flex-sm-row">
-							<ul>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Доставка</a></li>
-								<li><a href="#">Оплата</a></li>
-								<li><a href="#">Возврат товара</a></li>
-								<li><a href="#">Гарантия</a></li>
-							</ul>
-							<ul>
-								<li><a href="#">Блог</a></li>
-								<li><a href="#">Отзывы</a></li>
-								<li><a href="#">Акции и скидки</a></li>
-								<li><a href="#">Рассрочка и кредит</a></li>
-								<li><a href="#">Новые поступления</a></li>
-								<li><a href="#">Бренды</a></li>
-							</ul>
-							<ul>
-								<li><a href="#">Как заказать</a></li>
-								<li><a href="#">Дизайнерам </a></li>
-								<li><a href="#">Оптовикам</a></li>
-								<li><a href="#">Корпоративным клиентам</a></li>
-								<li><a href="#">Политика конфиденциальности</a></li>
-								<li><a href="#">Публичная оферта</a></li>
-							</ul>
-						</nav>
-					</div>
+					<nav class="d-flex flex-column flex-sm-row">
+						<ul>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Возврат товара</a></li>
+							<li><a href="#">Гарантия</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Акции и скидки</a></li>
+							<li><a href="#">Рассрочка и кредит</a></li>
+							<li><a href="#">Новые поступления</a></li>
+							<li><a href="#">Бренды</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Как заказать</a></li>
+							<li><a href="#">Дизайнерам </a></li>
+							<li><a href="#">Оптовикам</a></li>
+							<li><a href="#">Корпоративным клиентам</a></li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Публичная оферта</a></li>
+						</ul>
+					</nav>
 					<div class="footer__bottom">
 						<div class="footer__bottom-item d-flex align-items-left align-items-sm-center flex-column flex-sm-row">
 							<div class="footer__bottom-item-offer">Давайте дружить
@@ -199,40 +242,40 @@
 						<div class="footer__bottom-item d-flex align-items-left align-items-sm-center flex-column flex-sm-row">
 							<div class="footer__bottom-item-offer">Принимаем к оплате
 							</div>
-							<ul class="footer__payment-ul d-flex flex-wrap flex-sm-nowrap">
-								<li class="footer__payment-li visa">
+							<div class="footer__payment-items d-flex flex-wrap flex-sm-nowrap">
+								<div class="footer__payment-item visa">
 									<svg class="icon2 icon2-visa ">
 										<use xlink:href="img/svg/sprite2.svg#visa"></use>
 									</svg>
-								</li>
-								<li class="footer__payment-li mastercard">
+								</div>
+								<div class="footer__payment-item mastercard">
 									<svg class="icon2 icon2-mastercard ">
 										<use xlink:href="img/svg/sprite2.svg#mastercard"></use>
 									</svg>
-								</li>
-								<li class="footer__payment-li maestro">
+								</div>
+								<div class="footer__payment-item maestro">
 									<svg class="icon2 icon2-maestro ">
 										<use xlink:href="img/svg/sprite2.svg#maestro"></use>
 									</svg>
-								</li>
-								<li class="footer__payment-li"><img src="img/mir.svg" alt="" loading="lazy"/>
-								</li>
-								<li class="footer__payment-li">
+								</div>
+								<div class="footer__payment-item"><img src="img/mir.svg" alt="" loading="lazy"/>
+								</div>
+								<div class="footer__payment-item">
 									<svg class="icon2 icon2-wallet ">
 										<use xlink:href="img/svg/sprite2.svg#wallet"></use>
 									</svg>
-								</li>
-								<li class="footer__payment-li">
+								</div>
+								<div class="footer__payment-item">
 									<svg class="icon2 icon2-webmoney ">
 										<use xlink:href="img/svg/sprite2.svg#webmoney"></use>
 									</svg>
-								</li>
-								<li class="footer__payment-li">
+								</div>
+								<div class="footer__payment-item">
 									<svg class="icon2 icon2-qiwi ">
 										<use xlink:href="img/svg/sprite2.svg#qiwi"></use>
 									</svg>
-								</li>
-							</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

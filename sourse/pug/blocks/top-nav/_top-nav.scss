@@ -31,6 +31,65 @@
 	.row{
 		align-items: center;
 	}
+	.form-wrap {
+		flex-grow: 1;
+		margin-top: rem(9);
+		display: none;
+		&.active {
+			display: block;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			&.active {
+				display: none;
+			}
+		}
+		form {
+			width: 100%;
+			position: relative;
+		}
+	}
+	.form-wrap__input-wrap {
+		flex-grow: 1;
+	}
+	.form-wrap__input {
+		border: none;
+		background: #F3F3F4;
+		outline: none;
+		font-weight: $font-weight-semibold;
+		font-size: rem(14);
+		line-height: 150%;
+		border-radius: $border-radius;
+		&::placeholder {
+			color: $secondary;
+		}
+	}
+	.form-wrap__btn {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		.icon2 {
+			font-size: rem(28);
+		}
+	}
+	&__text {
+		margin-bottom: rem(30);
+		color: $secondary;
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+	}
+	&__offer {
+		margin-bottom: rem(2);
+		font-size: rem(14);
+		font-weight: $font-weight-semibold;
+		line-height: 150%;
+		color: $white;
+		margin-bottom: rem(7);
+	}
 	&__col{
 		position: relative;
 	}

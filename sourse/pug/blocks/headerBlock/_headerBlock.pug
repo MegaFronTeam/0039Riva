@@ -14,8 +14,8 @@ mixin headerBlock()
 									+img(`img/headerBlock-${i}.jpg`,'bg').picture-bg
 									+e.row.row 
 										+e.col.offset-1.col-5.col-md-3
-											+e.H2.offer!= t
-											+e.A.btn.btn-primary.btn(href="#") В каталог
+											H2!= t
+											+e.btn.btn-primary.btn(href="#") В каталог
 						+slide(`1`,`Кабинеты руководителя`)
 						+slide(`1`,`Кабинеты руководителя`)
 				+arrow

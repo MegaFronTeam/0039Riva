@@ -16,8 +16,11 @@
 			margin-bottom: rem(20);
 		}
 		p {
-			margin-bottom: rem(32);
+			margin-bottom: rem(0);
 		}
+	}
+	&__offer-constr {
+		margin-bottom: rem(32);
 	}
 	&__item{
 		margin-bottom: rem(26);
@@ -31,6 +34,15 @@
 	&__item-content {
 		margin-left: rem(19);
 		margin-top: rem(-2);
+		a {
+			color: $body-color;
+			font-size: rem(20);
+			font-weight: $font-weight-semibold;
+			@include mt;
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 	&__item-offer {
 		color: $secondary;
@@ -54,9 +66,8 @@
 	.sertificates__sertificate {
 		margin-top: rem(24);
 		cursor: pointer;
-		img {
-			width: 100%;
-		}
+		position: relative;
+		overflow: hidden;
 	}
 
 	@include media-breakpoint-up(xl) {}

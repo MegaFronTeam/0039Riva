@@ -42,12 +42,12 @@
 						</ol>
 					</nav>
 					<div class="row">
-						<div class="col-12 pr-xl-0 col-xl-2">
+						<div class="col-12 pr-xl-0 col-xl-2 order-xl-0 order-2">
 							<!-- start aside-->
 							<aside class="aside section" id="aside">
-								<div class="aside__also">Смотрите также
+								<div class="aside__also d-xl-block d-none">Смотрите также
 								</div>
-								<nav class="aside__nav">
+								<nav class="aside__nav d-xl-block d-none">
 									<ul> 
 										<li><a href="#">О компании</a></li>
 										<li><a href="#">Контакты</a></li>
@@ -82,7 +82,7 @@
 											<div class="sPayment__row row">
 												<div class="sPayment__col col-12 col-sm-6 col-lg-4 col-xl-3">
 													<div class="sPayment__item">
-														<div class="sPayment__item-img"><img src="img/payment-1.png" alt="" loading="lazy"/>
+														<div class="sPayment__item-img"><img class="res-i" src="img/payment-1.png" alt="" loading="lazy"/>
 														</div>
 														<div class="sPayment__item-text">Безналичный расчет для физических и юридических лиц (предоплата)
 														</div>
@@ -90,7 +90,7 @@
 												</div>
 												<div class="sPayment__col col-12 col-sm-6 col-lg-4 col-xl-3">
 													<div class="sPayment__item">
-														<div class="sPayment__item-img"><img src="img/payment-2.png" alt="" loading="lazy"/>
+														<div class="sPayment__item-img"><img class="res-i" src="img/payment-2.png" alt="" loading="lazy"/>
 														</div>
 														<div class="sPayment__item-text">Оплата наличными курьеру при получении заказа — при доставке транспортной компанией
 														</div>
@@ -98,7 +98,7 @@
 												</div>
 												<div class="sPayment__col col-12 col-sm-6 col-lg-4 col-xl-3">
 													<div class="sPayment__item">
-														<div class="sPayment__item-img"><img src="img/payment-3.png" alt="" loading="lazy"/>
+														<div class="sPayment__item-img"><img class="res-i" src="img/payment-3.png" alt="" loading="lazy"/>
 														</div>
 														<div class="sPayment__item-text">Оплата пластиковой картой и электронными деньгами (Яндекс деньги, Webmoney, Qiwi). Мы используем безопасный онлайн сервис оплаты — СберБанк.
 														</div>
@@ -106,7 +106,7 @@
 												</div>
 												<div class="sPayment__col col-12 col-sm-6 col-lg-4 col-xl-3">
 													<div class="sPayment__item">
-														<div class="sPayment__item-img"><img src="img/payment-4.png" alt="" loading="lazy"/>
+														<div class="sPayment__item-img"><img class="res-i" src="img/payment-4.png" alt="" loading="lazy"/>
 														</div>
 														<div class="sPayment__item-text">Оплата пластиковой картой курьеру — при доставке транспортной компанией СДЭК.
 														</div>
@@ -114,103 +114,109 @@
 												</div>
 											</div>
 											<h3>Реквизиты для физ.лиц </h3>
-											<div class="sPayment__req-items d-flex align-items-center">
-												<div class="sPayment__req-item alphabank"><img src="img/alphabank.png" alt="" loading="lazy"/>
+											<div class="tabs">
+												<div class="tabs__caption d-flex align-items-center">
+													<div class="tabs__btn active alphabank"><img src="img/alphabank.png" alt="" loading="lazy"/>
+													</div>
+													<div class="tabs__btn sberbank"><img src="img/sberbank.png" alt="" loading="lazy"/>
+													</div>
 												</div>
-												<div class="sPayment__req-item sberbank"><img src="img/sberbank.png" alt="" loading="lazy"/>
+												<div class="tabs__wrap">
+													<div class="tabs__content active">
+														<h5>ИП СУЧИЛИН А.С.</h5>
+														<table> 
+															<tbody>
+																					<tr> 
+																						<td>ОГРНИП</td>
+																						<td>319508100100617 от 21.05.2019</td>
+																					</tr>
+																					<tr> 
+																						<td>ИНН</td>
+																						<td>773001857125</td>
+																					</tr>
+																					<tr> 
+																						<td>Адрес</td>
+																						<td>г. Красногорск, Московская область</td>
+																					</tr>
+																					<tr> 
+																						<td>Расчетный счет</td>
+																						<td>40802810202410002359</td>
+																					</tr>
+																					<tr> 
+																						<td>Корреспондентский счет</td>
+																						<td>30101810200000000593</td>
+																					</tr>
+																					<tr> 
+																						<td>Название банка</td>
+																						<td>АО «АЛЬФА-БАНК»</td>
+																					</tr>
+																					<tr> 
+																						<td>БИК</td>
+																						<td>044525593</td>
+																					</tr>
+															</tbody>
+														</table>
+														<h3>Реквизиты для юр.лиц</h3>
+														<h5>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «АЛЬФА-М»</h5>
+														<table> 
+															<tbody>
+																					<tr> 
+																						<td>Юридический адрес</td>
+																						<td>125373, Москва, Походный проезд, д. 4, корп. 1, офис 317 А</td>
+																					</tr>
+																					<tr> 
+																						<td>Почтовый адрес</td>
+																						<td>125373, г. Москва, Походный проезд, д. 4, корп. 1, Бизнес центр «Тушино» а/я 31</td>
+																					</tr>
+																					<tr> 
+																						<td>ИНН</td>
+																						<td>7733708887</td>
+																					</tr>
+																					<tr> 
+																						<td>КПП</td>
+																						<td>773301001</td>
+																					</tr>
+																					<tr> 
+																						<td>ОКПО</td>
+																						<td>62766729</td>
+																					</tr>
+																					<tr> 
+																						<td>Расчетный счет</td>
+																						<td>40702810302190000778</td>
+																					</tr>
+																					<tr> 
+																						<td>Название банка</td>
+																						<td>АО "АЛЬФА-БАНК"</td>
+																					</tr>
+																					<tr> 
+																						<td>БИК</td>
+																						<td>044525593</td>
+																					</tr>
+																					<tr> 
+																						<td>Корреспондентский счет</td>
+																						<td>30101810200000000593</td>
+																					</tr>
+																					<tr> 
+																						<td>ОГРН</td>
+																						<td>1097746500720</td>
+																					</tr>
+																					<tr> 
+																						<td>ОКТМО</td>
+																						<td>45373000</td>
+																					</tr>
+																					<tr> 
+																						<td>ОКВЭД</td>
+																						<td>46.65</td>
+																					</tr>
+																					<tr> 
+																						<td>ОКОГУ</td>
+																						<td>49013</td>
+																					</tr>
+															</tbody>
+														</table>
+													</div>
 												</div>
 											</div>
-											<h5>ИП СУЧИЛИН А.С.</h5>
-											<table> 
-												<tbody>
-															<tr> 
-																<td>ОГРНИП</td>
-																<td>319508100100617 от 21.05.2019</td>
-															</tr>
-															<tr> 
-																<td>ИНН</td>
-																<td>773001857125</td>
-															</tr>
-															<tr> 
-																<td>Адрес</td>
-																<td>г. Красногорск, Московская область</td>
-															</tr>
-															<tr> 
-																<td>Расчетный счет</td>
-																<td>40802810202410002359</td>
-															</tr>
-															<tr> 
-																<td>Корреспондентский счет</td>
-																<td>30101810200000000593</td>
-															</tr>
-															<tr> 
-																<td>Название банка</td>
-																<td>АО «АЛЬФА-БАНК»</td>
-															</tr>
-															<tr> 
-																<td>БИК</td>
-																<td>044525593</td>
-															</tr>
-												</tbody>
-											</table>
-											<h3>Реквизиты для юр.лиц</h3>
-											<h5>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «АЛЬФА-М»</h5>
-											<table> 
-												<tbody>
-															<tr> 
-																<td>Юридический адрес</td>
-																<td>125373, Москва, Походный проезд, д. 4, корп. 1, офис 317 А</td>
-															</tr>
-															<tr> 
-																<td>Почтовый адрес</td>
-																<td>125373, г. Москва, Походный проезд, д. 4, корп. 1, Бизнес центр «Тушино» а/я 31</td>
-															</tr>
-															<tr> 
-																<td>ИНН</td>
-																<td>7733708887</td>
-															</tr>
-															<tr> 
-																<td>КПП</td>
-																<td>773301001</td>
-															</tr>
-															<tr> 
-																<td>ОКПО</td>
-																<td>62766729</td>
-															</tr>
-															<tr> 
-																<td>Расчетный счет</td>
-																<td>40702810302190000778</td>
-															</tr>
-															<tr> 
-																<td>Название банка</td>
-																<td>АО "АЛЬФА-БАНК"</td>
-															</tr>
-															<tr> 
-																<td>БИК</td>
-																<td>044525593</td>
-															</tr>
-															<tr> 
-																<td>Корреспондентский счет</td>
-																<td>30101810200000000593</td>
-															</tr>
-															<tr> 
-																<td>ОГРН</td>
-																<td>1097746500720</td>
-															</tr>
-															<tr> 
-																<td>ОКТМО</td>
-																<td>45373000</td>
-															</tr>
-															<tr> 
-																<td>ОКВЭД</td>
-																<td>46.65</td>
-															</tr>
-															<tr> 
-																<td>ОКОГУ</td>
-																<td>49013</td>
-															</tr>
-												</tbody>
-											</table>
 										</div>
 									</div>
 								</section>

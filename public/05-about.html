@@ -42,12 +42,12 @@
 						</ol>
 					</nav>
 					<div class="row">
-						<div class="col-12 pr-xl-0 col-xl-2">
+						<div class="col-12 pr-xl-0 col-xl-2 order-xl-0 order-2">
 							<!-- start aside-->
 							<aside class="aside section" id="aside">
-								<div class="aside__also">Смотрите также
+								<div class="aside__also d-xl-block d-none">Смотрите также
 								</div>
-								<nav class="aside__nav">
+								<nav class="aside__nav d-xl-block d-none">
 									<ul> 
 										<li><a href="#">О компании</a></li>
 										<li><a href="#">Контакты</a></li>
@@ -76,146 +76,113 @@
 									<div class="section-title">
 										<h1>О компании</h1>
 									</div>
-									<div class="sAbout__row row">
-										<div class="col-12">
-											<div class="sAbout__img bg-wrap"><img class="object-fit-js picture-bg" src="img/about.jpg" alt="" loading="lazy"/>
-											</div>
-											<h3>Описание</h3>
-											<h5>Наш ассортимент</h5>
-											<p>Мы предлагаем огромный выбор различной мебели. Весь наш ассортимент включает в себя абсолютно все виды мебели, необходимые для создания уюта и комфорта Вашего дома, что является неоспоримым преимуществом нашей компании.</p>
-											<h6>Среди прочего:</h6>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Мебель для персонала</div>
-												</div>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Кабинет руководителя</div>
-												</div>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Переговорные зоны</div>
-												</div>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Приемные зоны</div>
-												</div>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Кресла</div>
-												</div>
-												<div class="sAbout__item d-flex align-items-center">
-													<svg class="icon2 icon2-arrow-right ">
-														<use xlink:href="img/svg/sprite2.svg#arrow-right"></use>
-													</svg>
-													<div>Мягкая мебель</div>
-												</div>
-											<div class="sAbout__promo">Мы ориентированы на долгосрочное и взаимовыгодное сотрудничество с юридическими лицами, снабженцами, бюджетными и коммерческими организациями.
-											</div>
-											<h3>Благодарственные письма</h3>
-											<div class="sAbout__slider-wrapper greetings-wrapper">
-												<div class="sAbout__slider sAbout__slider--js greetings-slider swiper">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img src="img/greetings.png" alt="" loading="lazy"/>
-															</div>
-														</div>
+									<div class="sAbout__img bg-wrap"><img class="object-fit-js picture-bg" src="img/about.jpg" alt="" loading="lazy"/>
+									</div>
+									<h3>Описание</h3>
+									<h5>Наш ассортимент</h5>
+									<p>Мы предлагаем огромный выбор различной мебели. Весь наш ассортимент включает в себя абсолютно все виды мебели, необходимые для создания уюта и комфорта Вашего дома, что является неоспоримым преимуществом нашей компании.</p>
+									<h6>Среди прочего:</h6>
+									<ul>
+											<li>Мебель для персонала</li>
+											<li>Кабинет руководителя</li>
+											<li>Переговорные зоны</li>
+											<li>Приемные зоны</li>
+											<li>Кресла</li>
+											<li>Мягкая мебель</li>
+									</ul>
+									<blockquote>Мы ориентированы на долгосрочное и взаимовыгодное сотрудничество с юридическими лицами, снабженцами, бюджетными и коммерческими организациями.</blockquote>
+									<h3>Благодарственные письма</h3>
+									<div class="sAbout__slider-wrapper greetings-wrapper">
+										<div class="sAbout__slider sAbout__slider--js greetings-slider swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
 													</div>
 												</div>
-												<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-													<svg class="icon icon-chevron-left ">
-														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg>
-												</div>
-												<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-													<svg class="icon icon-chevron-right ">
-														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-													</svg>
-												</div>
-											</div>
-											<h3>Наши клиенты</h3>
-											<div class="sAbout__slider-wrapper clients-wrapper">
-												<div class="sAbout__slider sAbout__slider--js clients-slider swiper">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
-														<div class="swiper-slide">
-															<div class="sAbout__clients-item"><img src="img/clients.png" alt="" loading="lazy"/>
-															</div>
-														</div>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
 													</div>
 												</div>
-												<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-													<svg class="icon icon-chevron-left ">
-														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
+													</div>
 												</div>
-												<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-													<svg class="icon icon-chevron-right ">
-														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-													</svg>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__greetings-item" data-src="img/greetings.png" data-fancybox="sAbout-gallery"><img class="object-fit-js" src="img/greetings.png" alt="" loading="lazy"/>
+													</div>
 												</div>
 											</div>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</div>
+									</div>
+									<h3>Наши клиенты</h3>
+									<div class="sAbout__slider-wrapper clients-wrapper">
+										<div class="sAbout__slider sAbout__slider--js clients-slider swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="sAbout__clients-item"><img class="res-i" src="img/clients.png" alt="" loading="lazy"/>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
 										</div>
 									</div>
 								</div>

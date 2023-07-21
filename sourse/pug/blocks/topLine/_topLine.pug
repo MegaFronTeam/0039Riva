@@ -6,7 +6,6 @@ mixin topLine()
 				.col-auto.col-lg.d-none.d-sm-flex
 					+e.items.d-flex.align-items-center
 						+e.item.d-flex.align-items-center 
-							//- +img('img/marker.svg')
 							+icon2('marker')
 							+e.item-text Москва, Бизнес-центр «Тушино» Походный проезд, д. 4, корп. 1, офис 412, 4-й этаж
 						+e.item.d-flex.align-items-center 
@@ -15,23 +14,45 @@ mixin topLine()
 				.col-auto.d-none.d-lg-flex
 					+e.top-right.d-flex.align-items-center
 						+e.UL.top-social.d-flex 
-							+item-sos()
-								+icon2('telegram2')
-							+item-sos()
-								+icon2('whatsapp2')
+							+socChosen('telegram2', 'whatsapp2')
 						+e(href="tel:+7 (495) 642-70-97").phone +7 (495) 642-70-97
 						+e(href="#").btn Заказать звонок
 			+e.bottom.row
 				+e(href="#").logo.col-lg-auto.col
 					+icon2('logo')
-				+form-wrap.col-lg.order-lg-0.order-first
+				+form-wrap.col-lg.order-lg-0.order-first.d-none.d-sm-block
 					+input("Поиск товаров", 'text')
 					+e.btn.btn(type="submit")
 						+icon2('search')
 				+e.dropdown.col-auto.d-flex
-					+e.dropdown-current.d-flex.align-items-center
-						span О компании
-						+icon2('dropdown-arrow')
+					+b.dropdown-block.d-flex.align-items-center
+						+e.toggle.dropdown-current.d-flex.align-items-center
+							span О компании
+							+icon2('dropdown-arrow')
+						ul.main-ul
+							li.close-ul.d-lg-none.text-body 
+								.catalog-block__gumburger.on
+									span
+							
+								| Закрыть
+							mixin item(t)
+								li.has-children
+									a(href="#")
+										!=t
+							+item(`О компании`)
+							+item(`Контакты`)
+							+item(`Как заказать`)
+							+item(`Сертификаты`)
+							+item(`Оплата`)
+							+item(`Доставка`)
+							+item(`Блог`)
+							+item(`Гарантия`)
+							+item(`Возврат товара`)
+							+item(`Рассрочка и кредит`)
+							+item(`Отзывы`)
+							+item(`Дизайнерам`)
+							+item(`Корпоративным клиентам`)
+
 				+e.controls.col-auto.d-flex.align-items-center
 					mixin item(t, i, c)
 						+e(href="#").controls-item.text-center.d-inline-block
@@ -42,4 +63,6 @@ mixin topLine()
 					+item('Сравнение', `stats`, 0)
 					+item('Избранное', `heart`, 0)
 					+item('Корзина', `cart`, 0)
+				+e.show-search.d-flex.align-items-center.d-sm-none.col-auto.justify-content-end.ml-auto
+					+icon2('search')
 	// end topLine

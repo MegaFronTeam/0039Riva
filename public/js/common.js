@@ -372,6 +372,21 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	}
 
+	$(".catalog-block__toggle, .catalog-block .close-ul").on("click", function(){
+		$(".catalog-block .main-ul").toggleClass("active");
+		$('body').toggleClass("fixed")
+	})
+
+	$(".dropdown-block__toggle, .dropdown-block .close-ul").on("click", function(){
+		$(".dropdown-block .main-ul").toggleClass("active");
+		$('body').toggleClass("fixed")
+	})
+
+	$(".topLine__show-search").on("click", function(){
+		$(".form-wrap--mob").toggleClass("active");
+		$(".form-wrap--mob .form-wrap__input").focus();
+	})
+
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
@@ -395,7 +410,6 @@ function eventHandler() {
 	}, { passive: true });
 
 	whenResize();
-
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -650,14 +664,6 @@ function eventHandler() {
 				});
 			}
 		});
-		// $d3.on("change", function () {
-		// 	var $inp = $(this);
-		// 	var from = $inp.prop("value"); // reading input value
-		// 	var from2 = $inp.data("from"); // reading input data-from attribute
-
-		// 	_this.find('range-result--minus').val(from); // FROM value
-		// 	_this.find('range-result--plus').val(from); // FROM value
-		// });
 
 
 	})

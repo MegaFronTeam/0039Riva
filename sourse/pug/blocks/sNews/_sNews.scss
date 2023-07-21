@@ -18,6 +18,7 @@
 		border-radius: $border-radius;
 		overflow: hidden;
 		display: flex;
+		flex-direction: column-reverse;
 		height: 100%;
 		&:hover {
 			.sNews__big-offer {
@@ -26,6 +27,9 @@
 		}
 		@include media-breakpoint-up(md) {
 			min-height: rem(300);
+		}
+		@include media-breakpoint-up(sm) {
+			flex-direction: row;
 		}
 		min-height: rem(200);
 	}
@@ -40,6 +44,7 @@
 		font-weight: $font-weight-semibold;
 		padding-top: rem(10);
 		padding-bottom: rem(10);
+		width: 100%;
 		@include media-breakpoint-up(lg) {
 			width: 45%;
 		}
@@ -50,7 +55,6 @@
 			padding: rem(20) rem(30) rem(20) rem(32);
 			width: 40%;
 		}
-		width: 50%;
 	}
 	&__big-offer {
 		margin-bottom: rem(10);
@@ -67,6 +71,8 @@
 		line-height: 150%;
 	}
 	&__big-img {
+		min-height: rem(150);
+		width: 100%;
 		@include media-breakpoint-up(lg) {
 			width: 55%;
 		}
@@ -76,7 +82,6 @@
 		@include media-breakpoint-up(sm) {
 			width: 60%;
 		}
-		width: 50%;
 	}
 	&__item{
 		&:hover {
