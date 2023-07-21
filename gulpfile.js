@@ -1,7 +1,8 @@
 'use strict';
 let  publicPath = 'public',
     sourse = 'sourse',
-    destSprite = '../_sprite.scss'
+    destSprite = '../_sprite.scss',
+    destSprite2 = '../_sprite2.scss'
 
 import pkg from 'gulp'
 const { gulp, src, dest, parallel, series, watch } = pkg
@@ -224,10 +225,10 @@ function svg2() {
         .pipe(replace('&gt;', '>'))
         .pipe(svgSprite({
             shape: {
-                dimension: {         // Set maximum dimensions
-                    maxWidth: 500,
-                    maxHeight: 500
-                },
+                // dimension: {         // Set maximum dimensions
+                //     maxWidth: 500,
+                //     maxHeight: 500
+                // },
                 spacing: {         // Add padding
                     padding: 0
                 }
@@ -237,8 +238,8 @@ function svg2() {
                     sprite: "../sprite2.svg",
                     render: {
                         scss: {
-                            template: './' + sourse + '/sass/templates/_sprite_template.scss',
-                            dest: destSprite,
+                            template: './' + sourse + '/sass/templates/_sprite_template2.scss',
+                            dest: destSprite2,
                         }
                     }
                 }

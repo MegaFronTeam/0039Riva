@@ -25,15 +25,16 @@
 				box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.16);
 				z-index: 10;
 				.dd-group__head {
-					padding-top: rem(16);
-					padding-bottom: rem(5);
-					@include media-breakpoint-up(lg) {
-						padding-top: rem(24);
-					}
+					// padding-top: rem(16);
+					// padding-bottom: rem(5);
+					// @include media-breakpoint-up(lg) {
+					// 	padding-top: rem(24);
+					// }
 					&:before {
 						transform: rotateX(180deg);
 						@include media-breakpoint-up(lg) {
-							transform: translateY(8px) rotateX(180deg);
+							// transform: translateY(8px) rotateX(180deg);
+							transform: rotateX(180deg);
 						}
 					}
 				}
