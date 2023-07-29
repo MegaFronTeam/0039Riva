@@ -1,5 +1,5 @@
 mixin product-item(i,t, p ,pr, badge)
-	+b.ARTICLE.product-item
+	+b.ARTICLE.product-item&attributes(attributes)
 		+e.img-wrap(href="#")
 			if badge
 				+b.prod-tags
@@ -70,38 +70,42 @@ mixin cataloglist()
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
+		.container.container-tabs-js
 			+e.top.section-title.text-center
 				+e.UL.top-tabs.d-flex
-					+e.LI.top-tab.active 
-						h2 Скидки
-					+e.LI.top-tab 
-						h2 Новинки
-					+e.LI.top-tab 
-						h2 В наличии
+					+e.LI.top-tab.active.h2(data-tabs-main="stock") Скидки
+					+e.LI.top-tab.h2(data-tabs-main="new") Новинки
+					+e.LI.top-tab.h2(data-tabs-main="all") В наличии
 				+e.NAV.bottom-tabs-wrapper
-					+cataloglist()
-			+e.row.row
+					+e.UL.bottom-tabs
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="all").active   Все
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat1")  Офисная мебель для персонала
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat2")  Мебель в кабинет руководителя
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat3")  Домашний офис
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat4")  Столы для переговоров
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat5")  Столы для переговоров
+						+e.LI.bottom-tab: a(href="#" data-tabs-cat="cat6")  Столы для переговоров
+			+e.row.row.row-js
 				- const wrapClass="col-xl-3 col-lg-4 col-sm-6"
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="stock" data-tab-cat="cat1")
 					+product-item(`1`,``,``,``, 'badge')
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="new" data-tab-cat="cat2").d-none
 					+product-item(`2`,``,``,``)
 						.col-auto
 							+addblock()
 						.col
 							+status()
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="stock" data-tab-cat="cat3")
 					+product-item(`3`,``,``,`badge`)
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="new" data-tab-cat="cat4").d-none
 					+product-item(`4`,``,``,``)
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="stock" data-tab-cat="cat5")
 					+product-item(`5`,``,``,``)
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass data-tab-main="new" data-tab-cat="cat6").d-none
 					+product-item(`6`,``,``,``)
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass).d-none
 					+product-item(`7`,``,``,``)
-				+e.col(class= wrapClass)
+				+e.col(class= wrapClass).d-none
 					+product-item(`8`,``,``,``)
 						.col-auto
 							+e.btn(type="button").btn.btn-outline-primary

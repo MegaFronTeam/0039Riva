@@ -20,6 +20,7 @@
 		padding: 0;
 		position: relative;
 	}
+	span,
 	a{
 		display: block;
 		padding: rem(6) rem(10);
@@ -36,6 +37,7 @@
 	&> .sub-menu{
 		display: block;
 	}
+	&> span,
 	&> a{
 		&::after{
 			content: var(--chevron-down-color);

@@ -59,7 +59,9 @@
 
 .dropdown-item{
 	margin-bottom: 12px;
-
+	ul{
+		margin-bottom: 0;
+	}
 	&__toggle{
 		position: relative;
 		cursor: pointer;
@@ -128,6 +130,15 @@ ul{
 	border-radius: 6px;
 	font-size: 20px;
 	font-weight: 600;
+	overflow: hidden;
+	img{
+		@include mt;
+	}
+	&:hover{
+		img{
+			transform: scale(1.08);
+		}
+	}
 }
 .dropdowns{
 	display: none;

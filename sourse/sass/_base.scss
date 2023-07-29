@@ -605,3 +605,10 @@ iframe {
 	--bs-alert-bg: #FDE7E8; 
 	--bs-alert-link-color: var(--bs-primary);
 }
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+	pointer-events: all;
+	background-color: #fff !important;
+	color: $primary !important;
+	cursor: not-allowed;
+}

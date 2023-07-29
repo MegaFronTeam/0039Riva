@@ -273,17 +273,38 @@ mixin sProdCard2(data)
 								h3 12 000 ₽
 								+e.old-price 15 000 ₽
 								.badge.bg-primary -15%
-							+e.materials
-								+in-c('radio', 'ЛДСП', 'material')
-								+in-c('radio', 'Металл', 'material')
-								+in-c('radio', 'Ткань', 'material')
-							+e.color
-								+in-c('radio', '', 'color')(style='--bgColor: #C6AB8E')
-								+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5')
-								+in-c('radio', '', 'color')(style='--bgColor: #36251F')
-								+in-c('radio', '', 'color')(style='--bgColor: #252724')
-								+in-c('radio', '', 'color')(style='--bgColor: #706152')
-								+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+							.tabs
+
+								+e.materials.tabs__caption
+									.tabs__btn.active ЛДСП
+									.tabs__btn Металл
+									.tabs__btn Ткань
+									//- +in-c('radio', 'ЛДСП', 'material')
+									//- +in-c('radio', 'Металл', 'material')
+									//- +in-c('radio', 'Ткань', 'material')
+								.tabs__wrap
+									.tabs__content.active
+										+e.color
+											+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5') 
+											+in-c('radio', '', 'color')(style='--bgColor: #252724') 
+											+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+											
+									.tabs__content
+										+e.color
+											+in-c('radio', '', 'color')(style='--bgColor: #C6AB8E')
+											+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5')
+											+in-c('radio', '', 'color')(style='--bgColor: #36251F')
+											+in-c('radio', '', 'color')(style='--bgColor: #252724')
+											+in-c('radio', '', 'color')(style='--bgColor: #706152')
+											+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+									.tabs__content
+										+e.color
+											+in-c('radio', '', 'color')(style='--bgColor: #C6AB8E')
+											+in-c('radio', '', 'color')(style='--bgColor: #C5C5C5')
+											+in-c('radio', '', 'color')(style='--bgColor: #36251F')
+											+in-c('radio', '', 'color')(style='--bgColor: #706152')
+											+in-c('radio', '', 'color')(style='--bgColor: #E6E0D8')
+
 							+e.characteristics-item
 								mixin tr(key, val)
 									tr

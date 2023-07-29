@@ -165,44 +165,37 @@
 				<!-- end sCategories-->
 				<!-- start sCatalog-->
 				<div class="sCatalog section">
-					<div class="container">
+					<div class="container container-tabs-js">
 						<div class="sCatalog__top section-title text-center">
 							<ul class="sCatalog__top-tabs d-flex">
-								<li class="sCatalog__top-tab active"> 
-									<h2>Скидки</h2>
+								<li class="sCatalog__top-tab active h2" data-tabs-main="stock">Скидки
 								</li>
-								<li class="sCatalog__top-tab"> 
-									<h2>Новинки</h2>
+								<li class="sCatalog__top-tab h2" data-tabs-main="new">Новинки
 								</li>
-								<li class="sCatalog__top-tab"> 
-									<h2>В наличии</h2>
+								<li class="sCatalog__top-tab h2" data-tabs-main="all">В наличии
 								</li>
 							</ul>
 							<nav class="sCatalog__bottom-tabs-wrapper">
 								<ul class="sCatalog__bottom-tabs">
-									<li class="sCatalog__bottom-tab"><a class="active" href="#">  Все</a>
+									<li class="sCatalog__bottom-tab"><a class="active" href="#" data-tabs-cat="all">  Все</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Офисная мебель для персонала</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat1"> Офисная мебель для персонала</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Мебель в кабинет руководителя</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat2"> Мебель в кабинет руководителя</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Домашний офис</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat3"> Домашний офис</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat4"> Столы для переговоров</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat5"> Столы для переговоров</a>
 									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
-									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
-									</li>
-									<li class="sCatalog__bottom-tab"><a href="#"> Столы для переговоров</a>
+									<li class="sCatalog__bottom-tab"><a href="#" data-tabs-cat="cat6"> Столы для переговоров</a>
 									</li>
 								</ul>
 							</nav>
 						</div>
-						<div class="sCatalog__row row">
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+						<div class="sCatalog__row row row-js">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6" data-tab-main="stock" data-tab-cat="cat1">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="prod-tags">
@@ -293,7 +286,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6 d-none" data-tab-main="new" data-tab-cat="cat2">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -381,7 +374,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6" data-tab-main="stock" data-tab-cat="cat3">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -467,7 +460,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6 d-none" data-tab-main="new" data-tab-cat="cat4">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -553,7 +546,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6" data-tab-main="stock" data-tab-cat="cat5">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -639,7 +632,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6 d-none" data-tab-main="new" data-tab-cat="cat6">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -725,7 +718,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6 d-none">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
@@ -811,7 +804,7 @@
 								</article>
 								<!-- /.product-item-->
 							</div>
-							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
+							<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6 d-none">
 								<article class="product-item">
 									<a class="product-item__img-wrap" href="#">
 										<div class="card-slider">
