@@ -37,7 +37,8 @@ html(lang="ru")
 					.then(response => response.text())
 					.then( text => {
 						const wrap = document.querySelector(`#${elem}Wrap`);
-						wrap.insertAdjacentHTML('afterend', text);
+							wrap.insertAdjacentHTML('afterend', text);
+							//- wrap.previousElementSibling.remove()
 							wrap.remove();
 						}
 					);

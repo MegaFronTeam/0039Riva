@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
 		<link href="libs/priority-plus/priority-plus.css" rel="stylesheet"/>
@@ -20,7 +20,8 @@
 					.then(response => response.text())
 					.then( text => {
 						const wrap = document.querySelector(`#${elem}Wrap`);
-						wrap.insertAdjacentHTML('afterend', text);
+							wrap.insertAdjacentHTML('afterend', text);
+							//- wrap.previousElementSibling.remove()
 							wrap.remove();
 						}
 					);
@@ -2014,11 +2015,11 @@
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
 		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="libs/priority-plus/priority-plus.js"> </script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
-		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/priority-plus/priority-plus.js"> </script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

@@ -12,7 +12,7 @@ include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sOurProjects/_sOurProjects.pug
 include ../blocks/sRews/_sRews.pug
 include ../blocks/sNews/_sNews.pug
-include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBasket/_sBasket.pug
 include ../blocks/aside/_aside.pug
 
 block variables
@@ -20,7 +20,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'О компании'
+	- let  title= 'Корзина'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,16 +28,8 @@ block pagecontent
 	
 	+parts('header')
 	main.cat
-		.container
-			+breadcrumb('Главная', 'О Компании')
-			.row
-				.col-12.pr-xl-0.col-xl-2.order-xl-0.order-2
-					+aside
-				.col-12.offset-xl-1.col-xl-9
-					.content
-						+b.section-title
-							h1 О компании
-						+sAbout
+		+page-head(title, 'Корзина')
+		+sBasket
 		
 	+parts('footer')
       

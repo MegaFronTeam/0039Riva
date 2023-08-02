@@ -29,29 +29,25 @@ mixin topLine()
 						+e.toggle.dropdown-current.d-flex.align-items-center
 							span О компании
 							+icon2('dropdown-arrow')
-						ul.main-ul
-							li.close-ul.d-lg-none.text-body 
-								.catalog-block__gumburger.on
-									span
-							
-								| Закрыть
-							mixin item(t)
-								li.has-children
-									a(href="#")
-										!=t
-							+item(`О компании`)
-							+item(`Контакты`)
-							+item(`Как заказать`)
-							+item(`Сертификаты`)
-							+item(`Оплата`)
-							+item(`Доставка`)
-							+item(`Блог`)
-							+item(`Гарантия`)
-							+item(`Возврат товара`)
-							+item(`Рассрочка и кредит`)
-							+item(`Отзывы`)
-							+item(`Дизайнерам`)
-							+item(`Корпоративным клиентам`)
+						+e.block
+							ul
+								mixin item(t)
+									li
+										a(href="#")
+											!=t
+								+item(`О компании`)
+								+item(`Контакты`)
+								+item(`Как заказать`)
+								+item(`Сертификаты`)
+								+item(`Оплата`)
+								+item(`Доставка`)
+								+item(`Блог`)
+								+item(`Гарантия`)
+								+item(`Возврат товара`)
+								+item(`Рассрочка и кредит`)
+								+item(`Отзывы`)
+								+item(`Дизайнерам`)
+								+item(`Корпоративным клиентам`)
 
 				+e.controls.col-auto.d-flex.align-items-center
 					mixin item(t, i, c)

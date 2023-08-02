@@ -43,7 +43,7 @@
     "sass": "^1.63.3"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.16",
+    "@fancyapps/ui": "^5.0.20",
     "@types/ion-rangeslider": "^2.3.2",
     "inputmask": "^5.0.8",
     "ion-rangeslider": "^2.3.1",

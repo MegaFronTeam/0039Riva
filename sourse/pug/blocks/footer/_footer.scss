@@ -73,8 +73,15 @@
 		}
 	}
 	.form-wrap {
+		display: flex;
+		// justify-content: flex-start;
+		align-items: flex-start;
 		form {
-			display: flex;
+		}
+		.btn{
+			height: rem(45);
+			display: inline-flex;
+			align-items: center;
 		}
 	}
 	.form-wrap__input-wrap {

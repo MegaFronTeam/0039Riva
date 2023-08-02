@@ -1,7 +1,7 @@
 "use strict";
 const JSCCommon = { 
 	modalCall() {
-		const link = '.btn-modal-js';
+		const link = '[data-fancybox="modal"], .link-modal-js';
 		Fancybox.bind(link, {
 			arrows: false,
 			// // infobar: false,
@@ -29,35 +29,21 @@ const JSCCommon = {
 				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
+			on: {
+				done: (fancybox, slide) => {
+					JSCCommon.inputMask() 
+				}
+			}
 		});
+		Fancybox.defaults = {
+			autoFocus: false,
+			placeFocusBack: false,
+		};
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
 			})
-		})
-		Fancybox.bind('[data-fancybox]', {
-			placeFocusBack: false,
-		});
-		document.addEventListener('click', (event) => {
-			let element = event.target.closest(link)
-			if(!element) return;
-			let modal = document.querySelector(element.dataset.src);
-			const data = element.dataset;
-
-			function setValue(val, elem) {
-				if (elem && val) {
-					const el = modal.querySelector(elem)
-					el.tagName == "INPUT"
-						? el.value = val
-						: el.innerHTML = val;
-					// console.log(modal.querySelector(elem).tagName)
-				}
-			}
-			setValue(data.title, '.ttu');
-			setValue(data.text, '.after-headline');
-			setValue(data.btn, '.btn');
-			setValue(data.order, '.order');
-		})
+		}) 
 	},
 	// /modalCall
 	toggleMenu() {
@@ -149,9 +135,9 @@ const JSCCommon = {
 
 	inputMask() {
 		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]')); 
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({"mask":"+7(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
 	},
 	// /inputMask
 	sendForm() {
@@ -365,12 +351,12 @@ function eventHandler() {
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = 'screen/'+document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = 'screen/'+document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
+	// }
 
 	$(".catalog-block__toggle, .catalog-block .close-ul").on("click", function(){
 		$(".catalog-block .main-ul").toggleClass("active");
@@ -604,66 +590,74 @@ function eventHandler() {
  
 
 	$(".range-wrap").each(function () {
-		let _this = $(this);
-		var $d3 = _this.find(".slider-js");
+		var _self = $(this);
+		var $range = _self.find(".slider-js");
+		var $inputFrom = _self.find(".minus");
+		var $inputTo = _self.find(".plus");
+		var instance;
+		var min = +$inputFrom.val();
+		var max = +$inputTo.val();
+		var from = 0;
+		var to = 0;
 
-		var slider = $d3.ionRangeSlider({
+		$range.ionRangeSlider({
 			skin: "round",
 			type: "double",
+			min: min,
+			max: max,
+			// from: 200,
+			// to: 800,
 			grid: false,
 			grid_snap: false,
 			hide_min_max: true,
 			hide_from_to: true,
-			onStart: function (data) {
-				_this.find('.minus').val(data.from);
-				_this.find('.plus').val(data.to);
-			},
-			onChange: function (data) {
-				_this.find('.minus').val(data.from);
-				_this.find('.plus').val(data.to);
-			},
-			onFinish: function (data) {
-				_this.find('.minus').val(data.from);
-				_this.find('.plus').val(data.to);
-			},
-			onUpdate: function (data) {
-				_this.find('.minus').val(data.from);
-				_this.find('.plus').val(data.to);
-			}
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
 		});
-		var $d3_instance = slider.data("ionRangeSlider");
-		$(this).on('change  input  cut  copy  paste', '.minus', function () {
-			var th = $(this);
-			var data = th.val();
-			var min = +data;
-			// th.val(data + ' т')
-			console.log(1);
-			$d3_instance.update({
-				from: min,
-			})
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to);
+		}
+
+		$inputFrom.on("change input", function () {
+			var val = $(this).prop("value");
+
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+
+			$(this).prop("value", val);
+
 		});
 
-		$(this).on('change  input  cut  copy  paste', '.plus', function () {
-			var th = $(this);
-			var data = th.val();
-			var max = +data;
+		$inputTo.on("change input", function () {
+			var val = $(this).prop("value");
 
-			//max => new val of max inp
-			//min => value of the min inp
+			// validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
 
-			let min = Number(document.querySelector('.range-result.range-result--minus.minus').value);
-			if (min >= max) {
-				min = 0;
-				$d3_instance.update({
-					from: min,
-					to: max,
-				});
-			}
-			else {
-				$d3_instance.update({
-					to: max,
-				});
-			}
+			instance.update({
+				to: val
+			});
+
+			$(this).prop("value", val);
 		});
 
 

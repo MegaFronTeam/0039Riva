@@ -6,9 +6,10 @@ mixin footer()
 			.row 
 				+e.subscribe.d-flex.align-items-center.justify-content-center.flex-column.flex-lg-row
 					+e.subscribe-offer Подпишитесь на рассылку, чтобы узнавать об акциях первым!
-					+form-wrap
-						+input("Email",'text')
-						+e.btn.btn-outline-primary.btn(type="submit") Подписаться
+					form
+						+b.form-wrap
+							+input("Email",'text')
+							+e.btn.btn-outline-primary.btn(type="submit") Подписаться
 			
 			.row.roww.d-flex.align-items-center
 				+e.col.logo-col.col-auto

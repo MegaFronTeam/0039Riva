@@ -32,10 +32,10 @@ mixin catalogFilter(data)
 				.range-wrap
 					.row.g-2
 						.col-6
-							+input("20").minus
+							+input("10").minus(value="10")
 						.col-6
-							+input("200").plus
-					input(type="text").slider-js
+							+input("200").plus(value="10000")
+					input(type="text" ).slider-js
 			+item(`Цвет`)
 				.mb-2: +in-c( "checkbox", 'Белый').--color(style="--bg-color:#fff")
 				.mb-2: +in-c( "checkbox", 'Черный').--color(style="--bg-color:#000")

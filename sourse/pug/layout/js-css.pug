@@ -3,7 +3,7 @@ mixin allcss()
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 	link(href="libs/swiper/swiper-bundle.min.css", rel="stylesheet")
 	link(href="libs/@fancyapps/ui/fancybox/fancybox.css", rel="stylesheet")
 	link(href="libs/priority-plus/priority-plus.css", rel="stylesheet")
@@ -12,11 +12,11 @@ mixin allcss()
 	link(href=`css/main.min.css`, rel="stylesheet")
 
 mixin allcjs() 
+	script(src="libs/jquery/jquery.min.js")
 	script(src="libs/swiper/swiper-bundle.min.js")  
 	script(src="libs/inputmask/inputmask.min.js") 
-	script(src="libs/priority-plus/priority-plus.js") 
 	script(src="libs/@fancyapps/ui/fancybox/fancybox.umd.js") 
-	script(src="libs/jquery/jquery.min.js")
+	script(src="libs/priority-plus/priority-plus.js") 
 	script(src="libs/ion-rangeslider/js/ion.rangeSlider.min.js")
 	//- script(src=`js/common.js?v=${version}`)
 	script(src=`js/common.js`)

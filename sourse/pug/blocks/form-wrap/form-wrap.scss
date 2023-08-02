@@ -1,7 +1,7 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: 10px;
 		}
 		&__input{
 			// @extend .form-control;
@@ -15,6 +15,23 @@
  		width: 100%;
  		display: block;
  	}
+	&__title{
+		@include rfs(26px);
+		font-weight: 500;
+		margin-bottom: rem(8);
+	}
+	.after-headline{
+		color: var(--unnamed, #969FA8);  
+		margin-bottom:1rem;
+	}
+	&__policy{
+		color: var(--unnamed, #969FA8);
+		text-align: center;
+		font-size: rem(14);
+		a{
+			color: #1C83EB;
+		}
+	}
 }
 
 
