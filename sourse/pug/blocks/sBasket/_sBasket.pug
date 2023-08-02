@@ -2,8 +2,122 @@ mixin sBasket(data)
 	// start sBasket
 	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBasket
-				
 			+e.row.row
+				 
+				.col-lg
+					+e.col-inner
+						+e.table-wrap
+							table
+								+b.TR.prod-line
+									td
+										+e.img-wrap
+											.img-wrap-center
+												+img("img/sProductCard-img-1.png")
+									td
+										+e.text-wrap
+											+e.title(href="#").text-body Кресло Riva Chair A9184
+											p Артикул:  SK.SRT-200 (R)
+									td
+										+addblock()
+										block
+									td
+										+e.price.text-primary.d-block 41 900 ₽  
+										+e.price-old 
+											span 60 900
+											| ₽
+									td
+										+e.delete()
+											+icon2("delete")
+											
+								+b.TR.prod-line
+									td
+										+e.img-wrap
+											.img-wrap-center
+												+img("img/sProductCard-img-1.png")
+									td
+										+e.text-wrap
+											+e.title(href="#").text-body Кресло Riva Chair A9184
+											p Артикул:  SK.SRT-200 (R)
+									td
+										+addblock()
+										.small.text-secondary.mt-1 2 080 ₽ шт
+									td
+										+e.price.d-block 41 900 ₽  
+									td
+										+e.delete()
+											+icon2("delete")
+						
+				+e.col.col-lg-auto
+					+e.total-block
+						table
+							tr.tr-lg
+								td Итого:
+								td 8 090 ₽
+								
+							tr
+								td Товары, 3 шт.
+								td 8 930 ₽
+							tr
+								td Скидка
+								td 840 ₽
+							tr
+								td Доставка
+								td Бесплатно
+
+
+					+b.delivery-block
+						h5 Доставка
+						+e.list
+							mixin deliveryItem(icon, text)
+								+e.delivery-item 
+									//- +img(`img/svg/${icon}`)
+									+icon2(icon)
+									!= text
+							+deliveryItem('done', 'Ожидается')
+							+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+							+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+							+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+							+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
+
+
+				.col
+					+b.form-wrap.sProdCard
+							.tabs
+								.tabs__caption
+									.tabs__btn.active Оформление заказа
+									.tabs__btn Быстрый заказ
+								.tabs__wrap
+									.tabs__content.active
+										
+										.mb-4
+											.fw-600.mb-3 1. Данные покупателя
+											.row
+												.col-lg-4
+													+input("+7(___)___-__-__",'tel')
+												.col-lg-4
+													+input("Email",'email')
+												.col-lg-4
+													+input('Имя')
+										.mb-4
+											.fw-600.mb-3 2. Выберите способ доставки
+											.mb-3: +in-c("checkbox", 'Яндекс GO такси по Москве  (486 ₽, от 2-х часов)')
+											.mb-3: +in-c("checkbox")
+												+e.SPAN.text.form-check-label  Самовывоз из магазина 
+													small.text-secondary Московская область, г. Подольск, д. Борисовка, территория &laquo;НКН-Строй&raquo;, строение&nbsp;1
+											.mb-3: +in-c("checkbox", 'Курьерская служба “Достависта” по Москве  (600 ₽, в течение дня. От 5000 ₽ Бесплатно)')
+											+input('Город, улица, дом, квартира')
+											.mb-3.row
+												.col-auto
+													+in-c("checkbox", 'В пункт выдачи (400 ₽, 4 дня)')
+												.col-auto 
+													a.tdu(href="#").small Выбрать пункт выдачи 
+											.mb-3: +in-c("checkbox", 'Курьером (600 ₽, 7 дней)')
+										.mb-4
+											.fw-600.mb-3 3. Выберите способ оплаты
+											.mb-3: +in-c("checkbox", 'Картой на сайте')
+											.mb-3: +in-c("checkbox", 'Наличными или картой при получении')
+										+e.btn.btn.btn-primary(href="#") Подтвердить заказ
+									.tabs__content
+										+input("+7(___)___-__-__",'tel')
+										+e.btn.btn.btn-primary(href="#") Подтвердить заказ
 	// end sBasket

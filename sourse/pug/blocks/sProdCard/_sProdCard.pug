@@ -65,18 +65,19 @@ mixin sProdCard(data)
 								//- +img('img/beware.svg')
 								+icon2('beware')
 								| Остерегайтесь подделок
-						h5 Доставка
-						+e.delivery
-							mixin deliveryItem(icon, text)
-								+e.delivery-item 
-									//- +img(`img/svg/${icon}`)
-									+icon2(icon)
-									!= text
-							+deliveryItem('done', 'Ожидается')
-							+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
-							+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
-							+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
-							+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
+						+b.delivery-block
+							h5 Доставка
+							+e.list
+								mixin deliveryItem(icon, text)
+									+e.delivery-item 
+										//- +img(`img/svg/${icon}`)
+										+icon2(icon)
+										!= text
+								+deliveryItem('done', 'Ожидается')
+								+deliveryItem('fast-delivery', 'Доставка: уточняйте у&nbsp;менеджера, г. Санкт-Петербург&nbsp;&mdash; от&nbsp;300&nbsp;₽')
+								+deliveryItem('delivery', 'Забрать из&nbsp;пункта выдачи Пункты выдачи DPD: уточняйте у&nbsp;менеджера&nbsp;&mdash; 2&nbsp;045&nbsp;₽')
+								+deliveryItem('settings', 'Сборка: 300&nbsp;₽ за&nbsp;шт.')
+								+deliveryItem('shield', 'Гарантия: 1&nbsp;год')
 						+e.create
 							+icon2('move')
 							p Разработаем #[span бесплатный] эскиз растановки мебели

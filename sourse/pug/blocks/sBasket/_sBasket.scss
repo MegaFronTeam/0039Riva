@@ -4,25 +4,199 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
+		@include media-breakpoint-up(xxl) {
+		gap: 30px 110px;
+	}
+	gap: 30px ;
+		@include media-breakpoint-up(lg) {
+
+			margin: 0;
+			display: grid;
+			& > * {
+				padding: 0;
+				width: 100%;
+			}
+			grid-template-columns: 1fr #{rem(320)};
+		}
+	}
+	.custom-input__text {
+		font-size: 14px;
+	}
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
+	.sProdCard{
+		margin-bottom: 3rem;
 	}
-	&__col{
-
+	.section-title {
 	}
-	&__item{
+	&__col {
+		@include media-breakpoint-down(md) {
 
+			// max-width: calc(#{rem(320)} + var(--bs-gutter-x));
+		}
+		grid-column: 2 / 3;
+		grid-row:  1 / 2 span ;
+	}
+	&__item {
+	}
+	&__col-inner {
+		max-width: rem(850);
+	}
+	.prod-line {
+		&__delete {
+			@include mt;
+			cursor: pointer;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+	.prod-line__text-wrap {
+		height: 100%;
+		@include media-breakpoint-up(md) {
+
+			min-height: 83px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	&__table-wrap {
+		margin-bottom: rem(20);
+		table {
+			width: 100%;
+			td {
+				@include media-breakpoint-up(md) {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						&:not(:last-child) {
+							padding-right: 30px;
+						}
+						&:first-child {
+							width: rem(96 + 30);
+						}
+						&:nth-child(3) {
+							width: rem(106 + 30);
+						}
+						
+						&:nth-child(4) {
+							width: rem(106 + 30);
+						}
+					}
+			}
+		}
+		@include media-breakpoint-down(md){
+			table{
+				display: block;
+			}
+			tr{
+				display: flex;
+				flex-wrap: wrap;
+				@include roww(20px);
+				position: relative;
+				padding-left: rem(76);
+			}
+			.prod-line__img-wrap{
+				width: 70px;
+			}
+			.prod-line__delete{
+				position: absolute;
+				right: 10px;
+				top: 0;
+			}
+			td{
+				display: block;
+				padding-top: 0;
+				padding-bottom: 5px;
+				&:nth-child(1) {
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+				&:nth-child(2) {
+					width: calc(100%);
+				}
+			}
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	.addBlock {
+		height: rem(44);
+	}
+	.form-wrap {
+		&__btn {
+			width: rem(327);
+			max-width: 100%;
+			padding: 16px;
+		}
+
+		&__input-wrap {
+			margin-bottom: rem(14);
+		}
+	}
+	&__total-block{
+		border-radius: 6px;
+		background: var(--unnamed, #FFF);
+		box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.16);
+		padding: rem(27) rem(20);
+		margin-bottom: rem(30);
+		table{
+			width: 100%;
+			max-width: rem(329 - 80);
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 14px;
+			color: $secondary;
+		}
+		td{
+			padding-bottom: 6px;
+		}
+		td:nth-child(2){
+			text-align: right;
+		}
+		.tr-lg{
+			@include rfs(24px);
+			color: $body-color;
+			td{
+				&:nth-child(2){
+					@include rfs(30px);
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+
+	.form-check {
+		small {
+			font-size: 80%;
+		}
+	}
+	.form-check-input {
+		background-color: #fff;
+	}
+	.form-check-input:checked {
+		border-color: $primary;
+	}
+	a.tdu {
+		border-bottom: 1px solid;
+		text-decoration: none;
+		&:hover {
+			border-color: transparent;
+		}
+	}
 } // end.sBasket

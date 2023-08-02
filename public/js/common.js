@@ -35,10 +35,15 @@ const JSCCommon = {
 				}
 			}
 		});
+
 		Fancybox.defaults = {
 			autoFocus: false,
 			placeFocusBack: false,
 		};
+
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
