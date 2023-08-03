@@ -1,6 +1,11 @@
 "use strict";
 const JSCCommon = { 
 	modalCall() {
+
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
+		
 		const link = '[data-fancybox="modal"], .link-modal-js';
 		Fancybox.bind(link, {
 			arrows: false,
@@ -41,9 +46,7 @@ const JSCCommon = {
 			placeFocusBack: false,
 		};
 
-		Fancybox.bind('[data-fancybox]', {
-			placeFocusBack: false,
-		});
+	
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();

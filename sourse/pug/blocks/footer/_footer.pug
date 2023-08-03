@@ -16,36 +16,12 @@ mixin footer()
 					+e.logo 
 						+icon2('logo')
 				.col-lg-auto.col
-					+b.catalog-block.d-inline-block
+					+b.catalog-block.d-inline-block(href="#")
 						+e.toggle
 							+e.gumburger
 								span
-							| Каталог
-						ul.main-ul
-							li.close-ul.d-lg-none.text-body 
-								.catalog-block__gumburger.on
-									span
-							
-								| Закрыть
-							mixin item(i,t)
-								li.has-children
-									a(href="#")
-										!=t
-									//- .dropdown-menu-second
-									ul
-										li
-											a.dropdown-item(href='catalog/plita/oblicovochnye-plity') Облицовочные плиты
-										li
-											a.dropdown-item(href='catalog/plita/plita-moshheniya') Плиты мощения
-										li
-											a.dropdown-item(href='catalog/taktilnye-plity') Тактильные плиты
-							+item(1,`Облицовочные плиты`)
-							+item(2,`Плиты мощения`)
-							+item(3,`Брусчатка`)
-							+item(4,`Ступени`)
-							+item(5,`Бордюры`)
-							+item(6,`Пандусы`)
-							+item(7,`Архитектурные изделия`)
+							.text-white Каталог
+					
 
 				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js

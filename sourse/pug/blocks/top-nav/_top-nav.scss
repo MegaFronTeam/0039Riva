@@ -158,14 +158,21 @@
 
 
 .catalog-block{
+	position: relative;
+	@extend .btn,  .btn-primary; 
+	
+	font-size: rem(14);
+	font-weight: $font-weight-semibold;
+		padding: rem(8) rem(16) rem(6);
+		
+		&:hover {
+background-color: var(--bs-btn-hover-bg);
+border-color: var(--bs-btn-hover-border-color);
+color: var(--bs-btn-hover-color);
+	}
 	&__toggle{
-		position: relative;
-		font-size: rem(14);
-		font-weight: $font-weight-semibold;
-		@extend .btn-primary;
-			padding: rem(10) rem(16);
 			// padding-left: rem(44);
-			border-radius: 0;
+			// border-radius: 0;
 			// display: inline-block;
 			display: inline-flex;
 			align-items: center;
@@ -239,7 +246,7 @@
 	}
 .catalog-block{
 	position: relative;
-	background: $primary;
+	// background: $primary;
 	border-radius: $border-radius;
 	color: $white;
 	// --op: 1;
