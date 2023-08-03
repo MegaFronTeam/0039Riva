@@ -3,6 +3,7 @@
 	.header {
 		background: $white;
 		box-shadow: 0px 4px 20px 0px rgba(150, 159, 168, 0.12);
+		position: relative;
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

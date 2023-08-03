@@ -20,7 +20,7 @@ mixin topLine()
 			+e.bottom.row
 				+e(href="#").logo.col-lg-auto.col
 					+icon2('logo')
-				+form-wrap.col-lg.order-lg-0.order-first.d-none.d-sm-block
+				+form-wrap.col-lg
 					+input("Поиск товаров", 'text')
 					+e.btn.btn(type="submit")
 						+icon2('search')
@@ -51,14 +51,17 @@ mixin topLine()
 
 				+e.controls.col-auto.d-flex.align-items-center
 					mixin item(t, i, c)
-						+e(href="#").controls-item.text-center.d-inline-block
+						+e(href="#").controls-item.text-center.d-inline-block&attributes(attributes)
 							+icon(i)
-							div!= t
-							span!= c
+							if t
+								div!= t
+							if c
+								span!= c
 					+item('Кабинет', `user`)
 					+item('Сравнение', `stats`, 0)
 					+item('Избранное', `heart`, 0)
 					+item('Корзина', `cart`, 0)
-				+e.show-search.d-flex.align-items-center.d-sm-none.col-auto.justify-content-end.ml-auto
-					+icon2('search')
+					+e.controls-item.d-lg-none.d-inline-block.search-toggle-js
+						+icon2('search')
+						div Поиск
 	// end topLine

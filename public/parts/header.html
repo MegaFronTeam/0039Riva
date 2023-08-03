@@ -52,7 +52,7 @@
 						<use xlink:href="img/svg/sprite2.svg#logo"></use>
 					</svg>
 				</a>
-				<div class="form-wrap col-lg order-lg-0 order-first d-none d-sm-block">
+				<div class="form-wrap col-lg">
 					<form>
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Поиск товаров"/>
 						</div>
@@ -95,31 +95,32 @@
 						<svg class="icon icon-user ">
 							<use xlink:href="img/svg/sprite.svg#user"></use>
 						</svg>
-						<div>Кабинет</div><span></span>
+						<div>Кабинет</div>
 					</a>
 					<a class="topLine__controls-item text-center d-inline-block" href="#">
 						<svg class="icon icon-stats ">
 							<use xlink:href="img/svg/sprite.svg#stats"></use>
 						</svg>
-						<div>Сравнение</div><span>0</span>
+						<div>Сравнение</div>
 					</a>
 					<a class="topLine__controls-item text-center d-inline-block" href="#">
 						<svg class="icon icon-heart ">
 							<use xlink:href="img/svg/sprite.svg#heart"></use>
 						</svg>
-						<div>Избранное</div><span>0</span>
+						<div>Избранное</div>
 					</a>
 					<a class="topLine__controls-item text-center d-inline-block" href="#">
 						<svg class="icon icon-cart ">
 							<use xlink:href="img/svg/sprite.svg#cart"></use>
 						</svg>
-						<div>Корзина</div><span>0</span>
+						<div>Корзина</div>
 					</a>
-				</div>
-				<div class="topLine__show-search d-flex align-items-center d-sm-none col-auto justify-content-end ml-auto">
-					<svg class="icon2 icon2-search ">
-						<use xlink:href="img/svg/sprite2.svg#search"></use>
-					</svg>
+					<div class="topLine__controls-item d-lg-none d-inline-block search-toggle-js">
+						<svg class="icon2 icon2-search ">
+							<use xlink:href="img/svg/sprite2.svg#search"></use>
+						</svg>
+						<div>Поиск</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -130,65 +131,362 @@
 		<div class="container">
 			<div class="row roww">
 				<div class="col-lg-auto col">
-					<div class="catalog-block d-inline-block">
+					<div class="catalog-block d-inline-block hidden-block-js">
 						<div class="catalog-block__toggle">
 							<div class="catalog-block__gumburger"><span></span>
 							</div>Каталог
 						</div>
-						<ul class="main-ul">
-							<li class="close-ul d-lg-none text-body"> 
-								<div class="catalog-block__gumburger on"><span></span></div>Закрыть
-							</li>
-								<li class="has-children"><a href="#">Облицовочные плиты</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Плиты мощения</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Брусчатка</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Ступени</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Бордюры</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Пандусы</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-								<li class="has-children"><a href="#">Архитектурные изделия</a>
-									<ul>
-										<li><a class="dropdown-item" href="catalog/plita/oblicovochnye-plity">Облицовочные плиты</a></li>
-										<li><a class="dropdown-item" href="catalog/plita/plita-moshheniya">Плиты мощения</a></li>
-										<li><a class="dropdown-item" href="catalog/taktilnye-plity">Тактильные плиты</a></li>
-									</ul>
-								</li>
-						</ul>
+						<div class="catalog-block__block">
+							<div class="d-sm-none toggle-menu-js toggle-menu-main-js">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg>назад
+							</div>
+							<ul class="main-ul">
+									<li class="has-children"><a href="#">Мебель для персонала</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Кабинеты руководителей</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Переговорные зоны</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Мебель для персонала</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Приемные зоны</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Для дома и гостинец</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Кресла Riva Chair</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Мягкая мебель</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Мебель для залов суда</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+									<li class="has-children"><a href="#">Металическая мебель</a>
+										<ul>
+											<li class="d-sm-none">
+												<div class="toggle-menu-js">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>назад
+												</div>
+											</li>
+											<li><a class="dropdown-item" href="#">Riva</a></li>
+											<li><a class="dropdown-item" href="#">Style</a></li>
+											<li><a class="dropdown-item" href="#">Nova S</a></li>
+											<li><a class="dropdown-item" href="#">Slim System</a></li>
+											<li><a class="dropdown-item" href="#">Estetica</a></li>
+											<li><a class="dropdown-item" href="#">Metal System</a></li>
+											<li><a class="dropdown-item" href="#">Fit кухня</a></li>
+											<li><a class="dropdown-item" href="#">Concept</a></li>
+											<li><a class="dropdown-item" href="#">Locker Plus</a></li>
+											<li><a class="dropdown-item" href="#">Loft</a></li>
+											<li><a class="dropdown-item" href="#">Mobile System</a></li>
+											<li><a class="dropdown-item" href="#">X-Pull</a></li>
+											<li><a class="dropdown-item" href="#">R-Line</a></li>
+											<li><a class="dropdown-item" href="#">R-Line Soft</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр</a></li>
+											<li><a class="dropdown-item" href="#">Колл-центр Bell</a></li>
+											<li><a class="dropdown-item" href="#">Maris шкафы-купе</a></li>
+											<li><a class="dropdown-item" href="#">Move Up</a></li>
+											<li><a class="dropdown-item" href="#">Onix</a></li>
+											<li><a class="dropdown-item" href="#">Onix Wood</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 4x4</a></li>
+											<li><a class="dropdown-item" href="#">Quattro 5x5</a></li> 
+										</ul>
+									</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg order-lg-0 order-last">
