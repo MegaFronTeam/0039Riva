@@ -94,6 +94,9 @@ body {
 		}
 	}
 	&.fixedCatalog{
+		@include media-breakpoint-up(md) {
+			overflow: initial;
+		}
 		&::before{
 			display: none;
 		}

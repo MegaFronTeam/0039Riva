@@ -159,23 +159,24 @@
 
 .catalog-block{
 	position: relative;
-	@extend .btn,  .btn-primary; 
 	
 	font-size: rem(14);
-	font-weight: $font-weight-semibold;
-		padding: rem(8) rem(16) rem(6);
-		
-		&:hover {
-background-color: var(--bs-btn-hover-bg);
-border-color: var(--bs-btn-hover-border-color);
-color: var(--bs-btn-hover-color);
-	}
+	
 	&__toggle{
-			// padding-left: rem(44);
-			// border-radius: 0;
-			// display: inline-block;
-			display: inline-flex;
-			align-items: center;
+		@extend .btn,  .btn-primary; 
+		font-weight: $font-weight-semibold;
+		font-size: rem(14);
+		padding: rem(8) rem(16) rem(11);
+		// padding-left: rem(44);
+		// border-radius: 0;
+		// display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		&:hover {
+			background-color: var(--bs-btn-hover-bg);
+			border-color: var(--bs-btn-hover-border-color);
+			color: var(--bs-btn-hover-color);
+		}
 	}
 	&__gumburger{
 		margin-right: rem(7);
@@ -249,6 +250,10 @@ color: var(--bs-btn-hover-color);
 	// background: $primary;
 	border-radius: $border-radius;
 	color: $white;
+	a,
+	span{
+		color: $body-color;
+	}
 	// --op: 1;
 	// --op1: 1;
 	@include media-breakpoint-up(sm) { 
@@ -300,10 +305,26 @@ color: var(--bs-btn-hover-color);
 
 			background: #fff;
 			display: block;
-			
+			@include media-breakpoint-down(sm){
+			position: relative;
+			}
+			.toggle-sub-nav{
+				z-index: -1;
+				display: none;
+				@include media-breakpoint-down(sm){
+					@include a-cent;
+				z-index: 2;
+				display: block;
+				opacity: 0;
+				}
+			}
+			@include media-breakpoint-down(sm){
+			}
+			&> span,
 			&> a{
 				padding: rem(12) rem(20);
 				font-size: 14px;
+				color: $body-color;
 				background-color: #fff;
 				border-left: 1px solid #000;
 				height: 44px;
@@ -311,6 +332,10 @@ color: var(--bs-btn-hover-color);
 				align-items: center;
 				border-left: 3px solid #fff;
 				z-index: 4;
+				// color: $primary;
+			@include media-breakpoint-down(sm){
+				// pointer-events: none;
+			}
 				&:last-child > a{
 					border-radius: 0 0 6px 6px;
 				}
@@ -324,6 +349,7 @@ color: var(--bs-btn-hover-color);
 				height: 100%;
 				position: absolute;
 			}
+				&>span,
 				&>a{
 					color: $primary;
 					background: rgba(227, 6, 17, 0.05);

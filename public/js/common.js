@@ -366,19 +366,32 @@ function eventHandler() {
 	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	// }
 
-	$(document).on("click", ".catalog-block__toggle, .toggle-menu-main-js" , function(){
+	$(document).on("click", ".top-nav  .catalog-block__toggle, .toggle-menu-main-js" , function(){
 		$(".catalog-block__block").toggleClass("active");
 		$('body').toggleClass("fixedCatalog")
+		let hastChildren = document.querySelectorAll(".main-ul .has-children"); 
+		if(hastChildren){
+			for (const item of hastChildren) {
+				console.log(1);
+				if (!item.querySelector("span.toggle-sub-nav")) {
+
+					item.insertAdjacentHTML("beforeend", "<span class='toggle-sub-nav'></span>");
+				}
+			}
+		} 
 	})
 
-	$(document).on("click", ".has-children a", function(e){
-		e.preventDefault();
-		$(this).next().toggleClass("active");
+
+	$(document).on("click", ".has-children>.toggle-sub-nav", function(){
+		console.log(1);
+		// e.preventDefault();
+		$(this).parent().find('ul').toggleClass("active");
 	})
 
 	
 	$(document).on("click", ".has-children .toggle-menu-js", function(e){
-		e.preventDefault();
+		
+		e.preventDefault(); 
 		$(this).parents('ul').removeClass("active");
 	})
 
